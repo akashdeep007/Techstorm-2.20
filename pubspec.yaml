@@ -21,6 +21,9 @@ dependencies:
     sdk: flutter
   unicorndial: "^1.1.4"
   url_launcher: ^5.4.2
+  carousel_pro: ^1.0.0
+  carousel_slider: ^1.4.1
+  flip_card: ^0.4.4
 
 
   # The following adds the Cupertino Icons font to your application.
