@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/home.dart';
+import 'package:techstorm/Screens/Home.dart';
 
 void main() => runApp(MyApp());
 

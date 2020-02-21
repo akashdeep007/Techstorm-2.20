@@ -1,92 +1,53 @@
 import 'package:flutter/material.dart';
-import 'package:unicorndial/unicorndial.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
 }
-_launchURL() async {
-  const url = 'https://www.youtube.com/watch?v=NcDxGhwuphI';
-  if (await canLaunch(url)) {
-    await launch(url);
-  } else {
-    throw 'Could not launch $url';
-  }
-}
 
 
 class _HomeState extends State<Home> with TickerProviderStateMixin {
-  @override
+@override
   Widget build(BuildContext context) {
-    var childButtons = List<UnicornButton>();
-    childButtons.add(UnicornButton(
-        currentButton: FloatingActionButton(
-          heroTag: "train",
-          backgroundColor: Colors.redAccent,
-          mini: true,
-          child: Icon(Icons.video_call),
-          onPressed: _launchURL,
-        )));
-        childButtons.add(UnicornButton(
-        hasLabel: true,
-        labelText: "Choo choo",
-        currentButton: FloatingActionButton(
-          heroTag: "train",
-          backgroundColor: Colors.redAccent,
-          mini: true,
-          child: Icon(Icons.report),
-          onPressed: () {},
-        )));
-
-    childButtons.add(UnicornButton(
-        currentButton: FloatingActionButton(
-      heroTag: "airplane",
-      backgroundColor: Colors.greenAccent,
-      mini: true,
-      child: Icon(Icons.schedule),
-      onPressed: () {},
-    )));
-
-    childButtons.add(UnicornButton(
-        currentButton: FloatingActionButton(
-      heroTag: "directions",
-      backgroundColor: Colors.blueAccent,
-      mini: true,
-      child: Icon(Icons.people),
-      onPressed: () {},
-    )));
     return Scaffold(
-      floatingActionButtonLocation: FloatingActionButtonLocation.miniStartTop,
-      floatingActionButton: UnicornDialer(
-          backgroundColor: Color.fromRGBO(255, 255, 255, 0.6),
-          parentButtonBackground: Colors.redAccent,
-          orientation: UnicornOrientation.VERTICAL,
-          parentButton: Icon(Icons.menu),
-          childButtons: childButtons),
-      appBar: AppBar(
-        iconTheme: new IconThemeData(color: Colors.white),
-        backgroundColor: Colors.black,
-        title: Center(
-          child: Text(
-            "Techstorm 2.20",
-            style: TextStyle(
-                color: Colors.white, fontSize: 24, fontWeight: FontWeight.bold),
-          ),
+      bottomNavigationBar: BottomAppBar(
+        child: Row(
+          mainAxisAlignment : MainAxisAlignment.spaceBetween,
+          children : <Widget> [
+            Container(padding : EdgeInsets.all(10) ,child: Icon(Icons.hotel, size: 28,)),
+            Container(padding : EdgeInsets.all(10) ,child: Icon(Icons.hotel, size: 28,)),
+          ]
         ),
       ),
-      body: SingleChildScrollView(
-        scrollDirection: Axis.vertical,
-        child: Container(
-          child: Column(
-            children: <Widget>[
-              Text("events"),
-              Text("trailer link"),
-              Text("sponsers"),
-            ],
-          ),
+      drawer: Drawer(
+        child: Container(width: 50, height: 1000, color: Colors.black,),
+      ),
+      body: NestedScrollView(
+        headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
+          return <Widget>[
+            SliverAppBar(
+              backgroundColor: Colors.black,
+              expandedHeight: 200.0,
+              floating: true,
+              pinned: true,
+              flexibleSpace: FlexibleSpaceBar(
+                  centerTitle: true,
+                  title: Text("TechStorm 2.20",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16.0,
+                      )),
+                  background: Image.network(
+                    "https://images.pexels.com/photos/396547/pexels-photo-396547.jpeg?auto=compress&cs=tinysrgb&h=350",
+                    fit: BoxFit.cover,
+                  )),
+            ),
+          ];
+        },
+        body: Center(
+          child: Text("Sample Text"),
         ),
       ),
     );
-  }
+}
 }
