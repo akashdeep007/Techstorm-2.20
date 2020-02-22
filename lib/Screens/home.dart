@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:techstorm/Screens/HomeEvent/HomeEvents.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -44,8 +45,9 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
             ),
           ];
         },
-        body: Center(
-          child: Text("Sample Text"),
+        body: Column(
+          children: <Widget> [Center(child: Text("Events", style: TextStyle(fontSize : 48, fontWeight : FontWeight.bold,),)),
+          EventScroll(),]
         ),
       ),
     );
