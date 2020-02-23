@@ -50,7 +50,7 @@ class _SponsorsListState extends State<SponsorsList> {
               image: DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage(
-                      "assets/images/a.jpg'")))));
+                      "assets/images/a.jpg")))));
                       widgets.add(Container(
           height: 70.0,
           width: 70.0,
@@ -70,7 +70,7 @@ class _SponsorsListState extends State<SponsorsList> {
               image: DecorationImage(
                   fit: BoxFit.cover,
                   image: AssetImage(
-                      "assets/images/b.png'")))));
+                      "assets/images/b.png")))));
                       widgets.add(Container(
           height: 70.0,
           width: 70.0,
@@ -90,7 +90,7 @@ class _SponsorsListState extends State<SponsorsList> {
               image: DecorationImage(
                   fit: BoxFit.cover,
                   image:  AssetImage(
-                      "assets/images/r.png'")))));
+                      "assets/images/r.jpg")))));
                       widgets.add(Container(
           height: 70.0,
           width: 70.0,
@@ -110,7 +110,7 @@ class _SponsorsListState extends State<SponsorsList> {
               image: DecorationImage(
                   fit: BoxFit.cover,
                   image:  AssetImage(
-                      "assets/images/g.jpeg'")))));
+                      "assets/images/g.jpg")))));
     }
     return Container(
         height: 80.0,

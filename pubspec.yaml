@@ -23,6 +23,8 @@ dependencies:
   url_launcher: ^5.4.2
   animated_text_kit: ^2.0.0
   font_awesome_flutter: ^8.7.0
+  flip_card: ^0.4.4
+  carousel_slider: ^1.4.1
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -41,6 +43,16 @@ dev_dependencies:
 flutter:
   assets:
     - assets/images/
+    - assets/images/EventTypes/
+    - assets/images/GAMES/
+    - assets/images/BRAIN/
+    - assets/images/ROVERS/
+    - assets/images/CREATIVITY/
+  
+  fonts:
+    - family: TempestApache
+      fonts:
+        - asset : assets/fonts/tempestapache.ttf
 
 
 

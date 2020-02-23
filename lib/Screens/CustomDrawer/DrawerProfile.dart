@@ -10,7 +10,7 @@ class DrawerProfile extends StatelessWidget {
         children: <Widget>[
           Padding(padding: EdgeInsets.fromLTRB(0, 40, 0, 0),),
           FaIcon(FontAwesomeIcons.userCircle, size: 128,),
-          Text("MyProfile"),
+          Text("User", style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),),
         ],
       ),
     );

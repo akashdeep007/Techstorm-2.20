@@ -43,22 +43,22 @@ class CustomDrawer extends StatelessWidget {
             children : <Widget>[
               DrawerProfile(),
               FlatButton(
-                child: Text('Profile'),
+                child: Text('Profile', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                 onPressed: () {},
               ),
               FlatButton(
-                child: Text('Team'),
+                child: Text('Team', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                 onPressed: () {},
               ),
               FlatButton(
-                child: Text('Website'),
+                child: Text('Website', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                 onPressed: () {},
               ),
             ]
           ),
           Column(
             children : <Widget>[
-              Text('Social Media'),
+              Text('Social Media', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
               SizedBox(height: 20,),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
