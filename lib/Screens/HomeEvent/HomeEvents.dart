@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/EventPages/CodingPage.dart';
+import 'package:techstorm/Screens/EventPages/BrainPage.dart';
 import 'package:techstorm/Screens/EventPages/CreativePage.dart';
 import 'package:techstorm/Screens/EventPages/GamesPage.dart';
 import 'package:techstorm/Screens/EventPages/RoboticsPage.dart';
@@ -22,8 +22,8 @@ class _EventScrollState extends State<EventScroll> {
       margin: EdgeInsets.fromLTRB(padding_count, 0, padding_count, 0),
       width: 400.0,
       child: InkWell(
-        onTap: (){print('Robotics Tapped');
-        Navigator.push(context,new MaterialPageRoute(builder: (context) =>RoboticsPage()));},
+        onTap: (){print('Brain Tapped');
+        Navigator.push(context,new MaterialPageRoute(builder: (context) =>BrainPage()));},
           child: Stack(
             fit: StackFit.expand,
             children : <Widget> [
@@ -41,7 +41,7 @@ class _EventScrollState extends State<EventScroll> {
       width: 400.0,
       child: InkWell(
         onTap: (){print('Robotics Tapped');
-        Navigator.push(context,new MaterialPageRoute(builder: (context) =>RoboticsPage()));},
+        Navigator.push(context,new MaterialPageRoute(builder: (context) =>CreativePage()));},
           child: Stack(
             fit: StackFit.expand,
             children : <Widget> [

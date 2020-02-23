@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import './GamesCarousal.dart';
+import 'package:techstorm/Screens/EventPages/Carousal/GamesCarousal.dart';
+
 
 class GamesPage extends StatelessWidget {
   @override

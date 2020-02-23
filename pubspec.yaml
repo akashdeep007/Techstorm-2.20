@@ -45,6 +45,9 @@ flutter:
     - assets/images/
     - assets/images/EventTypes/
     - assets/images/GAMES/
+    - assets/images/BRAIN/
+    - assets/images/ROVERS/
+    - assets/images/CREATIVITY/
   
   fonts:
     - family: TempestApache
