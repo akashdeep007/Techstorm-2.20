@@ -1,5 +1,6 @@
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
+import 'package:techstorm/Screens/EventPages/fantac.dart';
 
 List<Widget> BrainCards = [
   //appmani
@@ -59,7 +60,7 @@ List<Widget> BrainCards = [
               child: Text(
             'FANTA-C',
             style: TextStyle(
-                fontSize: 36, fontWeight: FontWeight.bold, color: Colors.black),
+                fontSize: 36, fontWeight: FontWeight.bold, color: Colors.white),
           )),
         ]),
         back: Container(
@@ -78,7 +79,8 @@ List<Widget> BrainCards = [
               Text(
                   'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
               RaisedButton(
-                onPressed: () {},
+                onPressed: () {
+                },
                 child: const Text('Dive In', style: TextStyle(fontSize: 20)),
               ),
             ]))),
