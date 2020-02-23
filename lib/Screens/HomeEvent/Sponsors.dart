@@ -1,83 +1,122 @@
 import 'package:flutter/material.dart';
 
-class SponsorScroll extends StatefulWidget {
+class SponsorsList extends StatefulWidget {
   @override
-  _SponsorScrollState createState() => _SponsorScrollState();
+  _SponsorsListState createState() => _SponsorsListState();
 }
 
-class _SponsorScrollState extends State<SponsorScroll> {
-
+class _SponsorsListState extends State<SponsorsList> {
   @override
   Widget build(BuildContext context) {
-    const double padding_count = 5;
-    return Container ( height: 100.0,child : ListView(
-  // This next line does the trick.
-  scrollDirection: Axis.horizontal,
-  children: <Widget>[
-    Container(
-      margin: EdgeInsets.fromLTRB(padding_count, 0, padding_count, 0),
-      width: 200.0,
-      child: InkWell(
-              child: Card(
-                color: Colors.yellow,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Text('Robotics', style : TextStyle(fontSize : 48, fontWeight : FontWeight.bold))
-            ],
-          )
-        ),
-      ),
-    ),
-        Container(
-      margin: EdgeInsets.fromLTRB(padding_count, 0, padding_count, 0),
-      width: 200.0,
-      child: InkWell(
-              child: Card(
-                color: Colors.yellow,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Text('Ardent', style : TextStyle(fontSize : 48, fontWeight : FontWeight.bold))
-            ],
-          )
-        ),
-      ),
-    ),
-        Container(
-      margin: EdgeInsets.fromLTRB(padding_count, 0, padding_count, 0),
-      width: 200.0,
-      child: InkWell(
-              child: Card(
-                color: Colors.yellow,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Text('T2', style : TextStyle(fontSize : 48, fontWeight : FontWeight.bold))
-            ],
-          )
-        ),
-      ),
-    ),
-        Container(
-      margin: EdgeInsets.fromLTRB(padding_count, 0, padding_count, 0),
-      width: 200.0,
-      child: InkWell(
-              child: Card(
-                color: Colors.yellow,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              Text('mywbut', style : TextStyle(fontSize : 48, fontWeight : FontWeight.bold))
-            ],
-          )
-        ),
-      ),
-    ),])
-    );
+    List<Widget> widgets = [];
+
+    for (var x = 0; x < 2; x++) {
+      widgets.add(Container(
+          height: 70.0,
+          width: 70.0,
+          margin: EdgeInsets.all(6.0),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(100.0),
+              boxShadow: [
+                new BoxShadow(
+                    color: Color.fromARGB(100, 0, 0, 0),
+                    blurRadius: 5.0,
+                    offset: Offset(5.0, 5.0))
+              ],
+              border: Border.all(
+                  width: 2.0,
+                  style: BorderStyle.solid,
+                  color: Color.fromARGB(255, 0, 0, 0)),
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                      "assets/images/ardent_logo.png")))));
+                      widgets.add(Container(
+          height: 70.0,
+          width: 70.0,
+          margin: EdgeInsets.all(6.0),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(100.0),
+              boxShadow: [
+                new BoxShadow(
+                    color: Color.fromARGB(100, 0, 0, 0),
+                    blurRadius: 5.0,
+                    offset: Offset(5.0, 5.0))
+              ],
+              border: Border.all(
+                  width: 2.0,
+                  style: BorderStyle.solid,
+                  color: Color.fromARGB(255, 0, 0, 0)),
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                      "assets/images/a.jpg")))));
+                      widgets.add(Container(
+          height: 70.0,
+          width: 70.0,
+          margin: EdgeInsets.all(6.0),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(100.0),
+              boxShadow: [
+                new BoxShadow(
+                    color: Color.fromARGB(100, 0, 0, 0),
+                    blurRadius: 5.0,
+                    offset: Offset(5.0, 5.0))
+              ],
+              border: Border.all(
+                  width: 2.0,
+                  style: BorderStyle.solid,
+                  color: Color.fromARGB(255, 0, 0, 0)),
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image: AssetImage(
+                      "assets/images/b.png")))));
+                      widgets.add(Container(
+          height: 70.0,
+          width: 70.0,
+          margin: EdgeInsets.all(6.0),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(100.0),
+              boxShadow: [
+                new BoxShadow(
+                    color: Color.fromARGB(100, 0, 0, 0),
+                    blurRadius: 5.0,
+                    offset: Offset(5.0, 5.0))
+              ],
+              border: Border.all(
+                  width: 2.0,
+                  style: BorderStyle.solid,
+                  color: Color.fromARGB(255, 0, 0, 0)),
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image:  AssetImage(
+                      "assets/images/r.jpg")))));
+                      widgets.add(Container(
+          height: 70.0,
+          width: 70.0,
+          margin: EdgeInsets.all(6.0),
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(100.0),
+              boxShadow: [
+                new BoxShadow(
+                    color: Color.fromARGB(100, 0, 0, 0),
+                    blurRadius: 5.0,
+                    offset: Offset(5.0, 5.0))
+              ],
+              border: Border.all(
+                  width: 2.0,
+                  style: BorderStyle.solid,
+                  color: Color.fromARGB(255, 0, 0, 0)),
+              image: DecorationImage(
+                  fit: BoxFit.cover,
+                  image:  AssetImage(
+                      "assets/images/g.jpg")))));
+    }
+    return Container(
+        height: 80.0,
+        child: ListView(
+            scrollDirection: Axis.horizontal,
+            padding: EdgeInsets.all(5.0),
+            children: widgets));
   }
 }
