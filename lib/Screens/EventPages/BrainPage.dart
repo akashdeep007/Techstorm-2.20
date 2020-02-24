@@ -3,6 +3,8 @@ import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:techstorm/Screens/EventPages/Brain/Appmania.dart';
 import 'package:techstorm/Screens/EventPages/Brain/FantaC.dart';
+import 'package:techstorm/Screens/EventPages/Brain/omega.dart';
+import 'package:techstorm/Screens/EventPages/Brain/technomania.dart';
 
 
 
@@ -149,7 +151,7 @@ RaisedButton(
               ),
 RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>FantaC()));
+                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>Omegatrix()));
                 },
                 child: const Text('Dive In', style: TextStyle(fontSize: 20)),
               ),
@@ -197,7 +199,7 @@ RaisedButton(
               ),
 RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>FantaC()));
+                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>Technomania()));
                 },
                 child: const Text('Dive In', style: TextStyle(fontSize: 20)),
               ),

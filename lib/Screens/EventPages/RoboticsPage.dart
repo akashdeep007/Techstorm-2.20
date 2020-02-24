@@ -1,8 +1,11 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/EventPages/BRAIN/FantaC.dart';
+import 'package:techstorm/Screens/EventPages/Rover/rocombat.dart';
 import 'package:techstorm/Screens/EventPages/Rover/ronavigator.dart';
+import 'package:techstorm/Screens/EventPages/Rover/ropicker.dart';
+import 'package:techstorm/Screens/EventPages/Rover/rosoccer.dart';
+import 'package:techstorm/Screens/EventPages/Rover/rowings.dart';
 
 
 
@@ -53,7 +56,7 @@ class RoboticsPage extends StatelessWidget {
               ),
 RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>FantaC()));
+                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>RO_Combat()));
                 },
                 child: const Text('Dive In', style: TextStyle(fontSize: 20)),
               ),
@@ -149,7 +152,7 @@ RaisedButton(
               ),
 RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>FantaC()));
+                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>RO_Picker()));
                 },
                 child: const Text('Dive In', style: TextStyle(fontSize: 20)),
               ),
@@ -197,7 +200,7 @@ RaisedButton(
               ),
 RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>FantaC()));
+                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>RO_Soccer()));
                 },
                 child: const Text('Dive In', style: TextStyle(fontSize: 20)),
               ),
@@ -243,7 +246,7 @@ RaisedButton(
               ),
 RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>FantaC()));
+                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>RO_Wings()));
                 },
                 child: const Text('Dive In', style: TextStyle(fontSize: 20)),
               ),

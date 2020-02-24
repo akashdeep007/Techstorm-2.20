@@ -1,28 +1,28 @@
 import 'package:flutter/material.dart';
 import 'package:techstorm/Screens/EventPages/Form/FormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
-class AppMania extends StatefulWidget {
+class Omegatrix extends StatefulWidget {
   @override
-  _AppManiaState createState() => _AppManiaState();
+  _OmegatrixState createState() => _OmegatrixState();
 }
 
-class _AppManiaState extends State<AppMania> {
+class _OmegatrixState extends State<Omegatrix> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(onPressed: () { 
-      Navigator.push(context,new MaterialPageRoute(builder: (context) =>RegisterForm(eventName : 'AppMania',team: true, teamMembers: 2)));
+      Navigator.push(context,new MaterialPageRoute(builder: (context) =>RegisterForm(eventName : 'Omegatrix',team: true, teamMembers: 1)));
 
       }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
               appBar: AppBar(
-                title: Text('App Mania'),
+                title: Text('Omegatrix'),
                 backgroundColor: Colors.black87,
               ),
               body: Container(
                                     decoration: BoxDecoration(
                       image : DecorationImage(
-                        image : AssetImage('assets/images/BRAIN/APPMANIA.png'), fit:BoxFit.cover
+                        image : AssetImage('assets/images/BRAIN/OMEGATRIX.jpg'), fit:BoxFit.cover
                       )
                     ),
                 child: ListView(
@@ -31,7 +31,7 @@ class _AppManiaState extends State<AppMania> {
                       padding: EdgeInsets.only(top: 10, bottom: 10),
                       child: Center(
                         child: Text(
-                          "APPMANIA",
+                          "OMEGATRIX",
                           style: TextStyle(
                               fontSize: 48,
                               fontWeight: FontWeight.w900,

@@ -2,6 +2,10 @@ import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
 import 'package:techstorm/Screens/EventPages/BRAIN/FantaC.dart';
+import 'package:techstorm/Screens/EventPages/Games/coc.dart';
+import 'package:techstorm/Screens/EventPages/Games/fifa.dart';
+import 'package:techstorm/Screens/EventPages/Games/khet.dart';
+import 'package:techstorm/Screens/EventPages/Games/nfs.dart';
 
 
 
@@ -52,7 +56,7 @@ class GamesPage extends StatelessWidget {
               ),
 RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>FantaC()));
+                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>NFS()));
                 },
                 child: const Text('Dive In', style: TextStyle(fontSize: 20)),
               ),
@@ -100,7 +104,7 @@ RaisedButton(
               ),
 RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>FantaC()));
+                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>KHET()));
                 },
                 child: const Text('Dive In', style: TextStyle(fontSize: 20)),
               ),
@@ -148,7 +152,7 @@ RaisedButton(
               ),
 RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>FantaC()));
+                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>COC()));
                 },
                 child: const Text('Dive In', style: TextStyle(fontSize: 20)),
               ),
@@ -196,7 +200,7 @@ RaisedButton(
               ),
 RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>FantaC()));
+                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>FIFA()));
                 },
                 child: const Text('Dive In', style: TextStyle(fontSize: 20)),
               ),
