@@ -48,9 +48,13 @@ class BrainPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
-              Text(
-                  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
-              
+              SizedBox(height:30),
+              Center(
+                child: Text(
+                    'Showcase your inner Zuckerberg by spitting out the next facebook.',style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black),),
+              ),
                 ],
               ),
 RaisedButton(
@@ -96,8 +100,13 @@ RaisedButton(
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
-              Text(
-                  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
+              SizedBox(height: 30,),
+              Center(
+                child: Text(
+                    'while (!(succeed==try()));\n If you get this, then you know what this event is all about.',style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black),),
+              ),
               
                 ],
               ),
@@ -144,9 +153,13 @@ RaisedButton(
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
-              Text(
-                  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
-              
+             SizedBox(height: 30,),
+              Center(
+                child: Text(
+                    'Its not about equations or formulas or calculations. Its about understanding.',style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black),),
+              ),
                 ],
               ),
 RaisedButton(
@@ -192,9 +205,13 @@ RaisedButton(
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
-              Text(
-                  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
-              
+             SizedBox(height: 30,),
+              Center(
+                child: Text(
+                    'An idea today can be the technology of tomorrow.',style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black),),
+              ),
                 ],
               ),
 RaisedButton(

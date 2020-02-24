@@ -33,7 +33,7 @@ class _OmegatrixState extends State<Omegatrix> {
                         child: Text(
                           "OMEGATRIX",
                           style: TextStyle(
-                              fontSize: 48,
+                              fontSize: 48,fontFamily: "TempestApache",
                               fontWeight: FontWeight.w900,
                               color: Colors.black,
                              ),
@@ -57,19 +57,10 @@ class _OmegatrixState extends State<Omegatrix> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rule1",
+                                " Omegatrix is an integral part of recreational mathematics. Event is open to any studentwith an interest in mathematics. We Judge yourself by logging into deep well of mathematicsand test your grey matter and mental ability through many other mind blogging and brainstorming question puzzles. This event is divided into two parts namely –prelims and mainsround. The finalist will be tested on their logical reasoning,time management , analytical skills in final.",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "rule2",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
-                              Text(
-                                "rule3",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
+                              
                             ],
                           )),
                     ),
@@ -83,7 +74,7 @@ class _OmegatrixState extends State<Omegatrix> {
                           contentPadding: EdgeInsets.all(20),
                           title: Center(
                                 child: Text(
-                                  "Registration fees",
+                                  "Rules",
                                   style: TextStyle(
                                       fontSize: 24, fontWeight: FontWeight.w500),
                                 ),
@@ -91,7 +82,7 @@ class _OmegatrixState extends State<Omegatrix> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rs 10",
+                                " 1.Only individuals can participate.\n2.Every participant must carry her/his College identity card during the day of event.\n3.Utilizing any kind of electronics aid will lead to disqualification.\n4.Every participant must produce the given confirmation code during registration. Without proper confirmation code no participant can be registered.\n",
                                 style: TextStyle(fontSize: 18),
                               ),
                              
@@ -108,7 +99,7 @@ class _OmegatrixState extends State<Omegatrix> {
                           contentPadding: EdgeInsets.all(20),
                           title: Center(
                             child: Text(
-                              "Rules",
+                              "Registration fees",
                               style: TextStyle(
                                   fontSize: 24, fontWeight: FontWeight.w500),
                             ),
@@ -116,19 +107,15 @@ class _OmegatrixState extends State<Omegatrix> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rule1",
+                                "BPPIMT Teams: INR 30 ",
                                 style: TextStyle(fontSize: 18),
                               ),
                               Text(
-                                "Rule2",
+                                "Other Teams: INR 40 ",
                                 style: TextStyle(
                                     fontSize: 18),
                               ),
-                              Text(
-                                "Rule3",
-                                style: TextStyle(
-                                    fontSize: 18),
-                              ),
+                              
                             ],
                           )),
                     ),

@@ -33,7 +33,7 @@ class _AppManiaState extends State<AppMania> {
                         child: Text(
                           "APPMANIA",
                           style: TextStyle(
-                              fontSize: 48,
+                              fontSize: 48,fontFamily: "TempestApache",
                               fontWeight: FontWeight.w900,
                               color: Colors.black,
                              ),
@@ -57,16 +57,7 @@ class _AppManiaState extends State<AppMania> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rule1",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                "rule2",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
-                              Text(
-                                "rule3",
+                                "BP PODDAR INSTITUTE OF MANAGEMENT AND TECHNOLOGY presents APPMANIA in the awaitedTECHSTORM 2.19 Calling all the young innovators with a knack to hack together the nextdisruptive *Android, Web, iOS, Windows* applications to take the ever-growing marketof apps by storm. Register and present your application. This is your chance to make adent in the universe. The *APPMANIA* event will be held at our college on 12th April 2019.Interested teams (Minimum 1 Maximum 2 Members) can submit their names and complete theregistration .Our registration portal on our App/Website is OPEN!!!",
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500, fontSize: 15),
                               ),
@@ -116,19 +107,10 @@ class _AppManiaState extends State<AppMania> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rule1",
+                                "1. A maximum of 2 members are allowed in a single team.One single participant can also represent the team.\n2. Final submission of the app along with the ppt is on the day of the event.\n3. Maximum Time Limit for PowerPoint Presentation and App Demonstration​ is 10 minutes. The Participating team may be penalised​ (score penalty) if time taken exceeds further.\n4. PPT should NOT contain more than 10 slides and must contain the following:\na. Technology Stack Used\nb. Dependencies of the App Idea(if any)\nc. Use-Case Diagram/Model\n 5. We advise all participating teams to carry their own laptops for their presentation and use their own Internet connection, otherwise they shall need to fill in a regulatory declaration form as per IT rules and regulations of the institute.\n6. All team members must carry a government ID proof (VoterID Card, Aadhar Card, PAN card, Passport) and a college Id-card during their participation at the event.\n",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "Rule2",
-                                style: TextStyle(
-                                    fontSize: 18),
-                              ),
-                              Text(
-                                "Rule3",
-                                style: TextStyle(
-                                    fontSize: 18),
-                              ),
+                              
                             ],
                           )),
                     ),

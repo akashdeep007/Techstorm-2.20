@@ -55,7 +55,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 ],
                 textStyle: TextStyle(
                   color: Colors.white,
-                    fontSize: 50.0,
+                    fontSize: 45.0,
                     fontWeight: FontWeight.bold,
                     fontStyle: FontStyle.normal,
                     fontFamily: "TempestApache"),

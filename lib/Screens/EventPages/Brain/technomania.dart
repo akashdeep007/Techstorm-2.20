@@ -33,7 +33,7 @@ class _TechnomaniaState extends State<Technomania> {
                         child: Text(
                           "Technomania",
                           style: TextStyle(
-                              fontSize: 48,
+                              fontSize: 48,fontFamily: "TempestApache",
                               fontWeight: FontWeight.w900,
                               color: Colors.white,
                              ),
@@ -57,19 +57,35 @@ class _TechnomaniaState extends State<Technomania> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rule1",
+                                "The Competition encourages students to extend their knowledge to a professional level in electrical and electronics circuit design. It also encourages them to nurture their creativity and innovation on applied engineering concepts.",
                                 style: TextStyle(fontSize: 18),
                               ),
+                              
+                            ],
+                          )),
+                    ),
+                    Divider(height: 20,),
+                    Card(
+                      color: Colors.white70,
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(10.0)),
+                      child: ListTile(
+                          contentPadding: EdgeInsets.all(20),
+                          title: Center(
+                            child: Text(
+                              "Participation Norms",
+                              style: TextStyle(
+                                  fontSize: 24, fontWeight: FontWeight.w500),
+                            ),
+                          ),
+                          subtitle: Column(
+                            children: <Widget>[
                               Text(
-                                "rule2",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
+                                "1. Team Size: 2(Exact)\n2. Each Team will be provided with a Linux (Ubuntu) based System having supportable compilers in each round.\n3. The whole competition will be done through a web portal. So better you be familiar yourself with autojudge Codechef platform or any other autojudged webportal available.\n 4. Utilizing any kind of external electronic aid will lead to disqualification.\n 5. A group may comprise of members from different streams and/or different years and/or different colleges. If at least one member of a team is from a different college, the team will be treated as an outside team.\n6. No paper carried by the participants will be allowed during the whole contest.\n7. Team members cannot be changed after registration.\n",
+                                style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "rule3",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
+                
                             ],
                           )),
                     ),
@@ -91,7 +107,11 @@ class _TechnomaniaState extends State<Technomania> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rs 10",
+                                "BPPIMT Teams: INR 100 ",
+                                style: TextStyle(fontSize: 18),
+                              ),
+                              Text(
+                                "Other Teams: INR 120 ",
                                 style: TextStyle(fontSize: 18),
                               ),
                              
@@ -116,19 +136,11 @@ class _TechnomaniaState extends State<Technomania> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rule1",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                "Rule2",
+                                " 1. It should consist of hardware model on science and technology along with a powerpoint presentation.\n2. The members of a single team should be from the same institute.\n3. Each team must consist of 4 members.\n4. Each team must display their hardware model and have a presentation about their entire project.\n5. Each team will get 10 minutes for showing their hardware model and 10minutes to perform the presentation.\n6. Marks will be provided on boththemodel and presentation.\n7. The decision of the judges will be final.\n",
                                 style: TextStyle(
                                     fontSize: 18),
                               ),
-                              Text(
-                                "Rule3",
-                                style: TextStyle(
-                                    fontSize: 18),
-                              ),
+                              
                             ],
                           )),
                     ),
