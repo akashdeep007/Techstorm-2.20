@@ -30,7 +30,7 @@ class _EventScrollState extends State<EventScroll> {
               Card(
                 semanticContainer: true,
                 child: Image.asset('assets/images/EventTypes/Brain.jpg', fit:BoxFit.cover)),
-                Center(child: Text('Brain', style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold, color: Colors.white),)),
+                Center(child: Text('Brain', style: TextStyle(fontSize: 48, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.white),)),
             ]
           )
 
@@ -48,7 +48,7 @@ class _EventScrollState extends State<EventScroll> {
               Card(
                 semanticContainer: true,
                 child: Image.asset('assets/images/EventTypes/CREATIVITY_result.jpg', fit:BoxFit.cover)),
-                Center(child: Text('Creativity', style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold, color: Colors.white),)),
+                Center(child: Text('Creativity', style: TextStyle(fontSize: 48, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.white),)),
             ]
           )
 
@@ -65,7 +65,7 @@ class _EventScrollState extends State<EventScroll> {
               Card(
                 semanticContainer: true,
                 child: Image.asset('assets/images/EventTypes/EXPOSCIENCE_result.jpg', fit:BoxFit.cover)),
-                Center(child: Text('Exposcience', style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold, color: Colors.white),)),
+                Center(child: Text('Exposcience', style: TextStyle(fontSize: 48, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.white),)),
             ]
           )
 
@@ -83,7 +83,7 @@ class _EventScrollState extends State<EventScroll> {
               Card(
                 semanticContainer: true,
                 child: Image.asset('assets/images/EventTypes/ROVERS_result.jpg', fit:BoxFit.cover)),
-                Center(child: Text('Rovers', style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold, color: Colors.white),)),
+                Center(child: Text('Rovers', style: TextStyle(fontSize: 48,fontFamily: "TempestApache", fontWeight: FontWeight.bold, color: Colors.white),)),
             ]
           )
 
@@ -101,7 +101,7 @@ class _EventScrollState extends State<EventScroll> {
               Card(
                 semanticContainer: true,
                 child: Image.asset('assets/images/EventTypes/GAMES_result.jpg', fit:BoxFit.cover)),
-                Center(child: Text('Games', style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold, color: Colors.white),)),
+                Center(child: Text('Games', style: TextStyle(fontSize: 48, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.white),)),
             ]
           )
 

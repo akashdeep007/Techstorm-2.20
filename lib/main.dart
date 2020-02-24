@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/Home.dart';
+import 'package:techstorm/Screens/home.dart';
+
+import 'package:techstorm/splashscreen/Splash.dart';
 
 void main() => runApp(MyApp());
+
 
 class MyApp extends StatefulWidget {
   @override
@@ -19,7 +22,10 @@ class _MyAppState extends State<MyApp> {
         theme: ThemeData(
           primarySwatch: Colors.red,
         ),
-        home: Home(),
+        home:  new SplashScreen(),
+    routes: <String, WidgetBuilder>{
+      '/HomeScreen': (BuildContext context) => new Home()
+    },
       );
   }
 }

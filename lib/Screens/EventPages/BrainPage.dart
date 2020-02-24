@@ -1,7 +1,8 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/EventPages/FantaC.dart';
+import 'package:techstorm/Screens/EventPages/Brain/Appmania.dart';
+import 'package:techstorm/Screens/EventPages/Brain/FantaC.dart';
 
 
 
@@ -28,7 +29,7 @@ class BrainPage extends StatelessWidget {
               child: Text(
             'APPMANIA',
             style: TextStyle(
-                fontSize: 36, fontWeight: FontWeight.bold, color: Colors.white),
+                fontSize: 36, fontWeight: FontWeight.bold,fontFamily: "TempestApache", color: Colors.white),
           )),
         ]),
         back: Container(
@@ -41,7 +42,7 @@ class BrainPage extends StatelessWidget {
                                 Text(
                 'APPMANIA',
                 style: TextStyle(
-                    fontSize: 36,
+                    fontSize: 36,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
@@ -52,7 +53,7 @@ class BrainPage extends StatelessWidget {
               ),
 RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>FantaC()));
+                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>AppMania()));
                 },
                 child: const Text('Dive In', style: TextStyle(fontSize: 20)),
               ),
@@ -76,7 +77,7 @@ RaisedButton(
               child: Text(
             'FANTA-C',
             style: TextStyle(
-                fontSize: 36, fontWeight: FontWeight.bold, color: Colors.white),
+                fontSize: 36,fontFamily: "TempestApache", fontWeight: FontWeight.bold, color: Colors.white),
           )),
         ]),
         back: Container(
@@ -87,9 +88,9 @@ RaisedButton(
               Column(
                 children: <Widget>[
                                 Text(
-                'Need for Speed',
+                'FANTA - C',
                 style: TextStyle(
-                    fontSize: 36,
+                    fontSize: 36,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
@@ -124,7 +125,7 @@ RaisedButton(
               child: Text(
             'OMEGATRIX',
             style: TextStyle(
-                fontSize: 36, fontWeight: FontWeight.bold, color: Colors.black),
+                fontSize: 36, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.black),
           )),
         ]),
         back: Container(
@@ -137,7 +138,7 @@ RaisedButton(
                                 Text(
                 'Omegatrix',
                 style: TextStyle(
-                    fontSize: 36,
+                    fontSize: 36,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
@@ -172,7 +173,7 @@ RaisedButton(
               child: Text(
             'TECHNOMANIA',
             style: TextStyle(
-                fontSize: 36, fontWeight: FontWeight.bold, color: Colors.white),
+                fontSize: 36, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.white),
           )),
         ]),
         back: Container(
@@ -185,7 +186,7 @@ RaisedButton(
                                 Text(
                 'TECHNOMANIA',
                 style: TextStyle(
-                    fontSize: 36,
+                    fontSize: 36,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
