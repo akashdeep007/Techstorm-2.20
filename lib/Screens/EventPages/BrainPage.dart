@@ -1,7 +1,10 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
+import 'package:techstorm/Screens/EventPages/Brain/Appmania.dart';
 import 'package:techstorm/Screens/EventPages/Brain/FantaC.dart';
+import 'package:techstorm/Screens/EventPages/Brain/omega.dart';
+import 'package:techstorm/Screens/EventPages/Brain/technomania.dart';
 
 
 
@@ -28,7 +31,7 @@ class BrainPage extends StatelessWidget {
               child: Text(
             'APPMANIA',
             style: TextStyle(
-                fontSize: 36, fontWeight: FontWeight.bold, color: Colors.white),
+                fontSize: 36, fontWeight: FontWeight.bold,fontFamily: "TempestApache", color: Colors.white),
           )),
         ]),
         back: Container(
@@ -41,18 +44,22 @@ class BrainPage extends StatelessWidget {
                                 Text(
                 'APPMANIA',
                 style: TextStyle(
-                    fontSize: 36,
+                    fontSize: 36,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
-              Text(
-                  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
-              
+              SizedBox(height:30),
+              Center(
+                child: Text(
+                    'Showcase your inner Zuckerberg by spitting out the next facebook.',style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black),),
+              ),
                 ],
               ),
 RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>FantaC()));
+                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>AppMania()));
                 },
                 child: const Text('Dive In', style: TextStyle(fontSize: 20)),
               ),
@@ -76,7 +83,7 @@ RaisedButton(
               child: Text(
             'FANTA-C',
             style: TextStyle(
-                fontSize: 36, fontWeight: FontWeight.bold, color: Colors.white),
+                fontSize: 36,fontFamily: "TempestApache", fontWeight: FontWeight.bold, color: Colors.white),
           )),
         ]),
         back: Container(
@@ -87,14 +94,19 @@ RaisedButton(
               Column(
                 children: <Widget>[
                                 Text(
-                'Need for Speed',
+                'FANTA - C',
                 style: TextStyle(
-                    fontSize: 36,
+                    fontSize: 36,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
-              Text(
-                  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
+              SizedBox(height: 30,),
+              Center(
+                child: Text(
+                    'while (!(succeed==try()));\n If you get this, then you know what this event is all about.',style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black),),
+              ),
               
                 ],
               ),
@@ -124,7 +136,7 @@ RaisedButton(
               child: Text(
             'OMEGATRIX',
             style: TextStyle(
-                fontSize: 36, fontWeight: FontWeight.bold, color: Colors.black),
+                fontSize: 36, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.black),
           )),
         ]),
         back: Container(
@@ -137,18 +149,22 @@ RaisedButton(
                                 Text(
                 'Omegatrix',
                 style: TextStyle(
-                    fontSize: 36,
+                    fontSize: 36,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
-              Text(
-                  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
-              
+             SizedBox(height: 30,),
+              Center(
+                child: Text(
+                    'Its not about equations or formulas or calculations. Its about understanding.',style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black),),
+              ),
                 ],
               ),
 RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>FantaC()));
+                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>Omegatrix()));
                 },
                 child: const Text('Dive In', style: TextStyle(fontSize: 20)),
               ),
@@ -172,7 +188,7 @@ RaisedButton(
               child: Text(
             'TECHNOMANIA',
             style: TextStyle(
-                fontSize: 36, fontWeight: FontWeight.bold, color: Colors.white),
+                fontSize: 36, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.white),
           )),
         ]),
         back: Container(
@@ -185,18 +201,22 @@ RaisedButton(
                                 Text(
                 'TECHNOMANIA',
                 style: TextStyle(
-                    fontSize: 36,
+                    fontSize: 36,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
-              Text(
-                  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
-              
+             SizedBox(height: 30,),
+              Center(
+                child: Text(
+                    'An idea today can be the technology of tomorrow.',style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black),),
+              ),
                 ],
               ),
 RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>FantaC()));
+                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>Technomania()));
                 },
                 child: const Text('Dive In', style: TextStyle(fontSize: 20)),
               ),

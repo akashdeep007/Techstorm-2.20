@@ -12,6 +12,8 @@ class TeamFormPage extends StatefulWidget {
 
 class _TeamFormPageState extends State<TeamFormPage> {
   int moreMembers = 1;
+  String department = '';
+  String year = '';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -109,7 +111,87 @@ class _TeamFormPageState extends State<TeamFormPage> {
                                 decoration: InputDecoration(
                                   labelText : 'College Name'
                                 ),
-                              ),
+                              ),                        SizedBox(height: 20,),
+                        DropDownFormField(
+                    titleText: 'Department',
+                    hintText: 'Please choose one',
+                    value: department,
+                    onSaved: (value) {
+                      setState(() {
+                        department= value;
+                      });
+                    },
+                    onChanged: (value) {
+                      setState(() {
+                        department = value;
+                      });
+                    },
+                    dataSource: [
+                      {
+                        "display": "IT",
+                        "value": "IT",
+                      },
+                      {
+                        "display": "CSE",
+                        "value": "CSE",
+                      },
+                      {
+                        "display": "ECE",
+                        "value": "ECE",
+                      },
+                      {
+                        "display": "EE",
+                        "value": "EE",
+                      },
+                      {
+                        "display": "MCA",
+                        "value": "MCA",
+                      },
+                      {
+                        "display": "BCA",
+                        "value": "BCA",
+                      },
+                    ],
+                    textField: 'display',
+                    valueField: 'value',
+                ),
+
+                        SizedBox(height: 20,),
+                        DropDownFormField(
+                    titleText: 'Year',
+                    hintText: 'Please choose one',
+                    value: year,
+                    onSaved: (value) {
+                      setState(() {
+                        department = value;
+                      });
+                    },
+                    onChanged: (value) {
+                      setState(() {
+                        year = value;
+                      });
+                    },
+                    dataSource: [
+                      {
+                        "display": "1st Year",
+                        "value": "1st Year",
+                      },
+                      {
+                        "display": "2nd Year",
+                        "value": "2nd Year",
+                      },
+                      {
+                        "display": "3rd Year",
+                        "value": "3rd Year",
+                      },
+                      {
+                        "display": "4th Year",
+                        "value": "4th Year",
+                      },
+                    ],
+                    textField: 'display',
+                    valueField: 'value',
+                ),
                               ]
                             ),
                           ),

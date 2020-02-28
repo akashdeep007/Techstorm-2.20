@@ -41,17 +41,20 @@ class CustomDrawer extends StatelessWidget {
           
           Column(
             children : <Widget>[
-              DrawerProfile(),
-              FlatButton(
-                child: Text('Profile', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                onPressed: () {},
-              ),
+              // FlatButton(
+              //   child: Text('Profile', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+              //   onPressed: () {},
+              // ),
               FlatButton(
                 child: Text('Team', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                 onPressed: () {},
               ),
               FlatButton(
                 child: Text('Website', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                onPressed: () {},
+              ),
+              FlatButton(
+                child: Text('Developers', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
                 onPressed: () {},
               ),
             ]
@@ -61,7 +64,7 @@ class CustomDrawer extends StatelessWidget {
               Text('Social Media', style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),),
               SizedBox(height: 20,),
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   IconButton(icon : FaIcon(FontAwesomeIcons.facebook), onPressed: _launchFacebook,),
                   IconButton(icon : FaIcon(FontAwesomeIcons.instagram), onPressed: _launchInstagram,),
