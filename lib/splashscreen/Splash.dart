@@ -12,14 +12,14 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   startTime() async {
-    var _duration = new Duration(seconds: 5);
+    var _duration = new Duration(milliseconds: 4500);
 
     return new Timer(_duration, navigationPage);
   }
 
   void navigationPage() {
     //Navigator.push(context,new MaterialPageRoute(builder: (context) =>Home()));
-    Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(seconds: 2), child: Home()));
+    Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 1500), child: Home()));
   }
 
   @override
@@ -37,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
         Container(
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/images/back.gif"),
+                    image: AssetImage("assets/images/back2.gif"),
                     fit: BoxFit.cover,
                   ),)),
         Center(
@@ -45,19 +45,20 @@ class _SplashScreenState extends State<SplashScreen> {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             RotateAnimatedTextKit(
+              onFinished: navigationPage,
               isRepeatingAnimation: false,
               duration: Duration(seconds: 1),
                 text: [
                   "",
-                  "UNLEASH\nYOUR\nTHOUHGTS",
-                  "TECHSTORM\n2.20"
+                  "UNLEASH\nYOUr\nTHOUHGTS",
+                  "TECHSTOrM\n2.20"
                 ],
                 textStyle: TextStyle(
                   color: Colors.white,
                     fontSize: 45.0,
-                    fontWeight: FontWeight.bold,
+                    fontWeight: FontWeight.w100,
                     fontStyle: FontStyle.normal,
-                    fontFamily: "TempestApache"),
+                    fontFamily: "BladeRunner"),
 
                 textAlign: TextAlign.center,
                 alignment: AlignmentDirectional.topStart // or Alignment.topLeft

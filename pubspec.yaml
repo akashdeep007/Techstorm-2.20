@@ -56,6 +56,10 @@ flutter:
     - family: TempestApache
       fonts:
         - asset : assets/fonts/tempestapache.ttf
+    
+    - family: BladeRunner
+      fonts:
+        - asset : assets/fonts/bladerunner.ttf
 
 
 

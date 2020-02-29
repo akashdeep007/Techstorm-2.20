@@ -38,7 +38,7 @@ class _EventScrollState extends State<EventScroll> {
   @override
   Widget build(BuildContext context) {
   Color borderColorLight = Color.fromARGB(255, 0,185,241);
-  Color borderColorDark = Color.fromARGB(255, 0,54,112);
+  // Color borderColorLight = Color.fromARGB(255, 0,54,112);
   double subHeadingSize = 28;
     const double padding_count = 8;
     return Container ( height: 300.0,child : ListView(
@@ -111,7 +111,7 @@ class _EventScrollState extends State<EventScroll> {
       width: 400.0,
       child: InkWell(
         onTap: (){print('Robotics Tapped');
-        Navigator.push(context,new MaterialPageRoute(builder: (context) =>GamesPage()));},
+        Navigator.push(context,new MaterialPageRoute(builder: (context) =>RoboticsPage()));},
           child: Stack(
             fit: StackFit.expand,
             children : <Widget> [

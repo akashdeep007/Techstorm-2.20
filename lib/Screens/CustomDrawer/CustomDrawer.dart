@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/CustomDrawer/DrawerProfile.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -39,25 +38,32 @@ class CustomDrawer extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children : <Widget> [
           
-          Column(
-            children : <Widget>[
-              // FlatButton(
-              //   child: Text('Profile', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-              //   onPressed: () {},
-              // ),
-              FlatButton(
-                child: Text('Team', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                onPressed: () {},
-              ),
-              FlatButton(
-                child: Text('Website', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                onPressed: () {},
-              ),
-              FlatButton(
-                child: Text('Developers', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
-                onPressed: () {},
-              ),
-            ]
+          Container(
+            padding: EdgeInsets.only(top : 200),
+            child: Column(
+              children : <Widget>[
+                // FlatButton(
+                //   child: Text('Profile', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                //   onPressed: () {},
+                // ),
+                FlatButton(
+                  padding: EdgeInsets.only(top : 20, bottom :20),
+                  child: Text('Team', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                  onPressed: () {},
+                ),
+                FlatButton(
+                  padding: EdgeInsets.only(top : 20, bottom :20),
+                  child: Text('Developers', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                  onPressed: () {},
+                ),
+                FlatButton(
+                  padding: EdgeInsets.only(top : 20, bottom :20),
+                  child: Text('Website', style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+                  onPressed: () {},
+                ),
+
+              ]
+            ),
           ),
           Column(
             children : <Widget>[
