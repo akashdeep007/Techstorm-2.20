@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/home.dart';
-
 import 'package:techstorm/splashscreen/Splash.dart';
 
 void main() => runApp(MyApp());
@@ -23,9 +21,9 @@ class _MyAppState extends State<MyApp> {
           primarySwatch: Colors.red,
         ),
         home:  new SplashScreen(),
-    routes: <String, WidgetBuilder>{
-      '/HomeScreen': (BuildContext context) => new Home()
-    },
+    // routes: <String, WidgetBuilder>{
+    //   '/HomeScreen': (BuildContext context) => new Home()
+    // },
       );
   }
 }

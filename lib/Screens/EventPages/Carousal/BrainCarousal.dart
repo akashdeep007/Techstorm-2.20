@@ -1,6 +1,5 @@
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/EventPages/fantac.dart';
 
 List<Widget> BrainCards = [
   //appmani

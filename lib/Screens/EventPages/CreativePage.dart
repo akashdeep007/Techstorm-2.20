@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/EventPages/BRAIN/FantaC.dart';
 import 'package:techstorm/Screens/EventPages/Creative/35mm.dart';
 import 'package:techstorm/Screens/EventPages/Creative/reel.dart';
 

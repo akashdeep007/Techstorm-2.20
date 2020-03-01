@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-class RO_Combat extends StatefulWidget {
+class Omegatrix extends StatefulWidget {
   @override
-  _RO_CombatState createState() => _RO_CombatState();
+  _OmegatrixState createState() => _OmegatrixState();
 }
 
-class _RO_CombatState extends State<RO_Combat> {
+class _OmegatrixState extends State<Omegatrix> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(onPressed: () {}, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
               appBar: AppBar(
-                title: Text('RO Combat'),
+                title: Text('Omegatrix'),
                 backgroundColor: Colors.black87,
               ),
               body: Container(
                                     decoration: BoxDecoration(
                       image : DecorationImage(
-                        image : AssetImage('assets/images/ROVERS/RO_COMBAT.jpg'), fit:BoxFit.cover
+                        image : AssetImage('assets/images/BRAIN/OMEGATRIX.jpg'), fit:BoxFit.cover
                       )
                     ),
                 child: ListView(
@@ -27,7 +27,7 @@ class _RO_CombatState extends State<RO_Combat> {
                       padding: EdgeInsets.only(top: 10, bottom: 10),
                       child: Center(
                         child: Text(
-                          "RO Combat",
+                          "Omegatrix",
                           style: TextStyle(
                               fontSize: 48,
                               fontWeight: FontWeight.w900,

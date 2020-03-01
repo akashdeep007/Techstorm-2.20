@@ -12,6 +12,9 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> with TickerProviderStateMixin {
+  double headingSize = 36;
+  double subHeadingSize = 24;
+  Image sliverBack;
   _launchYoutube() async {
     const url =
         'https://www.youtube.com/watch?v=bDdXe51yphI&list=RDbDdXe51yphI&start_radio=1';
@@ -20,6 +23,16 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
     } else {
       throw 'Could not launch $url';
     }
+  }
+  @override
+  void initState() {
+    sliverBack = Image.asset("assets/images/only logo.png",fit: BoxFit.fitHeight);
+    super.initState();
+  }
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    precacheImage(sliverBack.image, context);
   }
 
   @override
@@ -30,23 +43,26 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return <Widget>[
             SliverAppBar(
+              automaticallyImplyLeading : true,
               backgroundColor: Colors.black,
               expandedHeight: 250.0,
               floating: false,
               pinned: true,
-              stretch: true,
-              flexibleSpace: FlexibleSpaceBar(
-                  centerTitle: true,
-                  title: Text("TechStorm 2.20",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24.0,
-                        fontFamily: 'TempestApache'
-                      )),
-                  background: Image.asset(
-                    'assets/images/dp500.png',
-                    fit: BoxFit.fitWidth,
-                  )),
+              stretch: false,
+              flexibleSpace: LayoutBuilder(
+                              builder: (BuildContext context, BoxConstraints constraints) {
+                                return FlexibleSpaceBar(
+                    centerTitle: true,
+                    // title: Text(constraints.maxHeight.toString(),
+                    //     style: TextStyle(
+                    //       color: Colors.white,
+                    //       fontSize: 24.0,
+                    //       fontFamily: 'TempestApache'
+                    //     )),
+                    title: constraints.maxHeight <= 100.0 ? Container(padding : EdgeInsets.only(top: 30),height : 128, alignment: Alignment.bottomCenter, child : Image.asset('assets/images/only logo.png')) : Container(),
+                   background :  Container(padding: EdgeInsets.only(bottom : 10, top: 30) ,child : sliverBack)
+                   );},
+              ),
             ),
           ];
         },
@@ -57,7 +73,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
               child: Container(
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/images/back.gif"),
+                    image: AssetImage("assets/images/back2.gif"),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -68,20 +84,19 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                           child: Text(
                         "Events",
                         style: TextStyle(
-                            fontSize: 36,
-                            fontWeight: FontWeight.bold,fontFamily: 'TempestApache',
+                            fontSize: headingSize,
+                            fontFamily: 'BladeRunner',
                             color: Colors.white),
                       )),
                   ),
-                  EventScroll(),
+                  EventScroll(context: context,),
                   Padding(
-                    padding: EdgeInsets.only(top: 30, bottom: 10),
+                    padding: EdgeInsets.only(top: 30),
                                       child: Center(
                           child: Text(
                         "Trailer",
                         style: TextStyle(
-                            fontSize: 36,fontFamily: 'TempestApache',
-                            fontWeight: FontWeight.bold,
+                            fontSize: headingSize,fontFamily: 'BladeRunner',
                             color: Colors.white),
                       )),
                   ),
@@ -101,20 +116,19 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                       ],
                     ),
                   ),Padding(
-                    padding: EdgeInsets.only(top: 30, bottom: 10),
+                    padding: EdgeInsets.only(top: 30),
                                       child: Center(
                           child: Text(
                         "Sponsors",
                         style: TextStyle(
-                            fontSize: 36,fontFamily: 'TempestApache',
-                            fontWeight: FontWeight.bold,
+                            fontSize: headingSize,fontFamily: 'BladeRunner',
                             color: Colors.white),
                       )),
                   ),
 
                   SponsorsList(),
                   Container(
-                    color: Colors.white12,
+                    color: Colors.white38,
                     child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: <
                         Widget>[
                       Container(
