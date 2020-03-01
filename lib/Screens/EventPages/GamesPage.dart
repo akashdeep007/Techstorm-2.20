@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flip_card/flip_card.dart';
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/EventPages/BRAIN/FantaC.dart';
 import 'package:techstorm/Screens/EventPages/Games/coc.dart';
 import 'package:techstorm/Screens/EventPages/Games/fifa.dart';
 import 'package:techstorm/Screens/EventPages/Games/khet.dart';

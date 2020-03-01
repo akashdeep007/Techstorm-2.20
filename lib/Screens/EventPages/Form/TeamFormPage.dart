@@ -1,24 +1,48 @@
 import 'package:dropdown_formfield/dropdown_formfield.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_database/firebase_database.dart';
 
 
 class TeamFormPage extends StatefulWidget {
-  final String eventName;
+  final String eventName, eventType;
   final int teamMembers;
-  TeamFormPage({this.eventName, this.teamMembers});
+  TeamFormPage({this.eventType, this.eventName, this.teamMembers});
   @override
   _TeamFormPageState createState() => _TeamFormPageState();
 }
 
 class _TeamFormPageState extends State<TeamFormPage> {
   int moreMembers = 1;
-  String department = '';
-  String year = '';
+  List<String> department = ['','','','','','','',''];
+  List<String> name = ['','','','','','','',''];
+  List<String> year = ['','','','','','','',''];
+  List<String> contact = ['','','','','','','',''];
+  List<String> email = ['','','','','','','',''];
+  List<String> college = ['','','','','','','',''];
+  String teamName = '';
+
+  // void teamRegister(){
+  //   print(contact);
+  //   final database = FirebaseDatabase.instance.reference();
+  //   for(int i = 0; i < widget.teamMembers; i++){
+  //     print(i);
+  //     database.child(widget.eventType + '/' + widget.eventName + '/' + teamName + '/' + contact[i]).set({
+  //     'email' : email[i],
+  //     'name' : name[i],
+  //     'phone' : contact[i],
+  //     'department' : department[i],
+  //     'year' : year[i],
+  //     'college' : college[i],
+  //     });
+  //   }
+  // }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton.extended(onPressed: () {}, label: Container(child: Center(child : Text('Register')))),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      extendBody: true,
+      // floatingActionButton: FloatingActionButton.extended(onPressed: () {}, label: Container(child: Center(child : Text('Register')))),
+      // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
         title : Text('Register'),
         backgroundColor: Colors.black87,
@@ -41,6 +65,9 @@ class _TeamFormPageState extends State<TeamFormPage> {
                           children: <Widget>[
                             Center(child : Text(widget.eventName, style: TextStyle(fontSize : 36, fontWeight:FontWeight.bold),)),
                             TextFormField(
+                              onChanged: (text) {
+                                teamName = text;
+                              },
                               decoration: InputDecoration(
                                 labelText : 'Team Name'
                               ),
@@ -101,13 +128,31 @@ class _TeamFormPageState extends State<TeamFormPage> {
                                 decoration: InputDecoration(
                                   labelText : 'Name'
                                 ),
+                                onChanged: (text) {
+                                  name[index] = text;
+                                },
                               ),
-                                                      TextFormField(
+                              TextFormField(
                                 decoration: InputDecoration(
                                   labelText : 'Contact Number'
                                 ),
+                                onChanged: (text) {
+                                  contact[index] = text;
+                                  print(contact[index] + index.toString());
+                                },
                               ),
-                                                      TextFormField(
+                              TextFormField(
+                                decoration: InputDecoration(
+                                  labelText : 'Email'
+                                ),
+                                onChanged: (text) {
+                                  email[index] = text;
+                                },
+                              ),
+                              TextFormField(
+                                onChanged: (text) {
+                                  college[index] = text;
+                                },
                                 decoration: InputDecoration(
                                   labelText : 'College Name'
                                 ),
@@ -115,15 +160,15 @@ class _TeamFormPageState extends State<TeamFormPage> {
                         DropDownFormField(
                     titleText: 'Department',
                     hintText: 'Please choose one',
-                    value: department,
+                    value: department[index],
                     onSaved: (value) {
                       setState(() {
-                        department= value;
+                        department[index]= value;
                       });
                     },
                     onChanged: (value) {
                       setState(() {
-                        department = value;
+                        department[index] = value;
                       });
                     },
                     dataSource: [
@@ -160,15 +205,15 @@ class _TeamFormPageState extends State<TeamFormPage> {
                         DropDownFormField(
                     titleText: 'Year',
                     hintText: 'Please choose one',
-                    value: year,
+                    value: year[index],
                     onSaved: (value) {
                       setState(() {
-                        department = value;
+                        year[index] = value;
                       });
                     },
                     onChanged: (value) {
                       setState(() {
-                        year = value;
+                        year[index] = value;
                       });
                     },
                     dataSource: [
@@ -198,7 +243,40 @@ class _TeamFormPageState extends State<TeamFormPage> {
                         ),
                       );
                     }),
-                    SizedBox(height: 100,),
+                    SizedBox(height: 20,),
+                    FlatButton(onPressed: () {
+                      print(widget.eventName);
+                      print(widget.eventType);
+                      print(teamName);
+                      print(contact);
+                      final database = FirebaseDatabase.instance.reference();
+                        for(int i = 0; i < widget.teamMembers; i++){
+                          print(widget.eventType + '/' + widget.eventName + '/' + teamName + '/' + contact[i]);
+                          database.child(widget.eventType + '/' + widget.eventName + '/' + teamName + '/' + contact[i]).set({
+                          'email' : email[i],
+                          'name' : name[i],
+                          'phone' : contact[i],
+                          'department' : department[i],
+                          'year' : year[i],
+                          'college' : college[i],
+                          });
+                        }
+                    }, child: Text('Register')),
+                    // InkWell(
+                    //   onTap: () {
+                    //     teamRegister();
+                    //   },
+                    //     child: Container(
+                    //       alignment: Alignment.center,
+                    //     width: double.infinity,
+                    //     height: 50,
+                    //     color: Colors.amber,
+                    //     child: Text(
+                    //       'Register', style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold,letterSpacing: 1
+                    //     ),),
+                    //   ),
+                    // ),
+                    SizedBox(height: 20,),
               ],
             )
           ),

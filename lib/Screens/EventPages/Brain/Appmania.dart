@@ -11,7 +11,7 @@ class _AppManiaState extends State<AppMania> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(onPressed: () { 
-      Navigator.push(context,new MaterialPageRoute(builder: (context) =>RegisterForm(eventName : 'AppMania',team: true, teamMembers: 2)));
+      Navigator.push(context,new MaterialPageRoute(builder: (context) =>RegisterForm(eventType: 'Brain Teasers' ,eventName : 'AppMania',team: true, teamMembers: 2)));
 
       }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

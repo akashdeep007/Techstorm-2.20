@@ -1,12 +1,14 @@
 import 'package:dropdown_formfield/dropdown_formfield.dart';
 import 'package:flutter/material.dart';
 import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
+import 'package:techstorm/Services/DatabaseService.dart';
 
 class RegisterForm extends StatefulWidget {
   final bool team;
   final String eventName;
   final int teamMembers;
-  RegisterForm({this.eventName, this.team, this.teamMembers});
+  final String eventType;
+  RegisterForm({this.eventType, this.eventName, this.team, this.teamMembers});
   
   @override
   _RegisterFormState createState() => _RegisterFormState();
@@ -18,14 +20,17 @@ class _RegisterFormState extends State<RegisterForm> {
   String year = '';
   String college = '';
   String contact = '';
-  
+  String email = '';
+  DatabaseService database = DatabaseService();
 
   @override
   Widget build(BuildContext context) {
     print(widget.eventName);
      return widget.team == false ?  Scaffold(
       extendBody: false,
-      floatingActionButton: FloatingActionButton.extended(onPressed: () {}, label: Container(child: Center(child : Text('Register')))),
+      floatingActionButton: FloatingActionButton.extended(onPressed: () {
+        database.registerUser(widget.eventType ,widget.eventName , email, contact, name, department, year, college);
+      }, label: Container(child: Center(child : Text('Register')))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
         backgroundColor : Colors.black87,
@@ -54,7 +59,7 @@ class _RegisterFormState extends State<RegisterForm> {
                             labelText: 'Email'
                           ),
                           onChanged: (text) {
-                            name = text;
+                            email = text;
                           },
                         ),
                             SizedBox(height: 20,),                      
@@ -63,7 +68,7 @@ class _RegisterFormState extends State<RegisterForm> {
                             labelText: 'Contact Number'
                           ),
                           onChanged: (text) {
-                            name = text;
+                            contact = text;
                           },
                         ),
                         SizedBox(height: 20,),
@@ -153,13 +158,13 @@ class _RegisterFormState extends State<RegisterForm> {
                             labelText: 'College'
                           ),
                           onChanged: (text) {
-                            name = text;
+                            college = text;
                           },
                         ),
                         SizedBox(height: 40,),
                         widget.eventName == "COC" ? TextFormField(
                           decoration: InputDecoration(
-                            labelText: 'Contact Number'
+                            labelText: 'Town Hall'
                           ),
                           onChanged: (text) {
                             name = text;
@@ -171,6 +176,6 @@ class _RegisterFormState extends State<RegisterForm> {
                 ),
         ),
       ),
-    ) : TeamFormPage(eventName : widget.eventName, teamMembers: widget.teamMembers,);
+    ) : TeamFormPage(eventType: widget.eventType , eventName : widget.eventName, teamMembers: widget.teamMembers,);
   }
 }

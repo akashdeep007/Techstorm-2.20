@@ -11,7 +11,7 @@ class _OmegatrixState extends State<Omegatrix> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(onPressed: () { 
-      Navigator.push(context,new MaterialPageRoute(builder: (context) =>RegisterForm(eventName : 'Omegatrix',team: false, teamMembers: 1)));
+      Navigator.push(context,new MaterialPageRoute(builder: (context) =>RegisterForm(eventType: 'Brain Teasers',eventName : 'OMEGATRIX',team: false, teamMembers: 1)));
 
       }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,

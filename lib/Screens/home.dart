@@ -26,7 +26,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   }
   @override
   void initState() {
-    sliverBack = Image.asset("assets/images/only logo.png",fit: BoxFit.fitHeight);
+    sliverBack = Image.asset("assets/images/only logo.png",fit: BoxFit.fitHeight,);
     super.initState();
   }
   @override
@@ -43,26 +43,21 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return <Widget>[
             SliverAppBar(
-              automaticallyImplyLeading : true,
+              
               backgroundColor: Colors.black,
-              expandedHeight: 250.0,
+              expandedHeight: 300.0,
               floating: false,
               pinned: true,
-              stretch: false,
-              flexibleSpace: LayoutBuilder(
-                              builder: (BuildContext context, BoxConstraints constraints) {
-                                return FlexibleSpaceBar(
-                    centerTitle: true,
-                    // title: Text(constraints.maxHeight.toString(),
-                    //     style: TextStyle(
-                    //       color: Colors.white,
-                    //       fontSize: 24.0,
-                    //       fontFamily: 'TempestApache'
-                    //     )),
-                    title: constraints.maxHeight <= 100.0 ? Container(padding : EdgeInsets.only(top: 30),height : 128, alignment: Alignment.bottomCenter, child : Image.asset('assets/images/only logo.png')) : Container(),
-                   background :  Container(padding: EdgeInsets.only(bottom : 10, top: 30) ,child : sliverBack)
-                   );},
-              ),
+              stretch: true,
+              flexibleSpace: FlexibleSpaceBar(
+                  centerTitle: true,
+                  // title: Text("TechStorm 2.20",
+                  //     style: TextStyle(
+                  //       color: Colors.white,
+                  //       fontSize: 24.0,
+                  //       fontFamily: 'TempestApache'
+                  //     )),
+                 background :  sliverBack),
             ),
           ];
         },
@@ -73,7 +68,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
               child: Container(
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/images/back2.gif"),
+                    image: AssetImage("assets/images/back.gif"),
                     fit: BoxFit.cover,
                   ),
                 ),
@@ -85,18 +80,19 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                         "Events",
                         style: TextStyle(
                             fontSize: headingSize,
-                            fontFamily: 'BladeRunner',
+                            fontWeight: FontWeight.bold,fontFamily: 'TempestApache',
                             color: Colors.white),
                       )),
                   ),
                   EventScroll(context: context,),
                   Padding(
-                    padding: EdgeInsets.only(top: 30),
+                    padding: EdgeInsets.only(top: 30, bottom: 10),
                                       child: Center(
                           child: Text(
                         "Trailer",
                         style: TextStyle(
-                            fontSize: headingSize,fontFamily: 'BladeRunner',
+                            fontSize: 36,fontFamily: 'TempestApache',
+                            fontWeight: FontWeight.bold,
                             color: Colors.white),
                       )),
                   ),
@@ -116,12 +112,13 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                       ],
                     ),
                   ),Padding(
-                    padding: EdgeInsets.only(top: 30),
+                    padding: EdgeInsets.only(top: 30, bottom: 10),
                                       child: Center(
                           child: Text(
                         "Sponsors",
                         style: TextStyle(
-                            fontSize: headingSize,fontFamily: 'BladeRunner',
+                            fontSize: headingSize,fontFamily: 'TempestApache',
+                            fontWeight: FontWeight.bold,
                             color: Colors.white),
                       )),
                   ),
