@@ -12,8 +12,8 @@ class _SponsorsListState extends State<SponsorsList> {
 
     for (var x = 0; x < 2; x++) {
       widgets.add(Container(
-          height: 70.0,
-          width: 70.0,
+          height: 55.0,
+          width: 55.0,
           margin: EdgeInsets.all(6.0),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(100.0),
@@ -32,8 +32,8 @@ class _SponsorsListState extends State<SponsorsList> {
                   image: AssetImage(
                       "assets/images/ardent_logo.png")))));
                       widgets.add(Container(
-          height: 70.0,
-          width: 70.0,
+          height: 55.0,
+          width: 55.0,
           margin: EdgeInsets.all(6.0),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(100.0),
@@ -52,8 +52,8 @@ class _SponsorsListState extends State<SponsorsList> {
                   image: AssetImage(
                       "assets/images/a.jpg")))));
                       widgets.add(Container(
-          height: 70.0,
-          width: 70.0,
+          height: 55.0,
+          width: 55.0,
           margin: EdgeInsets.all(6.0),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(100.0),
@@ -72,8 +72,8 @@ class _SponsorsListState extends State<SponsorsList> {
                   image: AssetImage(
                       "assets/images/b.png")))));
                       widgets.add(Container(
-          height: 70.0,
-          width: 70.0,
+          height: 55.0,
+          width: 55.0,
           margin: EdgeInsets.all(6.0),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(100.0),
@@ -92,8 +92,8 @@ class _SponsorsListState extends State<SponsorsList> {
                   image:  AssetImage(
                       "assets/images/r.jpg")))));
                       widgets.add(Container(
-          height: 70.0,
-          width: 70.0,
+          height: 55.0,
+          width: 55.0,
           margin: EdgeInsets.all(6.0),
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(100.0),

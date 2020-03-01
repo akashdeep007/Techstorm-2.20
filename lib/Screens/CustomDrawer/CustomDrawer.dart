@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:techstorm/Screens/CustomDrawer/Abouus.dart';
 import 'package:techstorm/Screens/CustomDrawer/Team.dart';
 import 'package:techstorm/Screens/CustomDrawer/schedule.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -145,7 +146,7 @@ class CustomDrawer extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 15, fontWeight: FontWeight.bold),
                       ),
-                      onPressed: () {},
+                      onPressed: () { },
                     ),
                   ],
                 ),
@@ -163,7 +164,7 @@ class CustomDrawer extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 15, fontWeight: FontWeight.bold),
                       ),
-                      onPressed: () {},
+                      onPressed: () {Navigator.push(context,new MaterialPageRoute(builder: (context) =>AboutusPage()));},
                     ),
                   ],
                 ),
