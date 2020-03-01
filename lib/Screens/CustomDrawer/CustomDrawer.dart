@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:techstorm/Screens/CustomDrawer/Abouus.dart';
 import 'package:techstorm/Screens/CustomDrawer/Team.dart';
+import 'package:techstorm/Screens/CustomDrawer/developer.dart';
 import 'package:techstorm/Screens/CustomDrawer/schedule.dart';
+import 'package:techstorm/Screens/EventPages/Form/qr.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -42,12 +44,16 @@ class CustomDrawer extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Container(
-              padding: EdgeInsets.only(top: 150),
+              padding: EdgeInsets.only(top: 12,bottom:50),
               child: Column(children: <Widget>[
                 // FlatButton(
                 //   child: Text('Profile', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
                 //   onPressed: () {},
                 // ),
+                Container(height:150,child: Image.asset("assets/images/lo.jpg"),),
+                SizedBox(
+                      height: 20,
+                    ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -60,13 +66,30 @@ class CustomDrawer extends StatelessWidget {
                       child: Text(
                         'Schedule',
                         style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.bold),
+                            fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                       onPressed: () { Navigator.push(context,new MaterialPageRoute(builder: (context) =>SchedulePage()));},
                     ),
                   ],
                 ),
-
+Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    FaIcon(FontAwesomeIcons.calendarCheck),
+                    SizedBox(
+                      width: 5,
+                    ),
+                    FlatButton(
+                      padding: EdgeInsets.only(top: 15, bottom: 15),
+                      child: Text(
+                        'Registered Events',
+                        style: TextStyle(
+                            fontSize: 18, fontWeight: FontWeight.bold),
+                      ),
+                      onPressed: () { },
+                    ),
+                  ],
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
@@ -79,7 +102,7 @@ class CustomDrawer extends StatelessWidget {
                       child: Text(
                         'Results',
                         style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.bold),
+                            fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                       onPressed: () {
                         showDialog(
@@ -108,7 +131,7 @@ class CustomDrawer extends StatelessWidget {
                       child: Text(
                         'Sponsers',
                         style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.bold),
+                            fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                       onPressed: () {},
                     ),
@@ -126,7 +149,7 @@ class CustomDrawer extends StatelessWidget {
                       child: Text(
                         'Team',
                         style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.bold),
+                            fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                       onPressed:  () { Navigator.push(context,new MaterialPageRoute(builder: (context) =>TeamPage()));},
                     ),
@@ -144,9 +167,9 @@ class CustomDrawer extends StatelessWidget {
                       child: Text(
                         'Developer',
                         style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.bold),
+                            fontSize: 18, fontWeight: FontWeight.bold),
                       ),
-                      onPressed: () { },
+                      onPressed: () { Navigator.push(context,new MaterialPageRoute(builder: (context) =>DevPage()));},
                     ),
                   ],
                 ),
@@ -162,7 +185,7 @@ class CustomDrawer extends StatelessWidget {
                       child: Text(
                         '\About Us',
                         style: TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.bold),
+                            fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                       onPressed: () {Navigator.push(context,new MaterialPageRoute(builder: (context) =>AboutusPage()));},
                     ),
@@ -171,15 +194,10 @@ class CustomDrawer extends StatelessWidget {
               ]),
             ),
             Column(children: <Widget>[
-              Text(
-                'Social Media',
-                style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-              ),
-              SizedBox(
-                height: 15,
-              ),
+              
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
+                
                 children: <Widget>[
                   IconButton(
                     icon: FaIcon(FontAwesomeIcons.firefoxBrowser),

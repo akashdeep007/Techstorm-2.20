@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
+
 Material Myitems(Image im, String heading) {
   return Material(
-    color: Colors.white,
+    color: Colors.white.withOpacity(.8),
     elevation: 14,
     shadowColor: Colors.black12,
     borderRadius: BorderRadius.circular(34),
@@ -46,7 +47,13 @@ class TeamPage extends StatelessWidget {
           title: Text('Team'),
           backgroundColor: Colors.black87,
         ),
-        body: GridView.count(
+        body:Container(
+        decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage("assets/images/back2.gif"),
+                fit: BoxFit.cover)),
+        child:  GridView.count(
+          
           scrollDirection: Axis.vertical,
           crossAxisCount: 2,
           crossAxisSpacing: 12,
@@ -157,7 +164,8 @@ class TeamPage extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
                 "abc"),
+                
           ],
-        ));
+        )));
   }
 }

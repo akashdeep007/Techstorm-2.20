@@ -52,11 +52,10 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
               floating: false,
               pinned: true,
               stretch: false,
-              
               flexibleSpace: LayoutBuilder(
                 builder: (BuildContext context, BoxConstraints constraints) {
                   return FlexibleSpaceBar(
-                    collapseMode: CollapseMode.parallax,
+                      collapseMode: CollapseMode.parallax,
                       centerTitle: true,
                       // title: Text(constraints.maxHeight.toString(),
                       //     style: TextStyle(
@@ -70,8 +69,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                               height: 128,
                               alignment: Alignment.bottomCenter,
                               child: Image.asset('assets/images/only logo.png'))
-                          : Container(
-                          ),
+                          : Container(),
                       background: Container(
                           padding: EdgeInsets.only(bottom: 10, top: 30),
                           child: sliverBack));
@@ -144,7 +142,10 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                           color: Colors.white),
                     )),
                   ),
-                  SponsorsList(),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 20),
+                    child: SponsorsList(),
+                  ),
                   Container(
                     color: Colors.white38,
                     child: Row(
@@ -173,6 +174,16 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                         image: AssetImage(
                                             "assets/images/new logo.png"),
                                       )))),
+                          Container(
+                            alignment: Alignment.center,
+                            child: Text(
+                              "\t     On 7th and 8th April 2020\n Everyone is welcome To witness\n  10th installment of TechStorm ",
+                              style: TextStyle(
+                                  fontSize: 17.5,
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.w900),
+                            ),
+                          ),
                           Container(
                               padding: EdgeInsets.all(10),
                               child: Container(

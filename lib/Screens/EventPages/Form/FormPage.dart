@@ -1,12 +1,14 @@
 import 'package:dropdown_formfield/dropdown_formfield.dart';
 import 'package:flutter/material.dart';
 import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
+import 'package:techstorm/Services/DatabaseService.dart';
 
 class RegisterForm extends StatefulWidget {
   final bool team;
   final String eventName;
   final int teamMembers;
-  RegisterForm({this.eventName, this.team, this.teamMembers});
+  final String eventType;
+  RegisterForm({this.eventType, this.eventName, this.team, this.teamMembers});
   
   @override
   _RegisterFormState createState() => _RegisterFormState();
@@ -18,14 +20,21 @@ class _RegisterFormState extends State<RegisterForm> {
   String year = '';
   String college = '';
   String contact = '';
-  
+  String email = '';
+  String townhall = '';
+  DatabaseService database = DatabaseService();
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     print(widget.eventName);
      return widget.team == false ?  Scaffold(
       extendBody: false,
-      floatingActionButton: FloatingActionButton.extended(onPressed: () {}, label: Container(child: Center(child : Text('Register')))),
+      floatingActionButton: FloatingActionButton.extended(onPressed: () {
+        if(_formKey.currentState.validate()){
+          database.registerUser(widget.eventType ,widget.eventName , email, contact, name, department, year, college); 
+        }
+      }, label: Container(child: Center(child : Text('Register')))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
         backgroundColor : Colors.black87,
@@ -34,6 +43,7 @@ class _RegisterFormState extends State<RegisterForm> {
       body: SingleChildScrollView(
               child: Card(
                 child: Form(
+                  key: _formKey,
                   child: Container(
                     padding: EdgeInsets.all(20),
                     child: Column(
@@ -41,6 +51,12 @@ class _RegisterFormState extends State<RegisterForm> {
                       children: <Widget>[
                         Text(widget.eventName, style: TextStyle(fontSize: 48, fontWeight: FontWeight.bold),),
                         TextFormField(
+                          validator: (text) {
+                            if(text.isEmpty){
+                              return 'Enter Name';
+                            }
+                            return null;
+                          },
                           decoration: InputDecoration(
                             labelText: 'Name'
                           ),
@@ -49,25 +65,44 @@ class _RegisterFormState extends State<RegisterForm> {
                           },
                         ),
                         SizedBox(height: 20,),
-                                                  TextFormField(
+                        TextFormField(
+                          validator: (text) {
+                            if(text.isEmpty){
+                              return 'Enter Email';
+                            }
+                            return null;
+                          },
                           decoration: InputDecoration(
                             labelText: 'Email'
                           ),
                           onChanged: (text) {
-                            name = text;
+                            email = text;
                           },
                         ),
                             SizedBox(height: 20,),                      
                         TextFormField(
+                          validator: (text) {
+                            if(text.isEmpty){
+                              return 'Enter Contact Number';
+                            }
+                            return null;
+                          },
                           decoration: InputDecoration(
                             labelText: 'Contact Number'
                           ),
                           onChanged: (text) {
-                            name = text;
+                            contact = text;
                           },
                         ),
                         SizedBox(height: 20,),
-                        DropDownFormField(
+                        DropDownFormField(                          
+                        validator: (value) {
+                            if(value == null){
+                              return 'Select Department';
+                            }
+                            return null;
+                          },
+                    
                     titleText: 'Department',
                     hintText: 'Please choose one',
                     value: department,
@@ -113,6 +148,12 @@ class _RegisterFormState extends State<RegisterForm> {
 
                         SizedBox(height: 20,),
                         DropDownFormField(
+                        validator: (value) {
+                            if(value == null){
+                              return 'Select Year';
+                            }
+                            return null;
+                          },
                     titleText: 'Year',
                     hintText: 'Please choose one',
                     value: year,
@@ -148,21 +189,33 @@ class _RegisterFormState extends State<RegisterForm> {
                     valueField: 'value',
                 ),
                 SizedBox(height: 40,),
-                                      TextFormField(
+                  TextFormField(
+                      validator: (text) {
+                            if(text.isEmpty){
+                              return 'Enter College';
+                            }
+                            return null;
+                          },
                           decoration: InputDecoration(
                             labelText: 'College'
                           ),
                           onChanged: (text) {
-                            name = text;
+                            college = text;
                           },
                         ),
                         SizedBox(height: 40,),
                         widget.eventName == "COC" ? TextFormField(
+                          validator: (text) {
+                            if(text.isEmpty){
+                              return 'Enter Townhall';
+                            }
+                            return null;
+                          },
                           decoration: InputDecoration(
-                            labelText: 'Contact Number'
+                            labelText: 'Town Hall'
                           ),
                           onChanged: (text) {
-                            name = text;
+                            townhall = text;
                           },
                         ) : Container(),
                       ],
@@ -171,6 +224,6 @@ class _RegisterFormState extends State<RegisterForm> {
                 ),
         ),
       ),
-    ) : TeamFormPage(eventName : widget.eventName, teamMembers: widget.teamMembers,);
+    ) : TeamFormPage(eventType: widget.eventType , eventName : widget.eventName, teamMembers: widget.teamMembers,);
   }
 }
