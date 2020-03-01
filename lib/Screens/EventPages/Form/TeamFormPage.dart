@@ -20,6 +20,7 @@ class _TeamFormPageState extends State<TeamFormPage> {
   List<String> email = ['','','','','','','',''];
   List<String> college = ['','','','','','','',''];
   String teamName = '';
+    final _formKey = GlobalKey<FormState>();
 
   // void teamRegister(){
   //   print(contact);
@@ -40,6 +41,7 @@ class _TeamFormPageState extends State<TeamFormPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      
       extendBody: true,
       // floatingActionButton: FloatingActionButton.extended(onPressed: () {}, label: Container(child: Center(child : Text('Register')))),
       // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
@@ -61,10 +63,17 @@ class _TeamFormPageState extends State<TeamFormPage> {
                     child : Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Form(
+                        key: _formKey,
                         child: Column(
                           children: <Widget>[
                             Center(child : Text(widget.eventName, style: TextStyle(fontSize : 36, fontWeight:FontWeight.bold),)),
                             TextFormField(
+                              validator: (text){
+                                if(text.isEmpty){
+                                  return 'Enter Team Name';
+                                }
+                                return null;
+                              },
                               onChanged: (text) {
                                 teamName = text;
                               },
@@ -120,44 +129,73 @@ class _TeamFormPageState extends State<TeamFormPage> {
                       return Card(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: Form(
-                            child: Column(
-                              children : <Widget> [
-                                Center(child : Text('Member' + (index+1).toString(), style: TextStyle(fontSize : 28, fontWeight : FontWeight.bold),)),
-                                                        TextFormField(
-                                decoration: InputDecoration(
-                                  labelText : 'Name'
-                                ),
-                                onChanged: (text) {
-                                  name[index] = text;
-                                },
+                          child: Column(
+                            children : <Widget> [
+                              Center(child : Text('Member' + (index+1).toString(), style: TextStyle(fontSize : 28, fontWeight : FontWeight.bold),)),
+                                                      TextFormField(
+
+                          validator: (text) {
+                          if(text.isEmpty){
+                            return 'Enter Name';
+                          }
+                          return null;
+                          },
+                              decoration: InputDecoration(
+                                labelText : 'Name'
                               ),
-                              TextFormField(
-                                decoration: InputDecoration(
-                                  labelText : 'Contact Number'
-                                ),
-                                onChanged: (text) {
-                                  contact[index] = text;
-                                  print(contact[index] + index.toString());
-                                },
+                              onChanged: (text) {
+                                name[index] = text;
+                              },
+                            ),
+                            TextFormField(
+                          validator: (text) {
+                          if(text.isEmpty){
+                            return 'Enter Contact Number';
+                          }
+                          return null;
+                          },
+                              decoration: InputDecoration(
+                                labelText : 'Contact Number'
                               ),
-                              TextFormField(
-                                decoration: InputDecoration(
-                                  labelText : 'Email'
-                                ),
-                                onChanged: (text) {
-                                  email[index] = text;
-                                },
+                              onChanged: (text) {
+                                contact[index] = text;
+                                print(contact[index] + index.toString());
+                              },
+                            ),
+                            TextFormField(
+                          validator: (text) {
+                          if(text.isEmpty){
+                            return 'Enter Email';
+                          }
+                          return null;
+                          },
+                              decoration: InputDecoration(
+                                labelText : 'Email'
                               ),
-                              TextFormField(
-                                onChanged: (text) {
-                                  college[index] = text;
-                                },
-                                decoration: InputDecoration(
-                                  labelText : 'College Name'
-                                ),
-                              ),                        SizedBox(height: 20,),
+                              onChanged: (text) {
+                                email[index] = text;
+                              },
+                            ),
+                            TextFormField(
+                          validator: (text) {
+                          if(text.isEmpty){
+                            return 'Enter College Name';
+                          }
+                          return null;
+                          },
+                              onChanged: (text) {
+                                college[index] = text;
+                              },
+                              decoration: InputDecoration(
+                                labelText : 'College Name'
+                              ),
+                            ),                        SizedBox(height: 20,),
                         DropDownFormField(
+                          validator: (value){
+                          if (value==null){
+                            return 'Enter your Department';
+                          }
+                          },
                     titleText: 'Department',
                     hintText: 'Please choose one',
                     value: department[index],
@@ -203,6 +241,11 @@ class _TeamFormPageState extends State<TeamFormPage> {
 
                         SizedBox(height: 20,),
                         DropDownFormField(
+                          validator: (value){
+                          if (value==null){
+                            return 'Enter your Year';
+                          }
+                          },
                     titleText: 'Year',
                     hintText: 'Please choose one',
                     value: year[index],
@@ -237,8 +280,7 @@ class _TeamFormPageState extends State<TeamFormPage> {
                     textField: 'display',
                     valueField: 'value',
                 ),
-                              ]
-                            ),
+                            ]
                           ),
                         ),
                       );
@@ -249,18 +291,20 @@ class _TeamFormPageState extends State<TeamFormPage> {
                       print(widget.eventType);
                       print(teamName);
                       print(contact);
-                      final database = FirebaseDatabase.instance.reference();
-                        for(int i = 0; i < widget.teamMembers; i++){
-                          print(widget.eventType + '/' + widget.eventName + '/' + teamName + '/' + contact[i]);
-                          database.child(widget.eventType + '/' + widget.eventName + '/' + teamName + '/' + contact[i]).set({
-                          'email' : email[i],
-                          'name' : name[i],
-                          'phone' : contact[i],
-                          'department' : department[i],
-                          'year' : year[i],
-                          'college' : college[i],
-                          });
-                        }
+                      if(_formKey.currentState.validate()){
+                        final database = FirebaseDatabase.instance.reference();
+                          for(int i = 0; i < widget.teamMembers; i++){
+                            print(widget.eventType + '/' + widget.eventName + '/' + teamName + '/' + contact[i]);
+                            database.child(widget.eventType + '/' + widget.eventName + '/' + teamName + '/' + contact[i]).set({
+                            'email' : email[i],
+                            'name' : name[i],
+                            'phone' : contact[i],
+                            'department' : department[i],
+                            'year' : year[i],
+                            'college' : college[i],
+                            });
+                          }
+                      }
                     }, child: Text('Register')),
                     // InkWell(
                     //   onTap: () {
