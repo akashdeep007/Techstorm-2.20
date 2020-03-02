@@ -12,7 +12,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   startTime() async {
-    var _duration = new Duration(milliseconds: 4500);
+    var _duration = new Duration(milliseconds: 9000);
 
     return new Timer(_duration, navigationPage);
   }
@@ -50,7 +50,9 @@ class _SplashScreenState extends State<SplashScreen> {
               duration: Duration(seconds: 1),
                 text: [
                   "",
-                  "UNLEASH\nYOUr\nTHOUHGTS",
+                  "UNLEASH",
+                  "YOUr",
+                  "THOUHGTS",
                   "TECHSTOrM\n2.20"
                 ],
                 textStyle: TextStyle(

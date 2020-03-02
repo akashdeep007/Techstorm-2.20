@@ -18,7 +18,7 @@ class _RO_CombatState extends State<RO_Combat> {
               body: Container(
                                     decoration: BoxDecoration(
                       image : DecorationImage(
-                        image : AssetImage('assets/images/ROVERS/RO_COMBAT.jpg'), fit:BoxFit.cover
+                        image : AssetImage('assets/images/back2.gif'), fit:BoxFit.cover
                       )
                     ),
                 child: ListView(
@@ -28,14 +28,27 @@ class _RO_CombatState extends State<RO_Combat> {
                       child: Center(
                         child: Text(
                           "RO Combat",
-                          style: TextStyle(
-                              fontSize: 48,
-                              fontWeight: FontWeight.w900,
-                              color: Colors.white,
-                             ),
+                  style: TextStyle(
+                    fontSize: 48,
+                    fontFamily: "TempestApache",
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                  ),
                         ),
                       ),
                     ),
+                    Card(
+                color: Colors.white70,
+                elevation: 5,
+                shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(10.0)),
+                child: Image.asset(
+                  'assets/images/ROVERS/RO_COMBAT.jpg',
+                  fit: BoxFit.fitWidth,
+                )),
+            Divider(
+              height: 20,
+            ),
                     Card(
                       color: Colors.white70,
                       elevation: 5,
@@ -143,20 +156,40 @@ class _RO_CombatState extends State<RO_Combat> {
                                   fontSize: 24, fontWeight: FontWeight.w500),
                             ),
                           ),
-                          subtitle: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                          subtitle: Column(
                             children: <Widget>[
-                              Text(
-                                "Akashdeep Bhattacharya",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              SizedBox(width:20),
-                               IconButton(icon: Icon(Icons.phone), 
-                            onPressed:() {
-                              launch('tel:+${'9051633040'}');
-                            },
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Text(
+                                    "Soumyadyuti Bagchi",
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                  SizedBox(width:20),
+                                   IconButton(icon: Icon(Icons.phone), 
+                                onPressed:() {
+                                  launch('tel:+${'7044075625'}');
+                                },
 
       ),
+                                ],
+                              ),
+                               Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Text(
+                                    "Barun Saha",
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                  SizedBox(width:20),
+                                   IconButton(icon: Icon(Icons.phone), 
+                                onPressed:() {
+                                  launch('tel:+${'9733838669'}');
+                                },
+
+      ),
+                                ],
+                              ),
                             ],
                           )),
                     ),

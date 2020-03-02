@@ -16,10 +16,16 @@
 @import firebase_database;
 #endif
 
-#if __has_include(<flutter_youtube/FlutterYoutubePlugin.h>)
-#import <flutter_youtube/FlutterYoutubePlugin.h>
+#if __has_include(<image_picker_saver/ImagePickerSaverPlugin.h>)
+#import <image_picker_saver/ImagePickerSaverPlugin.h>
 #else
-@import flutter_youtube;
+@import image_picker_saver;
+#endif
+
+#if __has_include(<path_provider/PathProviderPlugin.h>)
+#import <path_provider/PathProviderPlugin.h>
+#else
+@import path_provider;
 #endif
 
 #if __has_include(<url_launcher/FLTURLLauncherPlugin.h>)
@@ -33,7 +39,8 @@
 + (void)registerWithRegistry:(NSObject<FlutterPluginRegistry>*)registry {
   [FLTFirebaseCorePlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseCorePlugin"]];
   [FLTFirebaseDatabasePlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTFirebaseDatabasePlugin"]];
-  [FlutterYoutubePlugin registerWithRegistrar:[registry registrarForPlugin:@"FlutterYoutubePlugin"]];
+  [FLTImagePickerSaverPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTImagePickerSaverPlugin"]];
+  [FLTPathProviderPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTPathProviderPlugin"]];
   [FLTURLLauncherPlugin registerWithRegistrar:[registry registrarForPlugin:@"FLTURLLauncherPlugin"]];
 }
 

@@ -148,20 +148,40 @@ class _FantaCState extends State<FantaC> {
                           TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
                     ),
                   ),
-                  subtitle: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                  subtitle: Column(
                     children: <Widget>[
-                      Text(
-                        "Akashdeep Bhattacharya",
-                        style: TextStyle(fontSize: 18),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            "Muskan Verma",
+                            style: TextStyle(fontSize: 18),
+                          ),
+                          SizedBox(width: 20),
+                          IconButton(
+                            icon: Icon(Icons.phone),
+                            onPressed: () {
+                              launch('tel:+${'9883267071'}');
+                            },
+                          ),
+                        ],
                       ),
-                      SizedBox(width: 20),
-                      IconButton(
-                        icon: Icon(Icons.phone),
-                        onPressed: () {
-                          launch('tel:+${'9051633040'}');
-                        },
-                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            "Ayush Raj",
+                            style: TextStyle(fontSize: 18),
+                          ),
+                          SizedBox(width: 20),
+                          IconButton(
+                            icon: Icon(Icons.phone),
+                            onPressed: () {
+                              launch('tel:+${'6290754213'}');
+                            },
+                          ),
+                        ],
+                      )
                     ],
                   )),
             ),

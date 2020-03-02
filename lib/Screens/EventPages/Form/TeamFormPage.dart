@@ -12,6 +12,7 @@ class TeamFormPage extends StatefulWidget {
 }
 
 class _TeamFormPageState extends State<TeamFormPage> {
+  String error = '';
   int moreMembers = 1;
   List<String> department = ['','','','','','','',''];
   List<String> name = ['','','','','','','',''];
@@ -21,22 +22,6 @@ class _TeamFormPageState extends State<TeamFormPage> {
   List<String> college = ['','','','','','','',''];
   String teamName = '';
     final _formKey = GlobalKey<FormState>();
-
-  // void teamRegister(){
-  //   print(contact);
-  //   final database = FirebaseDatabase.instance.reference();
-  //   for(int i = 0; i < widget.teamMembers; i++){
-  //     print(i);
-  //     database.child(widget.eventType + '/' + widget.eventName + '/' + teamName + '/' + contact[i]).set({
-  //     'email' : email[i],
-  //     'name' : name[i],
-  //     'phone' : contact[i],
-  //     'department' : department[i],
-  //     'year' : year[i],
-  //     'college' : college[i],
-  //     });
-  //   }
-  // }
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +65,165 @@ class _TeamFormPageState extends State<TeamFormPage> {
                               decoration: InputDecoration(
                                 labelText : 'Team Name'
                               ),
+                            ),Card(
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children : <Widget> [
+                              Center(child : Text('Team Leader', style: TextStyle(fontSize : 28, fontWeight : FontWeight.bold),)),
+                                                      TextFormField(
+
+                          validator: (text) {
+                          if(text.isEmpty){
+                            return 'Enter Name';
+                          }
+                          return null;
+                          },
+                              decoration: InputDecoration(
+                                labelText : 'Name'
+                              ),
+                              onChanged: (text) {
+                                name[0] = text;
+                              },
                             ),
+                            TextFormField(
+                          validator: (text) {
+                          if(text.isEmpty){
+                            return 'Enter Contact Number';
+                          }
+                          return null;
+                          },
+                              decoration: InputDecoration(
+                                labelText : 'Contact Number'
+                              ),
+                              onChanged: (text) {
+                                contact[0] = text;
+                              },
+                            ),
+                            TextFormField(
+                          validator: (text) {
+                          if(text.isEmpty){
+                            return 'Enter Email';
+                          }
+                          return null;
+                          },
+                              decoration: InputDecoration(
+                                labelText : 'Email'
+                              ),
+                              onChanged: (text) {
+                                email[0] = text;
+                              },
+                            ),
+                            TextFormField(
+                          validator: (text) {
+                          if(text.isEmpty){
+                            return 'Enter College Name';
+                          }
+                          return null;
+                          },
+                              onChanged: (text) {
+                                college[0] = text;
+                              },
+                              decoration: InputDecoration(
+                                labelText : 'College Name'
+                              ),
+                            ),                        SizedBox(height: 20,),
+                        DropDownFormField(
+                          validator: (value){
+                          if (value==null){
+                            return 'Enter your Department';
+                          }
+                          return null;
+                          },
+                    titleText: 'Department',
+                    hintText: 'Please choose one',
+                    value: department[0],
+                    onSaved: (value) {
+                      setState(() {
+                        department[0]= value;
+                      });
+                    },
+                    onChanged: (value) {
+                      setState(() {
+                        department[0] = value;
+                      });
+                    },
+                    dataSource: [
+                      {
+                        "display": "IT",
+                        "value": "IT",
+                      },
+                      {
+                        "display": "CSE",
+                        "value": "CSE",
+                      },
+                      {
+                        "display": "ECE",
+                        "value": "ECE",
+                      },
+                      {
+                        "display": "EE",
+                        "value": "EE",
+                      },
+                      {
+                        "display": "MCA",
+                        "value": "MCA",
+                      },
+                      {
+                        "display": "BCA",
+                        "value": "BCA",
+                      },
+                    ],
+                    textField: 'display',
+                    valueField: 'value',
+                ),
+
+                        SizedBox(height: 20,),
+                        DropDownFormField(
+                          validator: (value){
+                          if (value==null){
+                            return 'Enter your Year';
+                          }
+                          return null;
+                          },
+                    titleText: 'Year',
+                    hintText: 'Please choose one',
+                    value: year[0],
+                    onSaved: (value) {
+                      setState(() {
+                        year[0] = value;
+                      });
+                    },
+                    onChanged: (value) {
+                      setState(() {
+                        year[0] = value;
+                      });
+                    },
+                    dataSource: [
+                      {
+                        "display": "1st Year",
+                        "value": "1st Year",
+                      },
+                      {
+                        "display": "2nd Year",
+                        "value": "2nd Year",
+                      },
+                      {
+                        "display": "3rd Year",
+                        "value": "3rd Year",
+                      },
+                      {
+                        "display": "4th Year",
+                        "value": "4th Year",
+                      },
+                    ],
+                    textField: 'display',
+                    valueField: 'value',
+                ),
+                            ]
+                          ),
+                        ),
+                      ),
                             widget.teamMembers >= 4 ? DropDownFormField(
                   titleText: 'Team Members',
                   hintText: 'Please choose one',
@@ -125,7 +268,7 @@ class _TeamFormPageState extends State<TeamFormPage> {
                       ),
                     )
                   ),
-                  ListView.builder(physics: NeverScrollableScrollPhysics(),  shrinkWrap: true, itemCount: widget.teamMembers,itemBuilder: (context, index){
+                  ListView.builder(physics: NeverScrollableScrollPhysics(),  shrinkWrap: true, itemCount: widget.teamMembers-1,itemBuilder: (context, index){
                       return Card(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
@@ -144,7 +287,7 @@ class _TeamFormPageState extends State<TeamFormPage> {
                                 labelText : 'Name'
                               ),
                               onChanged: (text) {
-                                name[index] = text;
+                                name[index+1] = text;
                               },
                             ),
                             TextFormField(
@@ -158,8 +301,7 @@ class _TeamFormPageState extends State<TeamFormPage> {
                                 labelText : 'Contact Number'
                               ),
                               onChanged: (text) {
-                                contact[index] = text;
-                                print(contact[index] + index.toString());
+                                contact[index+1] = text;
                               },
                             ),
                             TextFormField(
@@ -173,7 +315,7 @@ class _TeamFormPageState extends State<TeamFormPage> {
                                 labelText : 'Email'
                               ),
                               onChanged: (text) {
-                                email[index] = text;
+                                email[index+1] = text;
                               },
                             ),
                             TextFormField(
@@ -184,7 +326,7 @@ class _TeamFormPageState extends State<TeamFormPage> {
                           return null;
                           },
                               onChanged: (text) {
-                                college[index] = text;
+                                college[index+1] = text;
                               },
                               decoration: InputDecoration(
                                 labelText : 'College Name'
@@ -195,18 +337,19 @@ class _TeamFormPageState extends State<TeamFormPage> {
                           if (value==null){
                             return 'Enter your Department';
                           }
+                          return null;
                           },
                     titleText: 'Department',
                     hintText: 'Please choose one',
-                    value: department[index],
+                    value: department[index+1],
                     onSaved: (value) {
                       setState(() {
-                        department[index]= value;
+                        department[index+1]= value;
                       });
                     },
                     onChanged: (value) {
                       setState(() {
-                        department[index] = value;
+                        department[index+1] = value;
                       });
                     },
                     dataSource: [
@@ -245,18 +388,19 @@ class _TeamFormPageState extends State<TeamFormPage> {
                           if (value==null){
                             return 'Enter your Year';
                           }
+                          return null;
                           },
                     titleText: 'Year',
                     hintText: 'Please choose one',
-                    value: year[index],
+                    value: year[index+1],
                     onSaved: (value) {
                       setState(() {
-                        year[index] = value;
+                        year[index+1] = value;
                       });
                     },
                     onChanged: (value) {
                       setState(() {
-                        year[index] = value;
+                        year[index+1] = value;
                       });
                     },
                     dataSource: [
@@ -286,40 +430,45 @@ class _TeamFormPageState extends State<TeamFormPage> {
                       );
                     }),
                     SizedBox(height: 20,),
-                    FlatButton(onPressed: () {
+                     Text(error, style: TextStyle(color: Colors.red, fontSize: 16, fontWeight: FontWeight.bold),),
+                    FlatButton(onPressed: ()  {
                       print(widget.eventName);
                       print(widget.eventType);
                       print(teamName);
                       print(contact);
                       if(_formKey.currentState.validate()){
                         final database = FirebaseDatabase.instance.reference();
-                          for(int i = 0; i < widget.teamMembers; i++){
-                            print(widget.eventType + '/' + widget.eventName + '/' + teamName + '/' + contact[i]);
-                            database.child(widget.eventType + '/' + widget.eventName + '/' + teamName + '/' + contact[i]).set({
-                            'email' : email[i],
-                            'name' : name[i],
-                            'phone' : contact[i],
-                            'department' : department[i],
-                            'year' : year[i],
-                            'college' : college[i],
-                            });
-                          }
+                        String path = widget.eventType + '/' + widget.eventName + '/' + contact[0];
+                          database.reference().child(path).once().then((DataSnapshot datasnapshot) async {
+                            print(datasnapshot.value);
+                            if(datasnapshot.value == null){
+                              await database.child(widget.eventType + '/' + widget.eventName + '/' + contact[0]).set({
+                                'team_name' : teamName,
+                                'contact' : contact[0],
+                                'year' : year[0],
+                                'name' : name[0],
+                                'email' : email[0],
+                                'college' : college[0],
+                                'payment' : 'false',
+                              });
+                              for(int i = 0; i < widget.teamMembers-1; i++){
+                                await database.child(widget.eventType + '/' + widget.eventName + '/' +contact[0] + '/' + 'g_members').set({
+                                'email' : email[i+1],
+                                'name' : name[i+1],
+                                'phone' : contact[i+1],
+                                'department' : department[i+1],
+                                'year' : year[i+1],
+                                'college' : college[i+1],
+                                });
+                              }
+                            } else {
+                              setState(() {
+                                error = 'Already Registered';  
+                              });
+                            }
+                          });
                       }
-                    }, child: Text('Register')),
-                    // InkWell(
-                    //   onTap: () {
-                    //     teamRegister();
-                    //   },
-                    //     child: Container(
-                    //       alignment: Alignment.center,
-                    //     width: double.infinity,
-                    //     height: 50,
-                    //     color: Colors.amber,
-                    //     child: Text(
-                    //       'Register', style: TextStyle(fontSize: 36, fontWeight: FontWeight.bold,letterSpacing: 1
-                    //     ),),
-                    //   ),
-                    // ),
+                    }, child: Container(alignment: Alignment.center,height : 40, width: 200,color: Colors.red,  child:Container(alignment: Alignment.center,height : 40, width: 200,color: Colors.red,  child: Text('Register', style: TextStyle(fontSize: 24, fontWeight:FontWeight.bold),),),),),
                     SizedBox(height: 20,),
               ],
             )

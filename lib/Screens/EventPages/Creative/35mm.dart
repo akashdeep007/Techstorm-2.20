@@ -18,7 +18,7 @@ class _MMLIVEState extends State<MMLIVE> {
               body: Container(
                                     decoration: BoxDecoration(
                       image : DecorationImage(
-                        image : AssetImage('assets/images/CREATIVITY/35MM.jpg'), fit:BoxFit.cover
+                        image : AssetImage('assets/images/back2.gif'), fit:BoxFit.cover
                       )
                     ),
                 child: ListView(
@@ -28,14 +28,27 @@ class _MMLIVEState extends State<MMLIVE> {
                       child: Center(
                         child: Text(
                           "35MM LIVE",
-                          style: TextStyle(
-                              fontSize: 48,
-                              fontWeight: FontWeight.w900,
-                              color: Colors.white,
-                             ),
+                  style: TextStyle(
+                    fontSize: 48,
+                    fontFamily: "TempestApache",
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                  ),
                         ),
                       ),
                     ),
+                     Card(
+                color: Colors.white70,
+                elevation: 5,
+                shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(10.0)),
+                child: Image.asset(
+                  'assets/images/CREATIVITY/35MM.jpg',
+                  fit: BoxFit.fitWidth,
+                )),
+            Divider(
+              height: 20,
+            ),
                     Card(
                       color: Colors.white70,
                       elevation: 5,
@@ -147,13 +160,13 @@ class _MMLIVEState extends State<MMLIVE> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               Text(
-                                "Akashdeep Bhattacharya",
+                                "Nivedita Saha",
                                 style: TextStyle(fontSize: 18),
                               ),
                               SizedBox(width:20),
                                IconButton(icon: Icon(Icons.phone), 
                             onPressed:() {
-                              launch('tel:+${'9051633040'}');
+                              launch('tel:+${'8240579258'}');
                             },
 
       ),
