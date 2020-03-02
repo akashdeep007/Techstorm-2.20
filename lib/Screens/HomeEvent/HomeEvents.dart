@@ -37,6 +37,9 @@ class _EventScrollState extends State<EventScroll> {
 
   @override
   Widget build(BuildContext context) {
+     MediaQueryData queryData;
+queryData = MediaQuery.of(context);
+var sw=queryData.size.width;
   Color borderColorLight = Color.fromARGB(255, 0,185,241);
   // Color borderColorLight = Color.fromARGB(255, 0,54,112);
   double subHeadingSize = 28;
@@ -48,7 +51,7 @@ class _EventScrollState extends State<EventScroll> {
         Container(
           color: borderColorLight,
       margin: EdgeInsets.fromLTRB(padding_count, 0, padding_count, 0),
-      width: 400.0,
+      width: sw*.9,
       child: InkWell(
         onTap: (){print('Brain Tapped');
         Navigator.push(context,new MaterialPageRoute(builder: (context) =>BrainPage()));},
@@ -71,7 +74,7 @@ class _EventScrollState extends State<EventScroll> {
         Container(
           color: borderColorLight,
       margin: EdgeInsets.fromLTRB(padding_count, 0, padding_count, 0),
-      width: 400.0,
+      width: sw*.9,
       child: InkWell(
         onTap: (){print('Robotics Tapped');
         Navigator.push(context,new MaterialPageRoute(builder: (context) =>CreativePage()));},
@@ -108,7 +111,7 @@ class _EventScrollState extends State<EventScroll> {
          Container(
            color: borderColorLight,
       margin: EdgeInsets.fromLTRB(padding_count, 0, padding_count, 0),
-      width: 400.0,
+      width: sw*.9,
       child: InkWell(
         onTap: (){print('Robotics Tapped');
         Navigator.push(context,new MaterialPageRoute(builder: (context) =>RoboticsPage()));},
@@ -127,7 +130,7 @@ class _EventScrollState extends State<EventScroll> {
         Container(
           color: borderColorLight,
       margin: EdgeInsets.fromLTRB(padding_count, 0, padding_count, 0),
-      width: 400.0,
+      width: sw*.9,
       child: InkWell(
         onTap: (){print('Robotics Tapped');
         Navigator.push(context,new MaterialPageRoute(builder: (context) =>GamesPage()));},

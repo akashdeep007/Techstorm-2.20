@@ -12,6 +12,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> with TickerProviderStateMixin {
+  
   double headingSize = 36;
   double subHeadingSize = 24;
   Image sliverBack;
@@ -28,18 +29,20 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
   @override
   void initState() {
     sliverBack =
-        Image.asset("assets/images/only logo.png", fit: BoxFit.fitHeight);
+        Image.asset("assets/images/logo.png", fit: BoxFit.fitHeight);
     super.initState();
   }
 
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    precacheImage(sliverBack.image, context);
   }
 
   @override
   Widget build(BuildContext context) {
+    MediaQueryData queryData;
+queryData = MediaQuery.of(context);
+var sw=queryData.size.width;
     return Scaffold(
       drawer: CustomDrawer(),
       body: NestedScrollView(
@@ -68,7 +71,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                               padding: EdgeInsets.only(top: 30),
                               height: 128,
                               alignment: Alignment.bottomCenter,
-                              child: Image.asset('assets/images/only logo.png'))
+                              child: Image.asset('assets/images/logo.png'))
                           : Container(),
                       background: Container(
                           padding: EdgeInsets.only(bottom: 10, top: 30),
@@ -147,6 +150,7 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                     child: SponsorsList(),
                   ),
                   Container(
+                    width: sw*.95,
                     color: Colors.white38,
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -172,14 +176,14 @@ class _HomeState extends State<Home> with TickerProviderStateMixin {
                                       image: DecorationImage(
                                         fit: BoxFit.cover,
                                         image: AssetImage(
-                                            "assets/images/new logo.png"),
+                                            "assets/images/newlogo.png"),
                                       )))),
                           Container(
                             alignment: Alignment.center,
                             child: Text(
                               "\t     On 7th and 8th April 2020\n Everyone is welcome To witness\n  10th installment of TechStorm ",
                               style: TextStyle(
-                                  fontSize: 17.5,
+                                  fontSize: 16,
                                   color: Colors.black,
                                   fontWeight: FontWeight.w900),
                             ),

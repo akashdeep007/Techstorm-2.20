@@ -86,7 +86,7 @@ Row(
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold),
                       ),
-                      onPressed: () { },
+                      onPressed: () { Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(event: "ho",)));}
                     ),
                   ],
                 ),
