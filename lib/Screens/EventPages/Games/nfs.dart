@@ -18,7 +18,7 @@ class _NFSState extends State<NFS> {
               body: Container(
                                     decoration: BoxDecoration(
                       image : DecorationImage(
-                        image : AssetImage('assets/images/GAMES/NFS.jpg'), fit:BoxFit.cover
+                        image : AssetImage('assets/images/back2.gif'), fit:BoxFit.cover
                       )
                     ),
                 child: ListView(
@@ -28,14 +28,27 @@ class _NFSState extends State<NFS> {
                       child: Center(
                         child: Text(
                           "Need For Speed",
-                          style: TextStyle(
-                              fontSize: 48,
-                              fontWeight: FontWeight.w900,
-                              color: Colors.white,
-                             ),
+                  style: TextStyle(
+                    fontSize: 48,
+                    fontFamily: "TempestApache",
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                  ),
                         ),
                       ),
                     ),
+                    Card(
+                color: Colors.white70,
+                elevation: 5,
+                shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(10.0)),
+                child: Image.asset(
+                  'assets/images/GAMES/NFS.jpg',
+                  fit: BoxFit.fitWidth,
+                )),
+            Divider(
+              height: 20,
+            ),
                     Card(
                       color: Colors.white70,
                       elevation: 5,
@@ -147,13 +160,13 @@ class _NFSState extends State<NFS> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               Text(
-                                "Akashdeep Bhattacharya",
+                                "Vimal Kishore",
                                 style: TextStyle(fontSize: 18),
                               ),
                               SizedBox(width:20),
                                IconButton(icon: Icon(Icons.phone), 
                             onPressed:() {
-                              launch('tel:+${'9051633040'}');
+                              launch('tel:+${'8083336565'}');
                             },
 
       ),

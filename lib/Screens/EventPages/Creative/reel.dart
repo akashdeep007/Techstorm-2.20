@@ -18,7 +18,7 @@ class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
               body: Container(
                                     decoration: BoxDecoration(
                       image : DecorationImage(
-                        image : AssetImage('assets/images/CREATIVITY/PASSIONWITHREELS.jpg'), fit:BoxFit.cover
+                        image : AssetImage('assets/images/back2.gif'), fit:BoxFit.cover
                       )
                     ),
                 child: ListView(
@@ -28,14 +28,27 @@ class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
                       child: Center(
                         child: Text(
                           "Passion With Reels",
-                          style: TextStyle(
-                              fontSize: 30,
-                              fontWeight: FontWeight.w900,
-                              color: Colors.black,
-                             ),
+                  style: TextStyle(
+                    fontSize: 48,
+                    fontFamily: "TempestApache",
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                  ),
                         ),
                       ),
                     ),
+                    Card(
+                color: Colors.white70,
+                elevation: 5,
+                shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(10.0)),
+                child: Image.asset(
+                  'assets/images/CREATIVITY/PASSIONWITHREELS.jpg',
+                  fit: BoxFit.fitWidth,
+                )),
+            Divider(
+              height: 20,
+            ),
                     Card(
                       color: Colors.white70,
                       elevation: 5,
@@ -147,13 +160,13 @@ class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               Text(
-                                "Akashdeep Bhattacharya",
+                                "Abhishek Bharti",
                                 style: TextStyle(fontSize: 18),
                               ),
                               SizedBox(width:20),
                                IconButton(icon: Icon(Icons.phone), 
                             onPressed:() {
-                              launch('tel:+${'9051633040'}');
+                              launch('tel:+${'7278456054'}');
                             },
 
       ),

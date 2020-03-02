@@ -22,7 +22,7 @@ class _TechnomaniaState extends State<Technomania> {
               body: Container(
                                     decoration: BoxDecoration(
                       image : DecorationImage(
-                        image : AssetImage('assets/images/BRAIN/TECHNOMANIA.jpg'), fit:BoxFit.cover
+                        image : AssetImage('assets/images/back2.gif'), fit:BoxFit.cover
                       )
                     ),
                 child: ListView(
@@ -40,6 +40,18 @@ class _TechnomaniaState extends State<Technomania> {
                         ),
                       ),
                     ),
+                    Card(
+                color: Colors.white70,
+                elevation: 5,
+                shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(10.0)),
+                child: Image.asset(
+                  'assets/images/BRAIN/TECHNOMANIA.jpg',
+                  fit: BoxFit.fitWidth,
+                )),
+            Divider(
+              height: 20,
+            ),
                     Card(
                       color: Colors.white70,
                       elevation: 5,
@@ -159,20 +171,40 @@ class _TechnomaniaState extends State<Technomania> {
                                   fontSize: 24, fontWeight: FontWeight.w500),
                             ),
                           ),
-                          subtitle: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                          subtitle: Column(
                             children: <Widget>[
-                              Text(
-                                "Akashdeep Bhattacharya",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              SizedBox(width:20),
-                               IconButton(icon: Icon(Icons.phone), 
-                            onPressed:() {
-                              launch('tel:+${'9051633040'}');
-                            },
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Text(
+                                    "Md Wajid",
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                  SizedBox(width:20),
+                                   IconButton(icon: Icon(Icons.phone), 
+                                onPressed:() {
+                                  launch('tel:+${'8100414557'}');
+                                },
 
       ),
+                                ],
+                              ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Text(
+                                    "Sanah Asgar",
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                  SizedBox(width:20),
+                                   IconButton(icon: Icon(Icons.phone), 
+                                onPressed:() {
+                                  launch('tel:+${'9831071442'}');
+                                },
+
+      ),
+                                ],
+                              ),
                             ],
                           )),
                     ),

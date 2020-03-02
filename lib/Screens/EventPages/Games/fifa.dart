@@ -18,7 +18,7 @@ class _FIFAState extends State<FIFA> {
               body: Container(
                                     decoration: BoxDecoration(
                       image : DecorationImage(
-                        image : AssetImage('assets/images/GAMES/FIFA.jpg'), fit:BoxFit.cover
+                        image : AssetImage('assets/images/back2.gif'), fit:BoxFit.cover
                       )
                     ),
                 child: ListView(
@@ -28,14 +28,27 @@ class _FIFAState extends State<FIFA> {
                       child: Center(
                         child: Text(
                           "FIFA",
-                          style: TextStyle(
-                              fontSize: 48,
-                              fontWeight: FontWeight.w900,
-                              color: Colors.white,
-                             ),
+                  style: TextStyle(
+                    fontSize: 48,
+                    fontFamily: "TempestApache",
+                    fontWeight: FontWeight.w900,
+                    color: Colors.white,
+                  ),
                         ),
                       ),
                     ),
+                    Card(
+                color: Colors.white70,
+                elevation: 5,
+                shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(10.0)),
+                child: Image.asset(
+                  'assets/images/GAMES/FIFA.jpg',
+                  fit: BoxFit.fitWidth,
+                )),
+            Divider(
+              height: 20,
+            ),
                     Card(
                       color: Colors.white70,
                       elevation: 5,
@@ -143,20 +156,40 @@ class _FIFAState extends State<FIFA> {
                                   fontSize: 24, fontWeight: FontWeight.w500),
                             ),
                           ),
-                          subtitle: Row(
+                          subtitle: Column(
+                            children: <Widget>[Row(
                             mainAxisAlignment: MainAxisAlignment.center,
+                            
                             children: <Widget>[
                               Text(
-                                "Akashdeep Bhattacharya",
+                                "Partho Malakar",
                                 style: TextStyle(fontSize: 18),
                               ),
                               SizedBox(width:20),
                                IconButton(icon: Icon(Icons.phone), 
                             onPressed:() {
-                              launch('tel:+${'9051633040'}');
+                              launch('tel:+${'8910508026'}');
                             },
 
       ),
+                            ],
+                          ),
+                              Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: <Widget>[
+                                  Text(
+                                    "Abhishek Kumar",
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                  SizedBox(width:20),
+                                   IconButton(icon: Icon(Icons.phone), 
+                                onPressed:() {
+                                  launch('tel:+${'7044383703'}');
+                                },
+
+      ),
+                                ],
+                              ),
                             ],
                           )),
                     ),

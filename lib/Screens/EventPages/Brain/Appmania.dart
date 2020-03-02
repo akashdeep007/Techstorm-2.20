@@ -34,7 +34,7 @@ class _AppManiaState extends State<AppMania> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/BRAIN/APPMANIA.png'),
+                image: AssetImage('assets/images/back2.gif'),
                 fit: BoxFit.cover)),
         child: ListView(
           children: <Widget>[
@@ -47,10 +47,22 @@ class _AppManiaState extends State<AppMania> {
                     fontSize: 48,
                     fontFamily: "TempestApache",
                     fontWeight: FontWeight.w900,
-                    color: Colors.black,
+                    color: Colors.white,
                   ),
                 ),
               ),
+            ),
+            Card(
+                color: Colors.white70,
+                elevation: 5,
+                shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(10.0)),
+                child: Image.asset(
+                  'assets/images/BRAIN/APPMANIA.png',
+                  fit: BoxFit.fitWidth,
+                )),
+            Divider(
+              height: 20,
             ),
             Card(
               color: Colors.white70,
@@ -145,19 +157,23 @@ class _AppManiaState extends State<AppMania> {
                           TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
                     ),
                   ),
-                  subtitle: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                  subtitle: Column(
                     children: <Widget>[
-                      Text(
-                        "Akashdeep Bhattacharya",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                      SizedBox(width: 20),
-                      IconButton(
-                        icon: Icon(Icons.phone),
-                        onPressed: () {
-                          launch('tel:+${'9051633040'}');
-                        },
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            "Punit Khandelwal",
+                            style: TextStyle(fontSize: 18),
+                          ),
+                          SizedBox(width: 20),
+                          IconButton(
+                            icon: Icon(Icons.phone),
+                            onPressed: () {
+                              launch('tel:+${'9804747631'}');
+                            },
+                          ),
+                        ],
                       ),
                     ],
                   )),
