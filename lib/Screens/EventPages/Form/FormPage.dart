@@ -1,7 +1,6 @@
 import 'package:dropdown_formfield/dropdown_formfield.dart';
 import 'package:flutter/material.dart';
 import 'package:techstorm/Screens/EventPages/Form/qr.dart';
-import 'package:techstorm/Services/DatabaseService.dart';
 import 'package:firebase_database/firebase_database.dart';
 
 
@@ -23,8 +22,7 @@ class _RegisterFormState extends State<RegisterForm> {
   String contact = '';
   String email = '';
   String townhall = '';
-  DatabaseService database = DatabaseService();
-  final _formKey = GlobalKey<FormState>();
+    final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
