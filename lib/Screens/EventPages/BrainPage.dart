@@ -16,6 +16,7 @@ class BrainPage extends StatelessWidget {
     List<Widget> brainCards = [
   //appmani
   Container(
+    height: 30,
     margin: EdgeInsets.only(left:10, right:10),
     decoration: BoxDecoration(
       image: DecorationImage(image: 
@@ -78,7 +79,7 @@ RaisedButton(
     child: FlipCard(
         flipOnTouch: true,
         direction: FlipDirection.HORIZONTAL,
-        front: Stack(fit: StackFit.expand, children: <Widget>[
+        front: Column(children: <Widget>[
           Center(
               child: Text(
             'FANTA-C',
@@ -235,7 +236,7 @@ RaisedButton(
         alignment: Alignment.center,
         child: CarouselSlider.builder(
           enableInfiniteScroll: true,
-          height: 500,
+          height: 300,
    itemCount: brainCards.length,
    itemBuilder: (BuildContext context, int itemIndex) =>
           brainCards[itemIndex]

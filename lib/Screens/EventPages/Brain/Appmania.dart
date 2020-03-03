@@ -17,7 +17,7 @@ class _AppManiaState extends State<AppMania> {
                 context,
                 new MaterialPageRoute(
                     builder: (context) => RegisterForm(
-                        eventType : 'BrainTeasers',eventName: 'AppMania', team: true, teamMembers: 2)));
+                        eventName: 'AppMania', team: true, teamMembers: 2)));
           },
           label: Container(
               width: 100,
