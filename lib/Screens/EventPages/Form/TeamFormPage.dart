@@ -1,17 +1,20 @@
 import 'package:dropdown_formfield/dropdown_formfield.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:techstorm/Screens/EventPages/Form/qr.dart';
 
 
 class TeamFormPage extends StatefulWidget {
   final String eventName, eventType;
-  final int teamMembers;
-  TeamFormPage({this.eventType, this.eventName, this.teamMembers});
+  final int minMembers, maxMembers;
+  TeamFormPage({this.eventType, this.eventName, this.minMembers, this.maxMembers});
   @override
-  _TeamFormPageState createState() => _TeamFormPageState();
+  _TeamFormPageState createState() => _TeamFormPageState(maxMembers - minMembers);
 }
 
 class _TeamFormPageState extends State<TeamFormPage> {
+  final int numMembers;
+  _TeamFormPageState(this.numMembers);
   String error = '';
   int moreMembers = 1;
   List<String> department = ['','','','','','','',''];
@@ -22,9 +25,18 @@ class _TeamFormPageState extends State<TeamFormPage> {
   List<String> college = ['','','','','','','',''];
   String teamName = '';
     final _formKey = GlobalKey<FormState>();
-
+ 
   @override
   Widget build(BuildContext context) {
+    List<dynamic> members = [];
+    for(int i = widget.minMembers; i <= widget.maxMembers; i++){
+      members.add({
+        "display" : i.toString(),
+        "value" : i,
+      });
+    }
+    print("Number of Members : ${members.length}");
+    print(members);
     return Scaffold(
       
       extendBody: true,
@@ -65,7 +77,30 @@ class _TeamFormPageState extends State<TeamFormPage> {
                               decoration: InputDecoration(
                                 labelText : 'Team Name'
                               ),
-                            ),Card(
+                            ),
+                            widget.minMembers != widget.maxMembers ? TextFormField(
+                            keyboardType: TextInputType.number,
+                          validator: (text) {
+                          if(text.isEmpty){
+                            return 'Enter College Name';
+                          }
+                          else if(int.parse(text) < widget.minMembers || int.parse(text) > widget.maxMembers){
+                            return 'Minimum : ${widget.minMembers} Maximum : ${widget.maxMembers}';
+                          }
+                          return null;
+                          },
+                              onChanged: (text) {
+                                setState(() {
+                                  moreMembers = int.parse(text);
+                                  print(moreMembers);
+                                });
+                                
+                              },
+                              decoration: InputDecoration(
+                                labelText : 'Members'
+                              ),                    
+                            ) : Container(),
+                            Card(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
@@ -87,6 +122,7 @@ class _TeamFormPageState extends State<TeamFormPage> {
                               },
                             ),
                             TextFormField(
+                              keyboardType: TextInputType.number,
                           validator: (text) {
                           if(text.isEmpty){
                             return 'Enter Contact Number';
@@ -148,6 +184,7 @@ class _TeamFormPageState extends State<TeamFormPage> {
                         department[0] = value;
                       });
                     },
+                    
                     dataSource: [
                       {
                         "display": "IT",
@@ -179,96 +216,17 @@ class _TeamFormPageState extends State<TeamFormPage> {
                 ),
 
                         SizedBox(height: 20,),
-                        DropDownFormField(
-                          validator: (value){
-                          if (value==null){
-                            return 'Enter your Year';
-                          }
-                          return null;
-                          },
-                    titleText: 'Year',
-                    hintText: 'Please choose one',
-                    value: year[0],
-                    onSaved: (value) {
-                      setState(() {
-                        year[0] = value;
-                      });
-                    },
-                    onChanged: (value) {
-                      setState(() {
-                        year[0] = value;
-                      });
-                    },
-                    dataSource: [
-                      {
-                        "display": "1st Year",
-                        "value": "1st Year",
-                      },
-                      {
-                        "display": "2nd Year",
-                        "value": "2nd Year",
-                      },
-                      {
-                        "display": "3rd Year",
-                        "value": "3rd Year",
-                      },
-                      {
-                        "display": "4th Year",
-                        "value": "4th Year",
-                      },
-                    ],
-                    textField: 'display',
-                    valueField: 'value',
-                ),
                             ]
                           ),
                         ),
                       ),
-                            widget.teamMembers >= 4 ? DropDownFormField(
-                  titleText: 'Team Members',
-                  hintText: 'Please choose one',
-                  value: moreMembers,
-                  onSaved: (value) {
-                    setState(() {
-                      moreMembers= value;
-                    });
-                  },
-                  onChanged: (value) {
-                    setState(() {
-                      moreMembers = value;
-                    });
-                  },
-                  dataSource: [
-                    {
-                      "display": "1",
-                      "value": 1,
-                    },
-                    {
-                      "display": "2",
-                      "value": 2,
-                    },
-                    {
-                      "display": "3",
-                      "value": 3,
-                    },
-                    {
-                      "display": "4",
-                      "value": 4,
-                    },
-                    {
-                      "display": "5",
-                      "value": 5,
-                    },
-                  ],
-                  textField: 'display',
-                  valueField: 'value',
-              ) : Container(),
+                            
                           ],
                         ),
                       ),
                     )
                   ),
-                  ListView.builder(physics: NeverScrollableScrollPhysics(),  shrinkWrap: true, itemCount: widget.teamMembers-1,itemBuilder: (context, index){
+                  ListView.builder(physics: NeverScrollableScrollPhysics(),  shrinkWrap: true, itemCount: moreMembers-1,itemBuilder: (context, index){
                       return Card(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
@@ -383,47 +341,6 @@ class _TeamFormPageState extends State<TeamFormPage> {
                 ),
 
                         SizedBox(height: 20,),
-                        DropDownFormField(
-                          validator: (value){
-                          if (value==null){
-                            return 'Enter your Year';
-                          }
-                          return null;
-                          },
-                    titleText: 'Year',
-                    hintText: 'Please choose one',
-                    value: year[index+1],
-                    onSaved: (value) {
-                      setState(() {
-                        year[index+1] = value;
-                      });
-                    },
-                    onChanged: (value) {
-                      setState(() {
-                        year[index+1] = value;
-                      });
-                    },
-                    dataSource: [
-                      {
-                        "display": "1st Year",
-                        "value": "1st Year",
-                      },
-                      {
-                        "display": "2nd Year",
-                        "value": "2nd Year",
-                      },
-                      {
-                        "display": "3rd Year",
-                        "value": "3rd Year",
-                      },
-                      {
-                        "display": "4th Year",
-                        "value": "4th Year",
-                      },
-                    ],
-                    textField: 'display',
-                    valueField: 'value',
-                ),
                             ]
                           ),
                         ),
@@ -451,7 +368,7 @@ class _TeamFormPageState extends State<TeamFormPage> {
                                 'college' : college[0],
                                 'payment' : 'false',
                               });
-                              for(int i = 0; i < widget.teamMembers-1; i++){
+                              for(int i = 0; i < widget.maxMembers-1; i++){
                                 await database.child(widget.eventType + '/' + widget.eventName + '/' +contact[0] + '/' + 'g_members').set({
                                 'email' : email[i+1],
                                 'name' : name[i+1],
@@ -460,6 +377,8 @@ class _TeamFormPageState extends State<TeamFormPage> {
                                 'year' : year[i+1],
                                 'college' : college[i+1],
                                 });
+                                String data = "TeamName:$teamName\nName:$name\nEvent:${widget.eventName}\nCollege:$college\nDepartment: $department\nYear:$year\nContact:$contact,";
+                                Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data)));
                               }
                             } else {
                               setState(() {

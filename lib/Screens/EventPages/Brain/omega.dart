@@ -17,7 +17,7 @@ class _OmegatrixState extends State<Omegatrix> {
                 context,
                 new MaterialPageRoute(
                     builder: (context) => RegisterForm(
-                       eventType: 'BrainTeasers', eventName: 'Omegatrix', team: false, teamMembers: 1)));
+                       eventType: 'BrainTeasers', eventName: 'Omegatrix')));
           },
           label: Container(
               width: 100,

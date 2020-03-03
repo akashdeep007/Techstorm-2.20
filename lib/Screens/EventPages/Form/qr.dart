@@ -1,8 +1,5 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-import 'dart:async';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
 import 'package:image_picker_saver/image_picker_saver.dart';
@@ -10,20 +7,9 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 
 class QrGen extends StatefulWidget {
-  String name = '';
-  String department = '';
-  String year = '';
-  String college = '';
-  String contact = '';
-  String event = '';
-
-  QrGen(
-      {this.name,
-      this.department,
-      this.year,
-      this.college,
-      this.contact,
-      this.event});
+  String eventName;
+  String data;
+  QrGen(this.eventName, this.data);
 
   @override
   _QrGenState createState() => _QrGenState();
@@ -47,8 +33,8 @@ class _QrGenState extends State<QrGen> {
       print(filePath);
     }
 
-    String data =
-        "Name:${widget.name} \nEvent:${widget.event}\nCollege:${widget.college}\nDepartment: ${widget.department}\nYear:${widget.year}\nContact:${widget.contact},";
+    // String data =
+    //     "Name:${widget.name} \nEvent:${widget.event}\nCollege:${widget.college}\nDepartment: ${widget.department}\nYear:${widget.year}\nContact:${widget.contact},";
 
     return Scaffold(
       appBar: AppBar(
@@ -61,7 +47,7 @@ class _QrGenState extends State<QrGen> {
             child: Column(
               children: <Widget>[
                 Text(
-                  "${widget.event}",
+                  "${widget.eventName}",
                   style: TextStyle(
                     fontSize: 20.0,
                     color: Colors.deepOrange,
@@ -70,7 +56,7 @@ class _QrGenState extends State<QrGen> {
                 RepaintBoundary(
                     
                     child: QrImage(
-                      data: data,
+                      data: widget.data,
                     )),
                 RaisedButton(
                   onPressed: _screenshot,

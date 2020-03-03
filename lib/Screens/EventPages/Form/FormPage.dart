@@ -1,17 +1,14 @@
 import 'package:dropdown_formfield/dropdown_formfield.dart';
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
 import 'package:techstorm/Screens/EventPages/Form/qr.dart';
 import 'package:techstorm/Services/DatabaseService.dart';
 import 'package:firebase_database/firebase_database.dart';
 
 
 class RegisterForm extends StatefulWidget {
-  final bool team;
   final String eventName;
-  final int teamMembers;
   final String eventType;
-  RegisterForm({this.eventType, this.eventName, this.team, this.teamMembers});
+  RegisterForm({this.eventType, this.eventName});
   
   @override
   _RegisterFormState createState() => _RegisterFormState();
@@ -32,7 +29,7 @@ class _RegisterFormState extends State<RegisterForm> {
   @override
   Widget build(BuildContext context) {
     print(widget.eventName);
-     return widget.team == false ?  Scaffold(
+     return Scaffold(
       extendBody: false,
       appBar: AppBar(
         backgroundColor : Colors.black87,
@@ -84,7 +81,7 @@ class _RegisterFormState extends State<RegisterForm> {
                             if(text.isEmpty){
                               return 'Enter Contact Number';
                             }
-                            if(text.length <= 10){
+                            if(text.length != 10){
                               return 'Not Valid Phone Number';
                             }
                             return null;
@@ -240,7 +237,8 @@ class _RegisterFormState extends State<RegisterForm> {
                                   'year' : year,
                                   'college' : college,                           
                                 });
-                                Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(event: widget.eventName, college: college, contact: contact, department: department, name: name, year: year)));
+                                    String data = "Name:$name \nEvent:${widget.eventName}\nCollege:$college\nDepartment: $department\nYear:$year\nContact:$contact,";
+                                Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data)));
                               }
                               else {
                                 setState(() => error = 'Already Registered');
@@ -258,6 +256,6 @@ class _RegisterFormState extends State<RegisterForm> {
                 ),
         ),
       ),
-    ) : TeamFormPage(eventType: widget.eventType , eventName : widget.eventName, teamMembers: widget.teamMembers,);
+    );
   }
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/EventPages/Form/FormPage.dart';
+import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AppMania extends StatefulWidget {
@@ -16,8 +16,8 @@ class _AppManiaState extends State<AppMania> {
             Navigator.push(
                 context,
                 new MaterialPageRoute(
-                    builder: (context) => RegisterForm(
-                        eventName: 'AppMania', team: true, teamMembers: 2)));
+                    builder: (context) => TeamFormPage(
+                        eventName: 'AppMania', eventType: 'BrainTeasers', minMembers: 2, maxMembers: 4,)));
           },
           label: Container(
               width: 100,

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:techstorm/Screens/EventPages/Form/FormPage.dart';
+import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 class Technomania extends StatefulWidget {
   @override
@@ -11,7 +12,7 @@ class _TechnomaniaState extends State<Technomania> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(onPressed: () { 
-      Navigator.push(context,new MaterialPageRoute(builder: (context) =>RegisterForm(eventName : 'Technomania',team: true, teamMembers: 2)));
+      Navigator.push(context,new MaterialPageRoute(builder: (context) =>TeamFormPage(eventName : 'Technomania',eventType : 'BrainTeasers' , minMembers: 2, maxMembers: 2,)));
 
       }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
