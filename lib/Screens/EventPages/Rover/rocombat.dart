@@ -43,7 +43,7 @@ class _RO_CombatState extends State<RO_Combat> {
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
                 child: Image.asset(
-                  'assets/images/ROVERS/RO_COMBAT.jpg',
+                  'assets/images/ROVERS/rocom-min.jpg',
                   fit: BoxFit.fitWidth,
                 )),
             Divider(
@@ -66,19 +66,10 @@ class _RO_CombatState extends State<RO_Combat> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rule1",
+                                "Two bots will start from two opposite sides of arena.There will be an inclined plane and a combat zone. Points will be provided in both zones.There will be some changes in the arena from preliminary round to final round.In preliminary rounds there will be a cubical arena with two inclined planes.At the entrance there will be a flap gate and an inclined plane through which bots will enter.Two cubical ditches will be present inside the arena at possible edges.Preliminary rounds will be of 1200 points and later stages will be of more points.",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "rule2",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
-                              Text(
-                                "rule3",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
+                              
                             ],
                           )),
                     ),
@@ -100,7 +91,7 @@ class _RO_CombatState extends State<RO_Combat> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rs 10",
+                                "BPPIMT Teams: INR 120 /-\nOther Teams: INR 150 /",
                                 style: TextStyle(fontSize: 18),
                               ),
                              
@@ -157,6 +148,7 @@ class _RO_CombatState extends State<RO_Combat> {
                             ),
                           ),
                           subtitle: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -168,7 +160,7 @@ class _RO_CombatState extends State<RO_Combat> {
                                   SizedBox(width:20),
                                    IconButton(icon: Icon(Icons.phone), 
                                 onPressed:() {
-                                  launch('tel:+${'7044075625'}');
+                                  launch('tel:${'7044075625'}');
                                 },
 
       ),
@@ -184,7 +176,7 @@ class _RO_CombatState extends State<RO_Combat> {
                                   SizedBox(width:20),
                                    IconButton(icon: Icon(Icons.phone), 
                                 onPressed:() {
-                                  launch('tel:+${'9733838669'}');
+                                  launch('tel:${'9733838669'}');
                                 },
 
       ),
@@ -211,17 +203,10 @@ class _RO_CombatState extends State<RO_Combat> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "1st prize : 5000",
+                                "To be Announced",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "2nd prize : 2000",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                "3rd prize : 1000",
-                                style: TextStyle(fontSize: 18),
-                              ),
+                              
                             ],
                           )),
                     ),

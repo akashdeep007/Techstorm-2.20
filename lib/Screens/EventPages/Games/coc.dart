@@ -48,7 +48,7 @@ class _COCState extends State<COC> {
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
                 child: Image.asset(
-                  'assets/images/GAMES/CLASH_OF_CLANS.jpg',
+                  'assets/images/GAMES/coc-min.jpg',
                   fit: BoxFit.fitWidth,
                 )),
             Divider(
@@ -71,18 +71,8 @@ class _COCState extends State<COC> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rule1",
+                                "  Hey Chief! We\'ve been waiting for you. Techstorm 2.20 brings you the opportunity to prove to the Clashing Universe that you are the best in the business! So get your armies trained,spells brewed and heroes healed up to kick some green butts!",
                                 style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                "rule2",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
-                              Text(
-                                "rule3",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
                               ),
                             ],
                           )),
@@ -105,7 +95,7 @@ class _COCState extends State<COC> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rs 10",
+                                "BPPIMT students: INR 30 /-\n\nOther students: INR 50 /-",
                                 style: TextStyle(fontSize: 18),
                               ),
                              
@@ -129,20 +119,8 @@ class _COCState extends State<COC> {
                           ),
                           subtitle: Column(
                             children: <Widget>[
-                              Text(
-                                "Rule1",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                "Rule2",
-                                style: TextStyle(
-                                    fontSize: 18),
-                              ),
-                              Text(
-                                "Rule3",
-                                style: TextStyle(
-                                    fontSize: 18),
-                              ),
+                             Text("1.	Townhall 7 to Townhall 9 only.\n2.	Mod or any other 3rd party softwares are not allowed.\n3.	One entry per person.\n4.	Organizers will not provide any sort of internet connection.\n5.	In case of any conflict, the decision of the organizers will be final.\n6.	Breaking of any rules will lead to immediate disqualification.\n7.	Clan troops/spells are not allowed during the event whether it is used as attacking or defending the village.\n8.	There will be no use of magic items such as using potion which boosts the army and spells to a max level and siege machines.")
+                             
                             ],
                           )),
                     ),
@@ -171,7 +149,7 @@ class _COCState extends State<COC> {
                               SizedBox(width:20),
                                IconButton(icon: Icon(Icons.phone), 
                             onPressed:() {
-                              launch('tel:+${'8240905009'}');
+                              launch('tel:${'8240905009'}');
                             },
 
       ),
@@ -196,17 +174,10 @@ class _COCState extends State<COC> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "1st prize : 5000",
+                                "To be Announced",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "2nd prize : 2000",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                "3rd prize : 1000",
-                                style: TextStyle(fontSize: 18),
-                              ),
+                              
                             ],
                           )),
                     ),

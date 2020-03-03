@@ -1,7 +1,10 @@
 import 'package:dropdown_formfield/dropdown_formfield.dart';
 import 'package:flutter/material.dart';
 import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
+import 'package:techstorm/Screens/EventPages/Form/qr.dart';
 import 'package:techstorm/Services/DatabaseService.dart';
+import 'package:firebase_database/firebase_database.dart';
+
 
 class RegisterForm extends StatefulWidget {
   final bool team;
@@ -15,6 +18,7 @@ class RegisterForm extends StatefulWidget {
 }
 
 class _RegisterFormState extends State<RegisterForm> {
+  String error = '';
   String name = '';
   String department = '';
   String year = '';
@@ -30,12 +34,6 @@ class _RegisterFormState extends State<RegisterForm> {
     print(widget.eventName);
      return widget.team == false ?  Scaffold(
       extendBody: false,
-      floatingActionButton: FloatingActionButton.extended(onPressed: () {
-        if(_formKey.currentState.validate()){
-          database.registerUser(widget.eventType ,widget.eventName , email, contact, name, department, year, college); 
-        }
-      }, label: Container(child: Center(child : Text('Register')))),
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
         backgroundColor : Colors.black87,
         title : Text('Register'),
@@ -81,9 +79,13 @@ class _RegisterFormState extends State<RegisterForm> {
                         ),
                             SizedBox(height: 20,),                      
                         TextFormField(
+                          keyboardType: TextInputType.number,
                           validator: (text) {
                             if(text.isEmpty){
                               return 'Enter Contact Number';
+                            }
+                            if(text.length <= 10){
+                              return 'Not Valid Phone Number';
                             }
                             return null;
                           },
@@ -218,6 +220,38 @@ class _RegisterFormState extends State<RegisterForm> {
                             townhall = text;
                           },
                         ) : Container(),
+                        Text(error, style: TextStyle(color: Colors.red, fontSize: 16, fontWeight: FontWeight.bold),),
+                        FlatButton(
+                          onPressed: () {
+                            final database = FirebaseDatabase.instance.reference();
+                          setState(() {
+                            error = '';
+                          });
+                          if(_formKey.currentState.validate()){
+                            String path = widget.eventType + '/' + widget.eventName + '/' + contact;
+                            database.reference().child(path).once().then((DataSnapshot dataSnapshot) {
+                              print(dataSnapshot.value);
+                              if (dataSnapshot.value == null){
+                                database.child(widget.eventType + '/' + widget.eventName + '/' + contact).set({
+                                  'email' : email,
+                                  'name' : name,
+                                  'phone' : contact,
+                                  'department' : department,
+                                  'year' : year,
+                                  'college' : college,                           
+                                });
+                                Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(event: widget.eventName, college: college, contact: contact, department: department, name: name, year: year)));
+                              }
+                              else {
+                                setState(() => error = 'Already Registered');
+                              }
+                            });
+                            
+                          } else {
+                            setState(() => error = '');
+                          }
+                        },
+                        child: Container(alignment: Alignment.center,height : 40, width: 200,color: Colors.red,  child:Container(alignment: Alignment.center,height : 40, width: 200,color: Colors.red,  child: Text('Register', style: TextStyle(fontSize: 24, fontWeight:FontWeight.bold),),),),)
                       ],
                     ),
                   ),

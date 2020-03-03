@@ -34,7 +34,7 @@ class _FantaCState extends State<FantaC> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/BRAIN/FANTA-C.jpg'),
+                image: AssetImage('assets/images/BRAIN/fc-min.jpg'),
                 fit: BoxFit.cover)),
         child: ListView(
           children: <Widget>[
@@ -161,7 +161,7 @@ class _FantaCState extends State<FantaC> {
                           IconButton(
                             icon: Icon(Icons.phone),
                             onPressed: () {
-                              launch('tel:+${'9883267071'}');
+                              launch('tel:${'9883267071'}');
                             },
                           ),
                         ],
@@ -177,7 +177,7 @@ class _FantaCState extends State<FantaC> {
                           IconButton(
                             icon: Icon(Icons.phone),
                             onPressed: () {
-                              launch('tel:+${'6290754213'}');
+                              launch('tel:${'6290754213'}');
                             },
                           ),
                         ],
@@ -205,17 +205,10 @@ class _FantaCState extends State<FantaC> {
                   subtitle: Column(
                     children: <Widget>[
                       Text(
-                        "1st prize : 5000",
+                        "To be Announced",
                         style: TextStyle(fontSize: 18),
                       ),
-                      Text(
-                        "2nd prize : 2000",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                      Text(
-                        "3rd prize : 1000",
-                        style: TextStyle(fontSize: 18),
-                      ),
+                    
                     ],
                   )),
             ),

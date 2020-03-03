@@ -43,7 +43,7 @@ class _KHETState extends State<KHET> {
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
                 child: Image.asset(
-                  'assets/images/GAMES/KHET.jpg',
+                  'assets/images/GAMES/khet-min.jpg',
                   fit: BoxFit.fitWidth,
                 )),
             Divider(
@@ -66,19 +66,10 @@ class _KHETState extends State<KHET> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rule1",
+                                " The Laser Game KHET 2.0: Mind blowing laser fun for players ages 9-99.Using simple rules that can be learned in minutes, players alternate turns movingEgyptian themed mirrored Pieces, after which they fire their REAL (eye-safe) laser withthe goal of blasting their opponents PHARAOH to win the game! BASIC GEOMETRICAL CONCEPT ISTHE KEY FACTOR IN THIS GAME.",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "rule2",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
-                              Text(
-                                "rule3",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
+                          
                             ],
                           )),
                     ),
@@ -100,7 +91,7 @@ class _KHETState extends State<KHET> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rs 10",
+                                "BPPIMT students: INR 30 /",
                                 style: TextStyle(fontSize: 18),
                               ),
                              
@@ -124,12 +115,9 @@ class _KHETState extends State<KHET> {
                           ),
                           subtitle: Column(
                             children: <Widget>[
+                              
                               Text(
-                                "Rule1",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                "Rule2",
+                                "PRELIMS-I: 1.Two Players will be in one set at a time.2. In each turn player will get max 2 minutes for next 30 seconds -1 will be added and for next 30 seconds another -1 will be added.\n3. If he/she does not make any move in stipulated time then and there he/she will be eliminated and opponent shall be declared as winner.\n4.For each warning -3 will be added for breaking any rule i.e. touching mirror, rotate pyramid more than 45 degree, rotate and then move element). After getting 3 warnings participant will be then and there eliminated.\n5. Marks division: Pyramid 5, Anubis 10, Rule breaking -3\n7. If participant hits his/her own element then the corresponding marks will be deducted.\n6. If the total game time exceeds 15 minutes then another 5 minutes will be given to end the game. In this case no marks will be deducted from any participant but they will be warned.\n7. If the match will tie then marks will be considered and if marks will also happen to be same then total time taken will be considered. \nPRELIMS-II:\nTime limit for each move will be 1.5 minutes and after that he/she will be given another 1 min to move.\nQuarter final, Semifinal & Final :\n\n1. In each turn player will get max 2 minutes for next 30 seconds -1 will be added and for next 30 seconds another (-1) will be added.\n2. There is no total time limit for entire game. \n\nSetups: \nPrelims: Classic\nQuarter final: Dynasty\nSemifinal & Final: Imhotep",
                                 style: TextStyle(
                                     fontSize: 18),
                               ),
@@ -168,7 +156,7 @@ class _KHETState extends State<KHET> {
                                   SizedBox(width:20),
                                    IconButton(icon: Icon(Icons.phone), 
                                 onPressed:() {
-                                  launch('tel:+${'8910016185'}');
+                                  launch('tel:${'8910016185'}');
                                 },
 
       ),
@@ -184,7 +172,7 @@ class _KHETState extends State<KHET> {
                                   SizedBox(width:20),
                                    IconButton(icon: Icon(Icons.phone), 
                                 onPressed:() {
-                                  launch('tel:+${'8240259213'}');
+                                  launch('tel:${'8240259213'}');
                                 },
 
       ),
@@ -211,17 +199,10 @@ class _KHETState extends State<KHET> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "1st prize : 5000",
+                                "To be announced",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "2nd prize : 2000",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                "3rd prize : 1000",
-                                style: TextStyle(fontSize: 18),
-                              ),
+                              
                             ],
                           )),
                     ),

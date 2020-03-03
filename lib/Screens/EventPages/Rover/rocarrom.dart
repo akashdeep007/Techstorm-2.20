@@ -43,7 +43,7 @@ class _RO_CarromState extends State<RO_Carrom> {
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
                 child: Image.asset(
-                  'assets/images/ROVERS/RO_WINGS.jpg',
+                  'assets/images/ROVERS/rocar-min.jpg',
                   fit: BoxFit.fitWidth,
                 )),
             Divider(
@@ -168,7 +168,7 @@ class _RO_CarromState extends State<RO_Carrom> {
                                   SizedBox(width:20),
                                    IconButton(icon: Icon(Icons.phone), 
                                 onPressed:() {
-                                  launch('tel:+${'9852169210'}');
+                                  launch('tel:${'9852169210'}');
                                 },
 
       ),
@@ -186,7 +186,7 @@ class _RO_CarromState extends State<RO_Carrom> {
                                   SizedBox(width:20),
                                    IconButton(icon: Icon(Icons.phone), 
                                 onPressed:() {
-                                  launch('tel:+${'98697238442'}');
+                                  launch('tel:${'98697238442'}');
                                 },
 
       ),
@@ -213,17 +213,10 @@ class _RO_CarromState extends State<RO_Carrom> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "1st prize : 5000",
+                                "To be Announced",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "2nd prize : 2000",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                "3rd prize : 1000",
-                                style: TextStyle(fontSize: 18),
-                              ),
+                             
                             ],
                           )),
                     ),

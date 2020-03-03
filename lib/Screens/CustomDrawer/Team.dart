@@ -20,17 +20,6 @@ Material Myitems(Image im, String heading) {
                 borderRadius: BorderRadius.circular(30),
                 child: im,
               ),
-              Center(
-                  child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  heading,
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontFamily: "TempestApache",
-                  ),
-                ),
-              )),
             ],
           )
         ],
@@ -62,105 +51,121 @@ class TeamPage extends StatelessWidget {
           children: <Widget>[
             Myitems(
                 Image.asset(
-                  'assets/images/BRAIN/OMEGATRIX.jpg',
-                  width: 90.0,
-                  height: 90,
+                  'assets/images/Team/A.jpg',
+                  width:165,
+                  height: 165,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
             Myitems(
                 Image.asset(
-                  'assets/images/BRAIN/OMEGATRIX.jpg',
-                  width: 90.0,
-                  height: 90,
+                  'assets/images/Team/deba.jpg',
+                  width: 165.0,
+                  height: 165,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
             Myitems(
                 Image.asset(
-                  'assets/images/BRAIN/OMEGATRIX.jpg',
-                  width: 90.0,
-                  height: 90,
+                  'assets/images/Team/DEEPJYOTIFINAL-min.jpg',
+                  width: 165.0,
+                  height: 165,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
             Myitems(
                 Image.asset(
-                  'assets/images/BRAIN/OMEGATRIX.jpg',
-                  width: 90.0,
-                  height: 90,
+                  'assets/images/Team/Facebookframesatra.jpg',
+                  width: 165.0,
+                  height: 165,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
             Myitems(
                 Image.asset(
-                  'assets/images/BRAIN/OMEGATRIX.jpg',
-                  width: 90.0,
-                  height: 90,
+                  'assets/images/Team/KUNDUFINAL-min.jpg',
+                  width: 165.0,
+                  height: 165,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
             Myitems(
                 Image.asset(
-                  'assets/images/BRAIN/OMEGATRIX.jpg',
-                  width: 90.0,
-                  height: 90,
+                  'assets/images/Team/lahafinal-min.jpg',
+                  width: 165.0,
+                  height: 165,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
             Myitems(
                 Image.asset(
-                  'assets/images/BRAIN/OMEGATRIX.jpg',
-                  width: 90.0,
-                  height: 90,
+                  'assets/images/Team/NILOTPALFINAL-min.jpg',
+                  width: 165.0,
+                  height: 165,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
             Myitems(
                 Image.asset(
-                  'assets/images/BRAIN/OMEGATRIX.jpg',
-                  width: 90.0,
-                  height: 90,
+                  'assets/images/Team/niprofinal-min.jpg',
+                  width: 165.0,
+                  height: 165,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
             Myitems(
                 Image.asset(
-                  'assets/images/BRAIN/OMEGATRIX.jpg',
-                  width: 90.0,
-                  height: 90,
+                  'assets/images/Team/noor.jpg',
+                  width: 165.0,
+                  height: 165,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
             Myitems(
                 Image.asset(
-                  'assets/images/BRAIN/OMEGATRIX.jpg',
-                  width: 90.0,
-                  height: 90,
+                  'assets/images/Team/raju.jpg',
+                  width: 165.0,
+                  height: 165,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
             Myitems(
                 Image.asset(
-                  'assets/images/BRAIN/OMEGATRIX.jpg',
-                  width: 90.0,
-                  height: 90,
+                  'assets/images/Team/SAMIDHA2-min.jpg',
+                  width: 165.0,
+                  height: 165,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
             Myitems(
                 Image.asset(
-                  'assets/images/BRAIN/OMEGATRIX.jpg',
-                  width: 90.0,
-                  height: 90,
+                  'assets/images/Team/shankarfinal-min.jpg',
+                  width: 165.0,
+                  height: 165,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
             Myitems(
                 Image.asset(
-                  'assets/images/BRAIN/OMEGATRIX.jpg',
-                  width: 90.0,
-                  height: 90,
+                  'assets/images/Team/SOUMILIFINAL-min.jpg',
+                  width: 165.0,
+                  height: 165,
+                  fit: BoxFit.cover,
+                ),
+                "abc"),
+                 Myitems(
+                Image.asset(
+                  'assets/images/Team/sumanfinal-min.jpg',
+                  width: 165.0,
+                  height: 165,
+                  fit: BoxFit.cover,
+                ),
+                "abc"),
+                 Myitems(
+                Image.asset(
+                  'assets/images/Team/SOUMYA.jpg',
+                  width: 165.0,
+                  height: 165,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
