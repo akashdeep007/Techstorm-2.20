@@ -1,29 +1,14 @@
-import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-import 'dart:async';
-import 'dart:typed_data';
-import 'dart:ui' as ui;
-import 'package:image_picker_saver/image_picker_saver.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter/services.dart';
+
+import '../../home.dart';
+
 
 class QrGen extends StatefulWidget {
-  String name = '';
-  String department = '';
-  String year = '';
-  String college = '';
-  String contact = '';
-  String event = '';
-
-  QrGen(
-      {this.name,
-      this.department,
-      this.year,
-      this.college,
-      this.contact,
-      this.event});
+  String eventName;
+  String data;
+  QrGen(this.eventName, this.data);
 
   @override
   _QrGenState createState() => _QrGenState();
@@ -33,52 +18,36 @@ class _QrGenState extends State<QrGen> {
   Widget build(BuildContext context) {
     GlobalKey screen = new GlobalKey();
 
-
-    void _screenshot() async {
-      RenderRepaintBoundary boundary = screen.currentContext.findRenderObject();
-
-      ui.Image image = await boundary.toImage();
-
-      ByteData byteData =
-          await image.toByteData(format: ui.ImageByteFormat.rawRgba);
-      var filePath = await ImagePickerSaver.saveFile(
-          fileData: byteData.buffer.asUint8List());
-
-      print(filePath);
-    }
-
-    String data =
-        "Name:${widget.name} \nEvent:${widget.event}\nCollege:${widget.college}\nDepartment: ${widget.department}\nYear:${widget.year}\nContact:${widget.contact},";
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('SCAN IT'),
-      ),
-      body: RepaintBoundary(
-        key:screen ,
-        child:
-          Center(
-            child: Column(
-              children: <Widget>[
-                Text(
-                  "${widget.event}",
-                  style: TextStyle(
-                    fontSize: 20.0,
-                    color: Colors.deepOrange,
+    return WillPopScope(
+      onWillPop: () async => false,
+      child: Scaffold(
+        floatingActionButton: FloatingActionButton.extended(onPressed: () =>Navigator.push(context,new MaterialPageRoute(builder: (context) =>Home())), label: Text('Return')),
+        body: RepaintBoundary(
+          key:screen ,
+          child:
+            Center(
+              child: Column(
+                children: <Widget>[
+                  SizedBox(height: 40),
+                  
+                  Text(
+                    "${widget.eventName}",
+                    style: TextStyle(
+                      fontSize: 32.0,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold
+                    ),
                   ),
-                ),
-                RepaintBoundary(
-                    
-                    child: QrImage(
-                      data: data,
-                    )),
-                RaisedButton(
-                  onPressed: _screenshot,
-                  child: Text("Save Image"),
-                )
-              ],
+                  RepaintBoundary(
+                      child: QrImage(
+                        data: widget.data,
+                      )),
+                      SizedBox(height: 50,),
+                      Text('Please Take ScreenShot', style: TextStyle(fontSize : 32, color:Colors.red, fontWeight:FontWeight.bold),)
+                ],
+              ),
             ),
-          ),
+        ),
       ),
     );
   }

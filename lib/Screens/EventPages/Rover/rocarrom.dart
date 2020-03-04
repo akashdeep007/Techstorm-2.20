@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:techstorm/Screens/EventPages/Form/FormPage.dart';
+import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 class RO_Carrom extends StatefulWidget {
   @override
@@ -9,7 +11,9 @@ class _RO_CarromState extends State<RO_Carrom> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton.extended(onPressed: () {}, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
+      floatingActionButton: FloatingActionButton.extended(onPressed: () {
+        Navigator.push(context,new MaterialPageRoute(builder: (context) =>TeamFormPage(eventType: 'Roverse', eventName: "ROCARROM", minMembers: 1, maxMembers: 5,)));
+      }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
               appBar: AppBar(
                 title: Text('RO Carrom'),
@@ -38,7 +42,7 @@ class _RO_CarromState extends State<RO_Carrom> {
                       ),
                     ),
                     Card(
-                color: Colors.white70,
+                color: Colors.white,
                 elevation: 5,
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
@@ -50,7 +54,7 @@ class _RO_CarromState extends State<RO_Carrom> {
               height: 20,
             ),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -84,7 +88,7 @@ class _RO_CarromState extends State<RO_Carrom> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -100,7 +104,7 @@ class _RO_CarromState extends State<RO_Carrom> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rs 10",
+                                "FEE 100 for bppimt\n150 for non bppimt",
                                 style: TextStyle(fontSize: 18),
                               ),
                              
@@ -109,7 +113,7 @@ class _RO_CarromState extends State<RO_Carrom> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -125,16 +129,21 @@ class _RO_CarromState extends State<RO_Carrom> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rule1",
+                                "GAME RULES \n1. Points will be awarded for a successful knock in the pocket.\n 2. Team can pocket one carrom man at a time.\n  3. Pocketing bot is a FOUL. Team committing a FOUL will be penalized.\n 4. If carrom men  falls out of the arena, the team that made the FLICK will be penalized. \n5. Any player pocketing the queen is required to cover it immediately by pocketing one of their carrom men within 10 seconds. If the player fails to cover it, the queen is returned to the centre. \n6. Intentionally hitting the bot of the opposite team is a FOUL. \n 7. Decision of the coordinators will be final.\n ",
                                 style: TextStyle(fontSize: 18),
                               ),
                               Text(
-                                "Rule2",
+                                "BOT SPECIFICATIONS \n1. The dimensions of the bots should be 25*25*25 cm.\n 2. The weight of the bot should be within 3 kg, no external weights are allowed, otherwise the corresponding team will be disqualified .\n 3. 10% tolerance would be allowed in 25cm lengths & any deviations from the above mentioned dimensions may lead to disqualification of the team.\n 4. Readymade toy cars or Lego or IC engines or hydraulic systems are not allowed.\n 5. The robot should be remotely controlled.\n ",
                                 style: TextStyle(
                                     fontSize: 18),
                               ),
                               Text(
-                                "Rule3",
+                                "SCORING \n1. Each carrom-men : 20 points\n 2. Queen : 50 points \n3. Pocketing obstacles: -5 points \n4. Flick: -5 points\n 5. Foul : -10 points \n6. Any harm to arena : Disqualify \n",
+                                style: TextStyle(
+                                    fontSize: 18),
+                              ),
+                              Text(
+                                "GENERAL RULES \n1. Each team can have maximum 5 members.\n 2. Students from different institutions can form a team provided that each member of the team contains the identity card of his/her respective institute along with a Xerox copy of voter ID card or PAN card or AADHAR card.\n 3. No fans or blowing devices are allowed.\n ",
                                 style: TextStyle(
                                     fontSize: 18),
                               ),
@@ -143,7 +152,7 @@ class _RO_CarromState extends State<RO_Carrom> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -197,7 +206,7 @@ class _RO_CarromState extends State<RO_Carrom> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),

@@ -17,7 +17,7 @@ class _OmegatrixState extends State<Omegatrix> {
                 context,
                 new MaterialPageRoute(
                     builder: (context) => RegisterForm(
-                       eventType: 'BrainTeasers', eventName: 'Omegatrix', team: false, teamMembers: 1)));
+                       eventType: 'Brain Teasers', eventName: 'OMEGATRIX')));
           },
           label: Container(
               width: 100,
@@ -53,7 +53,7 @@ class _OmegatrixState extends State<Omegatrix> {
               ),
             ),
             Card(
-                color: Colors.white70,
+                color: Colors.white,
                 elevation: 5,
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
@@ -65,7 +65,7 @@ class _OmegatrixState extends State<Omegatrix> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
@@ -91,7 +91,7 @@ class _OmegatrixState extends State<Omegatrix> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
@@ -117,7 +117,7 @@ class _OmegatrixState extends State<Omegatrix> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
@@ -147,7 +147,7 @@ class _OmegatrixState extends State<Omegatrix> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
@@ -201,7 +201,7 @@ class _OmegatrixState extends State<Omegatrix> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),

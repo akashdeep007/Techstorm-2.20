@@ -42,14 +42,14 @@ class RoboticsPage extends StatelessWidget {
                                 Text(
                 'RO_COMBAT',
                 style: TextStyle(
-                    fontSize: 36,fontFamily: "TempestApache",
+                    fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
                SizedBox(height:20),
               Text(
                   'You don\'t want to stand too close to a robot arm; it can turn you to mush !',style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 18,
                       color: Colors.black)),
                 ],
               ),
@@ -87,14 +87,14 @@ RaisedButton(
                                 Text(
                 'RO_NAVIGATOR',
                 style: TextStyle(
-                    fontSize: 36,fontFamily: "TempestApache",
+                    fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
               SizedBox(height:20),
               Text(
                   'Discipline is the key to stay on track. May your bot be disciplined enough.',style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 18,
                       color: Colors.black)),
                 ],
               ),
@@ -132,14 +132,14 @@ RaisedButton(
                                 Text(
                 'Ro - PICKER',
                 style: TextStyle(
-                    fontSize: 36,fontFamily: "TempestApache",
+                    fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
               SizedBox(height:20),
               Text(
                   'At the end of the day, the job is to pick the blocks and move to the finish line as fast as you can !',style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 18,
                       color: Colors.black)),
                 ],
               ),
@@ -177,14 +177,14 @@ RaisedButton(
                                 Text(
                 'RO SOCCER',
                 style: TextStyle(
-                    fontSize: 36,fontFamily: "TempestApache",
+                    fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
               SizedBox(height:20),
               Text(
                   'As long as no one scored, it\'s always going to be close.',style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 18,
                       color: Colors.black)),
                 ],
               ),
@@ -220,14 +220,14 @@ RaisedButton(
                                 Text(
                 'RO_Terrace',
                 style: TextStyle(
-                    fontSize: 36,fontFamily: "TempestApache",
+                    fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
-             SizedBox(height:20),
+             SizedBox(height:10),
               Text(
                   'Life will throw many obstacles. But we\'ll throw mountains, desserts, bridges and may be even a river. Just don\'t let your wheels fall apart.',style: TextStyle(
-                      fontSize: 22,
+                      fontSize: 18,
                       color: Colors.black)),
                 ],
               ),
@@ -263,14 +263,14 @@ RaisedButton(
                                 Text(
                 'RO_Wings',
                 style: TextStyle(
-                    fontSize: 36,fontFamily: "TempestApache",
+                    fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
               SizedBox(height:20),
               Text(
                   'Please make sure to fasten your seat belts, keep your seats upright and keep your windows open during take-off.',style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 18,
                       color: Colors.black)),
                 ],
               ),
@@ -308,14 +308,14 @@ RaisedButton(
                                 Text(
                 'RO_Carrom',
                 style: TextStyle(
-                    fontSize: 36,fontFamily: "TempestApache",
+                    fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
              SizedBox(height:20),
               Text(
                   'One Objective.\nScore more than the opposition',style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 18,
                       color: Colors.black)),
                 ],
               ),
@@ -340,7 +340,7 @@ RaisedButton(
         alignment: Alignment.center,
         child: CarouselSlider.builder(
           enableInfiniteScroll: true,
-          height: 300,
+          height: 220,
    itemCount: RoverCards.length,
    itemBuilder: (BuildContext context, int itemIndex) =>
           RoverCards[itemIndex]

@@ -1,17 +1,14 @@
 import 'package:dropdown_formfield/dropdown_formfield.dart';
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
 import 'package:techstorm/Screens/EventPages/Form/qr.dart';
-import 'package:techstorm/Services/DatabaseService.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:string_validator/string_validator.dart';
 
 
 class RegisterForm extends StatefulWidget {
-  final bool team;
   final String eventName;
-  final int teamMembers;
   final String eventType;
-  RegisterForm({this.eventType, this.eventName, this.team, this.teamMembers});
+  RegisterForm({this.eventType, this.eventName});
   
   @override
   _RegisterFormState createState() => _RegisterFormState();
@@ -26,13 +23,12 @@ class _RegisterFormState extends State<RegisterForm> {
   String contact = '';
   String email = '';
   String townhall = '';
-  DatabaseService database = DatabaseService();
-  final _formKey = GlobalKey<FormState>();
+    final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
     print(widget.eventName);
-     return widget.team == false ?  Scaffold(
+     return Scaffold(
       extendBody: false,
       appBar: AppBar(
         backgroundColor : Colors.black87,
@@ -68,6 +64,9 @@ class _RegisterFormState extends State<RegisterForm> {
                             if(text.isEmpty){
                               return 'Enter Email';
                             }
+                            if(!isEmail(text)){
+                              return 'Enter Valid Email';
+                            }
                             return null;
                           },
                           decoration: InputDecoration(
@@ -84,8 +83,11 @@ class _RegisterFormState extends State<RegisterForm> {
                             if(text.isEmpty){
                               return 'Enter Contact Number';
                             }
-                            if(text.length <= 10){
+                            if(text.length != 10){
                               return 'Not Valid Phone Number';
+                            }
+                            if(!isNumeric(text)){
+                              return 'Enter a Valid Phone Number';
                             }
                             return null;
                           },
@@ -233,14 +235,32 @@ class _RegisterFormState extends State<RegisterForm> {
                               print(dataSnapshot.value);
                               if (dataSnapshot.value == null){
                                 database.child(widget.eventType + '/' + widget.eventName + '/' + contact).set({
-                                  'email' : email,
-                                  'name' : name,
-                                  'phone' : contact,
-                                  'department' : department,
-                                  'year' : year,
-                                  'college' : college,                           
+                                  'e_email' : email,
+                                  'b_leaderName' : name,
+                                  'f_phoneNo' : contact,
+                                  'd_department' : department,
+                                  'c_college' : college,
+                                  'payment' : 'false',
+                                  'time' : DateTime.now().toString(),                           
                                 });
-                                Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(event: widget.eventName, college: college, contact: contact, department: department, name: name, year: year)));
+                                    String data = "Name:$name\nEvent:${widget.eventName}\nCollege:$college\nDepartment:$department\nYear:$year\nContact:$contact\nEventType:${widget.eventType}";
+                                      showDialog(
+                                      context: context,
+                                      builder: (BuildContext context){
+                                          return AlertDialog(
+                                            title: Text("Confirm Registration"),
+                                            content: Text("Press Confirm to Generate QR Code"),
+                                            actions: <Widget>[
+                                              RaisedButton(
+                                                child: Text('Confirm'),
+                                                onPressed: () => Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data))),
+                                              ),
+                                            ],
+                                          );
+                                      }
+                                    );
+
+                                // Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data)));
                               }
                               else {
                                 setState(() => error = 'Already Registered');
@@ -258,6 +278,6 @@ class _RegisterFormState extends State<RegisterForm> {
                 ),
         ),
       ),
-    ) : TeamFormPage(eventType: widget.eventType , eventName : widget.eventName, teamMembers: widget.teamMembers,);
+    );
   }
 }

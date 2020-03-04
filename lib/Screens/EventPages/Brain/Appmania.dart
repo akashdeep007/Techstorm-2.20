@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/EventPages/Form/FormPage.dart';
+import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class AppMania extends StatefulWidget {
@@ -16,8 +16,8 @@ class _AppManiaState extends State<AppMania> {
             Navigator.push(
                 context,
                 new MaterialPageRoute(
-                    builder: (context) => RegisterForm(
-                        eventName: 'AppMania', team: true, teamMembers: 2)));
+                    builder: (context) => TeamFormPage(eventType: 'Brain Teasers',
+                        eventName: 'APPMANIA', minMembers: 1, maxMembers: 2,)));
           },
           label: Container(
               width: 100,
@@ -53,7 +53,7 @@ class _AppManiaState extends State<AppMania> {
               ),
             ),
             Card(
-                color: Colors.white70,
+                color: Colors.white,
                 elevation: 5,
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
@@ -65,7 +65,7 @@ class _AppManiaState extends State<AppMania> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
@@ -92,7 +92,7 @@ class _AppManiaState extends State<AppMania> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
@@ -118,7 +118,7 @@ class _AppManiaState extends State<AppMania> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
@@ -144,7 +144,7 @@ class _AppManiaState extends State<AppMania> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
@@ -182,7 +182,7 @@ class _AppManiaState extends State<AppMania> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),

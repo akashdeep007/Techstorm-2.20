@@ -32,22 +32,23 @@ class AboutusPage extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 20,),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
               child: ListTile(
                   contentPadding: EdgeInsets.all(20),
                   title:
-                      Center(child:ClipRRect(child:Image.asset('assets/images/BRAIN/OMEGATRIX.jpg'),),),
+                      Center(child:ClipRRect(child:Image.asset('assets/images/unnamed.png', fit: BoxFit.cover, scale: 4,),),),
                       
                      
                     
                   subtitle: Column(
                     children: <Widget>[
                       Text(
-                        " Here is a chance to prove yourself that you are not only a programmer but an elegant andefficient coder. Plunge in to unravel the deep Coding secrets and swim up to the shorewith the best algorithm. The three upcoming rounds will give your mind a real twist and turn so be ready to decode the trail.",
+                        "B. P. Poddar Institute of Management and Technology presents to you, Techstorm 2.20, where we aim at diversifying the manifold fields of technology. Ever since its advent in our institute from 2011, we have always believed in the amalgamation of technology and imagination.\n 'Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution'\n-Albert Einstein\n\nWhile continuing to celebrate this legacy, BPPIMT welcomes you to this edition of Techstorm 2.20 - the technical festival of BPPIMT family.\n\nWe invite you all to come and unleash your technical skills and creativity, be our esteemed guest and take back along with you an enriching experience that you have never experienced before.",
                         style: TextStyle(fontSize: 18),
                       ),
                     ],
@@ -56,64 +57,11 @@ class AboutusPage extends StatelessWidget {
             Divider(
               height: 20,
             ),
+
+           
+
             Card(
-              color: Colors.white70,
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(10.0)),
-              child: ListTile(
-                  contentPadding: EdgeInsets.all(20),
-                  title: Center(
-                    child: Text(
-                      "Registration fees",
-                      style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
-                    ),
-                  ),
-                  subtitle: Column(
-                    children: <Widget>[
-                      Text(
-                        "BPPIMT Teams: INR 60",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                      Text(
-                        "Other Teams: INR 80",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ],
-                  )),
-            ),
-            Divider(
-              height: 20,
-            ),
-            Card(
-              color: Colors.white70,
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(10.0)),
-              child: ListTile(
-                  contentPadding: EdgeInsets.all(20),
-                  title: Center(
-                    child: Text(
-                      "Rules",
-                      style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
-                    ),
-                  ),
-                  subtitle: Column(
-                    children: <Widget>[
-                      Text(
-                        "FIRST ROUND: D-CODE\n1.This is a preliminary round consisting of multiple choice questions on C programming language.\n2.Time Limit:45 Minutes\n3.There will be negative marking for wrong answers.\n\nSECOND ROUND: BUG-A-THON\n1.This is a Debugging round.\n2. The teams will be provided with erroneous programs. They will have to face the challenge of debugging them.\n3.Time Limit:40 Minutes\n\nTHIRD ROUND: CODE SPRINT\n1.The Groups are expected to exhibit their skills in programming.\n2.They will be allowed to code in anyone of the following programming languages- C, C++, JAVA and PYTHON.\n3.Time Limit: 90 Minutes\n",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ],
-                  )),
-            ),
-            Divider(
-              height: 20,
-            ),
-            Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
@@ -128,55 +76,43 @@ class AboutusPage extends StatelessWidget {
                   ),
                   subtitle: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        "Akashdeep Bhattacharya",
-                        style: TextStyle(fontSize: 18),
+                    children : <Widget> [Column(
+                      children: <Widget> [Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            "Phone Number",
+                            style: TextStyle(fontSize: 18),
+                          ),
+                          SizedBox(width: 20),
+                          IconButton(
+                            icon: Icon(Icons.phone),
+                            onPressed: () {
+                              launch('tel:+${'9051633040'}');
+                            },
+                          ),
+                        ],
                       ),
-                      SizedBox(width: 20),
-                      IconButton(
-                        icon: Icon(Icons.phone),
-                        onPressed: () {
-                          launch('tel:+${'9051633040'}');
-                        },
-                      ),
-                    ],
+Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            "Location           ",
+                            style: TextStyle(fontSize: 18),
+                          ),
+                          SizedBox(width: 20),
+                          IconButton(
+                            icon: Icon(Icons.pin_drop),
+                            onPressed: () {
+                              launch('https://www.google.com/maps/place/B.P.+Poddar+Institute+of+Management+and+Technology/@22.6296285,88.4323668,17z/data=!3m1!4b1!4m5!3m4!1s0x39f89e3149180d5b:0x9abf8a7af72c0eef!8m2!3d22.6296285!4d88.4345555');
+                            },
+                          ),
+                        ],
+                      )]
+                    ),]
                   )),
             ),
-            Divider(
-              height: 20,
-            ),
-            Card(
-              color: Colors.white70,
-              elevation: 5,
-              shape: RoundedRectangleBorder(
-                  borderRadius: new BorderRadius.circular(10.0)),
-              child: ListTile(
-                  contentPadding: EdgeInsets.all(20),
-                  title: Center(
-                    child: Text(
-                      "Prizes to won",
-                      style:
-                          TextStyle(fontSize: 24, fontWeight: FontWeight.w500),
-                    ),
-                  ),
-                  subtitle: Column(
-                    children: <Widget>[
-                      Text(
-                        "1st prize : 5000",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                      Text(
-                        "2nd prize : 2000",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                      Text(
-                        "3rd prize : 1000",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                    ],
-                  )),
-            ),
+
             SizedBox(
               height: 80,
             ),

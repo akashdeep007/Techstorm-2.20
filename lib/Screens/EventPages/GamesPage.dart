@@ -39,14 +39,14 @@ class GamesPage extends StatelessWidget {
                                 Text(
                 'NEED FOR SPEED',
                 style: TextStyle(
-                    fontSize: 36,fontFamily: "TempestApache",
+                    fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
               SizedBox(height:20),
               Text(
                   'Level Up!',style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 18,
                       color: Colors.black)),
               
                 ],
@@ -85,14 +85,14 @@ RaisedButton(
                                 Text(
                 'KHET',
                 style: TextStyle(
-                    fontSize: 36,fontFamily: "TempestApache",
+                    fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
               SizedBox(height:20),
               Text(
                   'The blunders are all there on the board, waiting to be made. When you see a good move, look for a better one.',style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 18,
                       color: Colors.black)),
               
                 ],
@@ -131,14 +131,14 @@ RaisedButton(
                                 Text(
                 'CLASH OF CLANS',
                 style: TextStyle(
-                    fontSize: 36,fontFamily: "TempestApache",
+                    fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
               SizedBox(height:20),
               Text(
                   'There is no good or bad in this world,\nthere are just people whose intentions and clans clash',style: TextStyle(
-                      fontSize: 20,
+                      fontSize: 18,
                       color: Colors.black)),
               
                 ],
@@ -177,14 +177,14 @@ RaisedButton(
                                 Text(
                 'FIFA',
                 style: TextStyle(
-                    fontSize: 36,fontFamily: "TempestApache",
+                    fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
               SizedBox(height:20),
               Text(
                   '90 Minutes. One Objective.\nScore more than the opposition',style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 18,
                       color: Colors.black)),
               
                 ],
@@ -210,7 +210,7 @@ RaisedButton(
         alignment: Alignment.center,
         child: CarouselSlider.builder(
           enableInfiniteScroll: true,
-          height: 300,
+          height: 220,
    itemCount: GamesCards.length,
    itemBuilder: (BuildContext context, int itemIndex) =>
           GamesCards[itemIndex]
