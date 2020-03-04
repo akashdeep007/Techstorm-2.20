@@ -244,7 +244,7 @@ class _RegisterFormState extends State<RegisterForm> {
                                   'time' : DateTime.now().toString(),                           
                                 });
                                     String data = "Name:$name\nEvent:${widget.eventName}\nCollege:$college\nDepartment:$department\nYear:$year\nContact:$contact\nEventType:${widget.eventType}";
-                                                                      showDialog(
+                                      showDialog(
                                       context: context,
                                       builder: (BuildContext context){
                                           return AlertDialog(

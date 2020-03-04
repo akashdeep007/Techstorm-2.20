@@ -29,6 +29,13 @@ class _TeamFormPageState extends State<TeamFormPage> {
  
   @override
   Widget build(BuildContext context) {
+    if(widget.maxMembers == widget.minMembers){
+      moreMembers = widget.maxMembers - 1;
+    }
+    else{
+      moreMembers = widget.maxMembers - widget.minMembers - 1;
+    }
+    print(moreMembers);
     return Scaffold(
       
       extendBody: true,
@@ -227,7 +234,7 @@ class _TeamFormPageState extends State<TeamFormPage> {
                       ),
                     )
                   ),
-                  ListView.builder(physics: NeverScrollableScrollPhysics(),  shrinkWrap: true, itemCount: moreMembers-1,itemBuilder: (context, index){
+                  ListView.builder(physics: NeverScrollableScrollPhysics(),  shrinkWrap: true, itemCount: moreMembers,itemBuilder: (context, index){
                       return Card(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
@@ -369,37 +376,14 @@ class _TeamFormPageState extends State<TeamFormPage> {
                                 'c_college' : college[0],
                                 'payment' : 'false',
                               });
-                              for(int i = 0; i < widget.maxMembers-1; i++){
+                              for(int i = 0; i < moreMembers; i++){
                                 await database.child(widget.eventType + '/' + widget.eventName + '/' +contact[0] + '/' + 'g_members' + '/' + i.toString()).set({
                                 'name' : name[i+1],
                                 'department' : department[i+1],
                                 });
                                 String data = "TeamName:$teamName\nName:${name[0]}\nEvent:${widget.eventName}\nCollege:${college[0]}\nDepartment: ${department[0]}\nYear:${year[0]}\nContact:$contact\nEventType:${widget.eventType}";
-                                                                      showDialog(
-                                      context: context,
-                                      builder: (BuildContext context){
-                                          return AlertDialog(
-                                            title: Text("Confirm Registration"),
-                                            content: Text("Dialog Content"),
-                                            actions: <Widget>[
-                                              Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                              children: <Widget>[
-                                              RaisedButton(
-                                                child: Text('Confirm'),
-                                                onPressed: () => Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data))),
-                                              ),
-                                              RaisedButton(
-                                                child: Text('Back'),
-                                                onPressed: () => Navigator.pop(context),
-                                              )
-                                              ],),
-
-                                            ],
-                                          );
-                                      }
-                                    );
-                                // Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data)));
+                                
+                                Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data)));
                               }
                             } else {
                               setState(() {
