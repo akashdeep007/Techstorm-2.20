@@ -235,6 +235,7 @@ class _RegisterFormState extends State<RegisterForm> {
                               print(dataSnapshot.value);
                               if (dataSnapshot.value == null){
                                 database.child(widget.eventType + '/' + widget.eventName + '/' + contact).set({
+                                  'a_teamName' : '',
                                   'e_email' : email,
                                   'b_leaderName' : name,
                                   'f_phoneNo' : contact,
@@ -243,7 +244,7 @@ class _RegisterFormState extends State<RegisterForm> {
                                   'payment' : 'false',
                                   'time' : DateTime.now().toString(),                           
                                 });
-                                    String data = "Name:$name\nEvent:${widget.eventName}\nCollege:$college\nDepartment:$department\nYear:$year\nContact:$contact\nEventType:${widget.eventType}";
+                                    String data = "${widget.eventType} ${widget.eventName} $contact";
                                       showDialog(
                                       context: context,
                                       builder: (BuildContext context){

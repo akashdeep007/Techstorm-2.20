@@ -191,16 +191,16 @@ var sw=queryData.size.width;
                               Container(
                                 alignment: Alignment.center,
                                 child: Text(
-                                  "\t     On 7th and 8th April 2020\nEveryone is welcome to witness\n10th installment of TechStorm ",
+                                  "\t     On 7th and 8th April 2020\n Everyone is welcome to witness\n 10th installment of TechStorm ",
                                   style: TextStyle(
-                                      fontSize: 18,
+                                      fontSize: 17,
                                       color: Colors.black,
                                       fontWeight: FontWeight.w900),
                                 ),
                               ),
                               Container(
                                 
-                                  padding: EdgeInsets.all(5),
+                                  padding: EdgeInsets.all(15),
                                   child: Container(
 
                                       height: 43.0,

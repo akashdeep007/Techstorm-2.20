@@ -17,7 +17,7 @@ class _FantaCState extends State<FantaC> {
                 context,
                 new MaterialPageRoute(
                     builder: (context) => TeamFormPage(
-                        eventType: 'Brain Teasers', eventName: 'FANTAC', minMembers: 2, maxMembers: 2,)));
+                        eventType: 'Brain_Teasers', eventName: 'FANTAC', minMembers: 2, maxMembers: 2,)));
           },
           label: Container(
               width: 100,

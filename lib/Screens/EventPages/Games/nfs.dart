@@ -103,7 +103,7 @@ class _NFSState extends State<NFS> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rs 10",
+                                "BPPIMT students: INR 30 /-\n\nOther students: INR 50",
                                 style: TextStyle(fontSize: 18),
                               ),
                              

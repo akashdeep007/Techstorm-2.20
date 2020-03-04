@@ -63,7 +63,7 @@ class _TeamFormPageState extends State<TeamFormPage> {
                         key: _formKey,
                         child: Column(
                           children: <Widget>[
-                            Center(child : Text(widget.eventName, style: TextStyle(fontSize : 36, fontWeight:FontWeight.bold),)),
+                            Center(child : Text(widget.eventName, style: TextStyle(fontSize : 32, fontWeight:FontWeight.bold),)),
                             TextFormField(
                               validator: (text){
                                 if(text.isEmpty){
@@ -258,48 +258,7 @@ class _TeamFormPageState extends State<TeamFormPage> {
                                 name[index+1] = text;
                               },
                             ),
-                            TextFormField(
-                          validator: (text) {
-                          if(text.isEmpty){
-                            return 'Enter Contact Number';
-                          }
-                          return null;
-                          },
-                              decoration: InputDecoration(
-                                labelText : 'Contact Number'
-                              ),
-                              onChanged: (text) {
-                                contact[index+1] = text;
-                              },
-                            ),
-                            TextFormField(
-                          validator: (text) {
-                          if(text.isEmpty){
-                            return 'Enter Email';
-                          }
-                          return null;
-                          },
-                              decoration: InputDecoration(
-                                labelText : 'Email'
-                              ),
-                              onChanged: (text) {
-                                email[index+1] = text;
-                              },
-                            ),
-                            TextFormField(
-                          validator: (text) {
-                          if(text.isEmpty){
-                            return 'Enter College Name';
-                          }
-                          return null;
-                          },
-                              onChanged: (text) {
-                                college[index+1] = text;
-                              },
-                              decoration: InputDecoration(
-                                labelText : 'College Name'
-                              ),
-                            ),                        SizedBox(height: 20,),
+                    SizedBox(height: 20,),
                         DropDownFormField(
                           validator: (value){
                           if (value==null){
@@ -379,11 +338,11 @@ class _TeamFormPageState extends State<TeamFormPage> {
                                 'payment' : 'false',
                               });
                               for(int i = 1; i < numMembers; i++){
-                                await database.child(widget.eventType + '/' + widget.eventName + '/' +contact[0] + '/' + 'g_members' + '/' + i.toString()).set({
+                                await database.child(widget.eventType + '/' + widget.eventName + '/' +contact[0] + '/' + 'g_members' + '/' + (i-1).toString()).set({
                                 'name' : name[i],
                                 'department' : department[i],
                                 });
-                                String data = "TeamName:$teamName\nName:${name[0]}\nEvent:${widget.eventName}\nCollege:${college[0]}\nDepartment: ${department[0]}\nYear:${year[0]}\nContact:$contact\nEventType:${widget.eventType}";
+                                String data = "${widget.eventType} ${widget.eventName} ${contact[0]}";
                                       showDialog(
                                       context: context,
                                       builder: (BuildContext context){
