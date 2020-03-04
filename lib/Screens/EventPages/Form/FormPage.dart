@@ -249,21 +249,12 @@ class _RegisterFormState extends State<RegisterForm> {
                                       builder: (BuildContext context){
                                           return AlertDialog(
                                             title: Text("Confirm Registration"),
-                                            content: Text("Dialog Content"),
+                                            content: Text("Press Confirm to Generate QR Code"),
                                             actions: <Widget>[
-                                              Row(
-                                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                                              children: <Widget>[
                                               RaisedButton(
                                                 child: Text('Confirm'),
                                                 onPressed: () => Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data))),
                                               ),
-                                              RaisedButton(
-                                                child: Text('Back'),
-                                                onPressed: () => Navigator.pop(context),
-                                              )
-                                              ],),
-
                                             ],
                                           );
                                       }

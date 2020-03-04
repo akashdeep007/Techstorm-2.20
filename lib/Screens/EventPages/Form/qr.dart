@@ -28,6 +28,7 @@ class _QrGenState extends State<QrGen> {
             Center(
               child: Column(
                 children: <Widget>[
+                  SizedBox(height: 40),
                   
                   Text(
                     "${widget.eventName}",

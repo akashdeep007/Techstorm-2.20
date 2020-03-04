@@ -3,7 +3,6 @@ import 'package:techstorm/Screens/CustomDrawer/Abouus.dart';
 import 'package:techstorm/Screens/CustomDrawer/Team.dart';
 import 'package:techstorm/Screens/CustomDrawer/developer.dart';
 import 'package:techstorm/Screens/CustomDrawer/schedule.dart';
-import 'package:techstorm/Screens/EventPages/Form/qr.dart';
 import 'package:techstorm/Screens/sponsercarousal.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';

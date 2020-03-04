@@ -10,12 +10,12 @@ class TeamFormPage extends StatefulWidget {
   final int minMembers, maxMembers;
   TeamFormPage({this.eventType, this.eventName, this.minMembers, this.maxMembers});
   @override
-  _TeamFormPageState createState() => _TeamFormPageState(maxMembers - minMembers);
+  _TeamFormPageState createState() => _TeamFormPageState();
 }
 
 class _TeamFormPageState extends State<TeamFormPage> {
-  final int numMembers;
-  _TeamFormPageState(this.numMembers);
+  int numMembers = 1;
+  _TeamFormPageState();
   String error = '';
   int moreMembers = 1;
   List<String> department = ['','','','','','','',''];
@@ -26,21 +26,22 @@ class _TeamFormPageState extends State<TeamFormPage> {
   List<String> college = ['','','','','','','',''];
   String teamName = '';
     final _formKey = GlobalKey<FormState>();
- 
+
   @override
   Widget build(BuildContext context) {
+    if(widget.maxMembers == widget.minMembers){
+    numMembers = widget.maxMembers;
+    }
     if(widget.maxMembers == widget.minMembers){
       moreMembers = widget.maxMembers - 1;
     }
     else{
-      moreMembers = widget.maxMembers - widget.minMembers - 1;
+      moreMembers = widget.maxMembers - widget.minMembers;
     }
     print(moreMembers);
     return Scaffold(
       
       extendBody: true,
-      // floatingActionButton: FloatingActionButton.extended(onPressed: () {}, label: Container(child: Center(child : Text('Register')))),
-      // floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       appBar: AppBar(
         title : Text('Register'),
         backgroundColor: Colors.black87,
@@ -90,8 +91,8 @@ class _TeamFormPageState extends State<TeamFormPage> {
                           },
                               onChanged: (text) {
                                 setState(() {
-                                  moreMembers = int.parse(text);
-                                  print(moreMembers);
+                                  numMembers = int.parse(text);
+                                  print("Changed Value $numMembers");
                                 });
                                 
                               },
@@ -234,7 +235,8 @@ class _TeamFormPageState extends State<TeamFormPage> {
                       ),
                     )
                   ),
-                  ListView.builder(physics: NeverScrollableScrollPhysics(),  shrinkWrap: true, itemCount: moreMembers,itemBuilder: (context, index){
+                  ListView.builder(physics: NeverScrollableScrollPhysics(),  shrinkWrap: true, itemCount: numMembers - 1,itemBuilder: (context, index){
+                    print('MoreMembers : $numMembers');
                       return Card(
                         child: Padding(
                           padding: const EdgeInsets.all(8.0),
@@ -370,20 +372,34 @@ class _TeamFormPageState extends State<TeamFormPage> {
                               await database.child(widget.eventType + '/' + widget.eventName + '/' + contact[0]).set({
                                 'a_teamName' : teamName,
                                 'd_department' : department[0],
-                                'f_phone' : contact[0],
+                                'f_phoneNo' : contact[0],
                                 'b_leaderName' : name[0],
                                 'e_email' : email[0],
                                 'c_college' : college[0],
                                 'payment' : 'false',
                               });
-                              for(int i = 0; i < moreMembers; i++){
+                              for(int i = 1; i < numMembers; i++){
                                 await database.child(widget.eventType + '/' + widget.eventName + '/' +contact[0] + '/' + 'g_members' + '/' + i.toString()).set({
-                                'name' : name[i+1],
-                                'department' : department[i+1],
+                                'name' : name[i],
+                                'department' : department[i],
                                 });
                                 String data = "TeamName:$teamName\nName:${name[0]}\nEvent:${widget.eventName}\nCollege:${college[0]}\nDepartment: ${department[0]}\nYear:${year[0]}\nContact:$contact\nEventType:${widget.eventType}";
-                                
-                                Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data)));
+                                      showDialog(
+                                      context: context,
+                                      builder: (BuildContext context){
+                                          return AlertDialog(
+                                            title: Text("Confirm Registration"),
+                                            content: Text("Press Confirm to Generate QR Code"),
+                                            actions: <Widget>[
+                                              RaisedButton(
+                                                child: Text('Confirm'),
+                                                onPressed: () => Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data))),
+                                              ),
+                                            ],
+                                          );
+                                      }
+                                    );                     
+                                // Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data)));
                               }
                             } else {
                               setState(() {

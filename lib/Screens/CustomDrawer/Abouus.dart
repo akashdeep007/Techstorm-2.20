@@ -32,6 +32,7 @@ class AboutusPage extends StatelessWidget {
                 ),
               ),
             ),
+            SizedBox(height: 20,),
             Card(
               color: Colors.white,
               elevation: 5,
@@ -40,12 +41,14 @@ class AboutusPage extends StatelessWidget {
               child: ListTile(
                   contentPadding: EdgeInsets.all(20),
                   title:
-                      Center(child:ClipRRect(child:Image.asset('assets/images/unnamed.png', fit: BoxFit.cover, scale: 3,),),),
+                      Center(child:ClipRRect(child:Image.asset('assets/images/unnamed.png', fit: BoxFit.cover, scale: 4,),),),
+                      
+                     
+                    
                   subtitle: Column(
                     children: <Widget>[
-                      SizedBox(height: 20,),
                       Text(
-                        "B. P. Poddar Institute of Management and Technology presents to you, Techstorm 2.20, where we aim at diversifying the manifold fields of technology. Ever since its advent in our institute from 2011, we have always believed in the amalgamation of technology and imagination.\n\n 'Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution'\n-Albert Einstein\n\nWhile continuing to celebrate this legacy, BPPIMT welcomes you to this edition of Techstorm 2.20 - the technical festival of BPPIMT family.\n\nWe invite you all to come and unleash your technical skills and creativity, be our esteemed guest and take back along with you an enriching experience that you have never experienced before.",
+                        "B. P. Poddar Institute of Management and Technology presents to you, Techstorm 2.20, where we aim at diversifying the manifold fields of technology. Ever since its advent in our institute from 2011, we have always believed in the amalgamation of technology and imagination.\n 'Imagination is more important than knowledge. For knowledge is limited, whereas imagination embraces the entire world, stimulating progress, giving birth to evolution'\n-Albert Einstein\n\nWhile continuing to celebrate this legacy, BPPIMT welcomes you to this edition of Techstorm 2.20 - the technical festival of BPPIMT family.\n\nWe invite you all to come and unleash your technical skills and creativity, be our esteemed guest and take back along with you an enriching experience that you have never experienced before.",
                         style: TextStyle(fontSize: 18),
                       ),
                     ],
@@ -55,6 +58,7 @@ class AboutusPage extends StatelessWidget {
               height: 20,
             ),
 
+           
 
             Card(
               color: Colors.white,
@@ -72,21 +76,43 @@ class AboutusPage extends StatelessWidget {
                   ),
                   subtitle: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Text(
-                        "Akashdeep Bhattacharya",
-                        style: TextStyle(fontSize: 18),
+                    children : <Widget> [Column(
+                      children: <Widget> [Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            "Phone Number",
+                            style: TextStyle(fontSize: 18),
+                          ),
+                          SizedBox(width: 20),
+                          IconButton(
+                            icon: Icon(Icons.phone),
+                            onPressed: () {
+                              launch('tel:+${'9051633040'}');
+                            },
+                          ),
+                        ],
                       ),
-                      SizedBox(width: 20),
-                      IconButton(
-                        icon: Icon(Icons.phone),
-                        onPressed: () {
-                          launch('tel:+${'9051633040'}');
-                        },
-                      ),
-                    ],
+Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: <Widget>[
+                          Text(
+                            "Location           ",
+                            style: TextStyle(fontSize: 18),
+                          ),
+                          SizedBox(width: 20),
+                          IconButton(
+                            icon: Icon(Icons.pin_drop),
+                            onPressed: () {
+                              launch('https://www.google.com/maps/place/B.P.+Poddar+Institute+of+Management+and+Technology/@22.6296285,88.4323668,17z/data=!3m1!4b1!4m5!3m4!1s0x39f89e3149180d5b:0x9abf8a7af72c0eef!8m2!3d22.6296285!4d88.4345555');
+                            },
+                          ),
+                        ],
+                      )]
+                    ),]
                   )),
             ),
+
             SizedBox(
               height: 80,
             ),

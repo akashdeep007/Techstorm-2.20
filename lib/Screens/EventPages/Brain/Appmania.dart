@@ -16,8 +16,8 @@ class _AppManiaState extends State<AppMania> {
             Navigator.push(
                 context,
                 new MaterialPageRoute(
-                    builder: (context) => TeamFormPage(eventType: 'Brain_Teasers',
-                        eventName: 'AppMania', minMembers: 1, maxMembers: 2,)));
+                    builder: (context) => TeamFormPage(eventType: 'Brain Teasers',
+                        eventName: 'APPMANIA', minMembers: 1, maxMembers: 2,)));
           },
           label: Container(
               width: 100,
