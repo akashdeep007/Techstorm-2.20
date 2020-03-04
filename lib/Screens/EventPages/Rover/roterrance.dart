@@ -42,7 +42,7 @@ class _RO_TState extends State<RO_T> {
                       ),
                     ),
                     Card(
-                color: Colors.white70,
+                color: Colors.white,
                 elevation: 5,
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
@@ -54,7 +54,7 @@ class _RO_TState extends State<RO_T> {
               height: 20,
             ),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -79,7 +79,7 @@ class _RO_TState extends State<RO_T> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -104,7 +104,7 @@ class _RO_TState extends State<RO_T> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -137,7 +137,7 @@ class _RO_TState extends State<RO_T> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -190,7 +190,7 @@ class _RO_TState extends State<RO_T> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),

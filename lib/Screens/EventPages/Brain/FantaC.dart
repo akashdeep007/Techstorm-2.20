@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/EventPages/Form/FormPage.dart';
 import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -35,7 +34,7 @@ class _FantaCState extends State<FantaC> {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/BRAIN/fc-min.jpg'),
+                image: AssetImage('assets/images/back2.gif'),
                 fit: BoxFit.cover)),
         child: ListView(
           children: <Widget>[
@@ -54,7 +53,17 @@ class _FantaCState extends State<FantaC> {
               ),
             ),
             Card(
-              color: Colors.white70,
+                color: Colors.white,
+                elevation: 5,
+                shape: RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(10.0)),
+                child: Image.asset(
+                  'assets/images/BRAIN/fc-min.jpg',
+                  fit: BoxFit.fitWidth,
+                )),
+                SizedBox(height: 20),
+            Card(
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
@@ -80,7 +89,7 @@ class _FantaCState extends State<FantaC> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
@@ -110,7 +119,7 @@ class _FantaCState extends State<FantaC> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
@@ -136,7 +145,7 @@ class _FantaCState extends State<FantaC> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
@@ -190,7 +199,7 @@ class _FantaCState extends State<FantaC> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),

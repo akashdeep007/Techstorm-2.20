@@ -2,6 +2,7 @@ import 'package:dropdown_formfield/dropdown_formfield.dart';
 import 'package:flutter/material.dart';
 import 'package:techstorm/Screens/EventPages/Form/qr.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:string_validator/string_validator.dart';
 
 
 class RegisterForm extends StatefulWidget {
@@ -63,6 +64,9 @@ class _RegisterFormState extends State<RegisterForm> {
                             if(text.isEmpty){
                               return 'Enter Email';
                             }
+                            if(!isEmail(text)){
+                              return 'Enter Valid Email';
+                            }
                             return null;
                           },
                           decoration: InputDecoration(
@@ -81,6 +85,9 @@ class _RegisterFormState extends State<RegisterForm> {
                             }
                             if(text.length != 10){
                               return 'Not Valid Phone Number';
+                            }
+                            if(!isNumeric(text)){
+                              return 'Enter a Valid Phone Number';
                             }
                             return null;
                           },
@@ -237,7 +244,32 @@ class _RegisterFormState extends State<RegisterForm> {
                                   'time' : DateTime.now().toString(),                           
                                 });
                                     String data = "Name:$name\nEvent:${widget.eventName}\nCollege:$college\nDepartment:$department\nYear:$year\nContact:$contact\nEventType:${widget.eventType}";
-                                Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data)));
+                                                                      showDialog(
+                                      context: context,
+                                      builder: (BuildContext context){
+                                          return AlertDialog(
+                                            title: Text("Confirm Registration"),
+                                            content: Text("Dialog Content"),
+                                            actions: <Widget>[
+                                              Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                              children: <Widget>[
+                                              RaisedButton(
+                                                child: Text('Confirm'),
+                                                onPressed: () => Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data))),
+                                              ),
+                                              RaisedButton(
+                                                child: Text('Back'),
+                                                onPressed: () => Navigator.pop(context),
+                                              )
+                                              ],),
+
+                                            ],
+                                          );
+                                      }
+                                    );
+
+                                // Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data)));
                               }
                               else {
                                 setState(() => error = 'Already Registered');

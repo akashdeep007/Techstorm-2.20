@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
-import 'dart:typed_data';
-import 'dart:ui' as ui;
 import 'package:flutter/rendering.dart';
-import 'package:flutter/services.dart';
+
+import '../../home.dart';
+
 
 class QrGen extends StatefulWidget {
   String eventName;
@@ -18,34 +18,35 @@ class _QrGenState extends State<QrGen> {
   Widget build(BuildContext context) {
     GlobalKey screen = new GlobalKey();
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('SCAN IT'),
-      ),
-      body: RepaintBoundary(
-        key:screen ,
-        child:
-          Center(
-            child: Column(
-              children: <Widget>[
-                
-                Text(
-                  "${widget.eventName}",
-                  style: TextStyle(
-                    fontSize: 32.0,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold
+    return WillPopScope(
+      onWillPop: () async => false,
+      child: Scaffold(
+        floatingActionButton: FloatingActionButton.extended(onPressed: () =>Navigator.push(context,new MaterialPageRoute(builder: (context) =>Home())), label: Text('Return')),
+        body: RepaintBoundary(
+          key:screen ,
+          child:
+            Center(
+              child: Column(
+                children: <Widget>[
+                  
+                  Text(
+                    "${widget.eventName}",
+                    style: TextStyle(
+                      fontSize: 32.0,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold
+                    ),
                   ),
-                ),
-                RepaintBoundary(
-                    child: QrImage(
-                      data: widget.data,
-                    )),
-                    SizedBox(height: 50,),
-                    Text('Please Take ScreenShot', style: TextStyle(fontSize : 32, color:Colors.red, fontWeight:FontWeight.bold),)
-              ],
+                  RepaintBoundary(
+                      child: QrImage(
+                        data: widget.data,
+                      )),
+                      SizedBox(height: 50,),
+                      Text('Please Take ScreenShot', style: TextStyle(fontSize : 32, color:Colors.red, fontWeight:FontWeight.bold),)
+                ],
+              ),
             ),
-          ),
+        ),
       ),
     );
   }

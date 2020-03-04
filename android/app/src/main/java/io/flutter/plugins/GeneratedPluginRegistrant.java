@@ -3,7 +3,6 @@ package io.flutter.plugins;
 import androidx.annotation.Keep;
 import androidx.annotation.NonNull;
 import io.flutter.embedding.engine.FlutterEngine;
-import io.flutter.embedding.engine.plugins.shim.ShimPluginRegistry;
 
 /**
  * Generated file. Do not edit.
@@ -13,11 +12,8 @@ import io.flutter.embedding.engine.plugins.shim.ShimPluginRegistry;
 @Keep
 public final class GeneratedPluginRegistrant {
   public static void registerWith(@NonNull FlutterEngine flutterEngine) {
-    ShimPluginRegistry shimPluginRegistry = new ShimPluginRegistry(flutterEngine);
     flutterEngine.getPlugins().add(new io.flutter.plugins.firebase.core.FirebaseCorePlugin());
     flutterEngine.getPlugins().add(new io.flutter.plugins.firebase.database.FirebaseDatabasePlugin());
-      io.github.ponnamkarthik.flutteryoutube.FlutterYoutubePlugin.registerWith(shimPluginRegistry.registrarFor("io.github.ponnamkarthik.flutteryoutube.FlutterYoutubePlugin"));
-      io.flutter.plugins.imagepickersaver.ImagePickerSaverPlugin.registerWith(shimPluginRegistry.registrarFor("io.flutter.plugins.imagepickersaver.ImagePickerSaverPlugin"));
     flutterEngine.getPlugins().add(new io.flutter.plugins.urllauncher.UrlLauncherPlugin());
   }
 }

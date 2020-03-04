@@ -51,6 +51,9 @@ var sw=queryData.size.width;
           headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
             return <Widget>[
               SliverAppBar(
+                bottom: PreferredSize(
+                  preferredSize: Size.fromHeight(15.0),
+                  child: Text(''),),
                 automaticallyImplyLeading: true,
                 backgroundColor: Colors.black,
                 expandedHeight: 160.0,
@@ -60,6 +63,7 @@ var sw=queryData.size.width;
                 flexibleSpace: LayoutBuilder(
                   builder: (BuildContext context, BoxConstraints constraints) {
                     return FlexibleSpaceBar(
+
                         collapseMode: CollapseMode.parallax,
                         centerTitle: true,
                         // title: Text(constraints.maxHeight.toString(),
@@ -148,13 +152,14 @@ var sw=queryData.size.width;
                       )),
                     ),
                     Padding(
-                      padding: EdgeInsets.only(bottom: 20),
+                      padding: EdgeInsets.only(bottom: 10),
                       child: SponsorsList(),
                     ),
                     Container(
-                      color: Colors.white38,
-                      width: sw,
-                      child: Container(
+                      height: 80,
+                                            color: Colors.white38,
+                    width: sw,
+                                            child: Container(
                         width: sw * .95,
                         child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -181,20 +186,23 @@ var sw=queryData.size.width;
                                             fit: BoxFit.cover,
                                             image: AssetImage(
                                                 "assets/images/LOGOfo.png"),
+                                                
                                           )))),
                               Container(
                                 alignment: Alignment.center,
                                 child: Text(
-                                  "\t     On 7th and 8th April 2020\n Everyone is welcome To witness\n  10th installment of TechStorm ",
+                                  "\t     On 7th and 8th April 2020\nEveryone is welcome to witness\n10th installment of TechStorm ",
                                   style: TextStyle(
-                                      fontSize: 16,
+                                      fontSize: 18,
                                       color: Colors.black,
                                       fontWeight: FontWeight.w900),
                                 ),
                               ),
                               Container(
-                                  padding: EdgeInsets.all(10),
+                                
+                                  padding: EdgeInsets.all(5),
                                   child: Container(
+
                                       height: 43.0,
                                       width: 43.0,
                                       decoration: BoxDecoration(
@@ -213,7 +221,8 @@ var sw=queryData.size.width;
                                           image: DecorationImage(
                                             fit: BoxFit.cover,
                                             image: AssetImage(
-                                                "assets/images/bppimt.png"),
+                                                "assets/images/bppimt.png",),
+                                            
                                           ))))
                             ]),
                       ),

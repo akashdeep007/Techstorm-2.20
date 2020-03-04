@@ -1,6 +1,7 @@
 import 'package:dropdown_formfield/dropdown_formfield.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:string_validator/string_validator.dart';
 import 'package:techstorm/Screens/EventPages/Form/qr.dart';
 
 
@@ -118,6 +119,12 @@ class _TeamFormPageState extends State<TeamFormPage> {
                           if(text.isEmpty){
                             return 'Enter Contact Number';
                           }
+                          if(!isNumeric(text)){
+                            return 'Enter Valid Phone Number';
+                          }
+                          if(text.length != 10){
+                            return 'Enter Valid Phone Number';
+                          }
                           return null;
                           },
                               decoration: InputDecoration(
@@ -129,10 +136,13 @@ class _TeamFormPageState extends State<TeamFormPage> {
                             ),
                             TextFormField(
                           validator: (text) {
-                          if(text.isEmpty){
-                            return 'Enter Email';
-                          }
-                          return null;
+                            if(text.isEmpty){
+                              return 'Enter Email';
+                            }
+                            if(!isEmail(text)){
+                              return 'Enter Valid Email';
+                            }
+                            return null;
                           },
                               decoration: InputDecoration(
                                 labelText : 'Email'
@@ -365,7 +375,31 @@ class _TeamFormPageState extends State<TeamFormPage> {
                                 'department' : department[i+1],
                                 });
                                 String data = "TeamName:$teamName\nName:${name[0]}\nEvent:${widget.eventName}\nCollege:${college[0]}\nDepartment: ${department[0]}\nYear:${year[0]}\nContact:$contact\nEventType:${widget.eventType}";
-                                Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data)));
+                                                                      showDialog(
+                                      context: context,
+                                      builder: (BuildContext context){
+                                          return AlertDialog(
+                                            title: Text("Confirm Registration"),
+                                            content: Text("Dialog Content"),
+                                            actions: <Widget>[
+                                              Row(
+                                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                              children: <Widget>[
+                                              RaisedButton(
+                                                child: Text('Confirm'),
+                                                onPressed: () => Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data))),
+                                              ),
+                                              RaisedButton(
+                                                child: Text('Back'),
+                                                onPressed: () => Navigator.pop(context),
+                                              )
+                                              ],),
+
+                                            ],
+                                          );
+                                      }
+                                    );
+                                // Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data)));
                               }
                             } else {
                               setState(() {

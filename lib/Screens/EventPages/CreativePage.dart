@@ -29,21 +29,21 @@ class CreativePage extends StatelessWidget {
         back: Container(
             color: Colors.white,
             alignment: Alignment.center,
-            padding: EdgeInsets.all(20),
+            padding: EdgeInsets.all(10),
             child: Column( mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[
               Column(
                 children: <Widget>[
                                 Text(
                 '35MM LIVE',
                 style: TextStyle(
-                    fontSize: 36,fontFamily: "TempestApache",
+                    fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
               SizedBox(height: 20,),
               Text(
                   'Keep it simple',style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 18,
                       color: Colors.black)),
               
                 ],
@@ -75,21 +75,21 @@ RaisedButton(
         back: Container(
             color: Colors.white,
             alignment: Alignment.center,
-            padding: EdgeInsets.all(20),
+            padding: EdgeInsets.all(10),
             child: Column( mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[
               Column(
                 children: <Widget>[
                                 Text(
                 'PASSIONWITHREELS',
                 style: TextStyle(
-                    fontSize: 36,fontFamily: "TempestApache",
+                    fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
               SizedBox(height: 20,),
               Text(
                   'Portray yourself through technology.',style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 18,
                       color: Colors.black)),
               
                 ],
@@ -116,7 +116,7 @@ RaisedButton(
         alignment: Alignment.center,
         child: CarouselSlider.builder(
           enableInfiniteScroll: true,
-          height: 300,
+          height: 220,
    itemCount: CreativeCards.length,
    itemBuilder: (BuildContext context, int itemIndex) =>
           CreativeCards[itemIndex]

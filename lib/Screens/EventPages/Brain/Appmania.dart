@@ -53,7 +53,7 @@ class _AppManiaState extends State<AppMania> {
               ),
             ),
             Card(
-                color: Colors.white70,
+                color: Colors.white,
                 elevation: 5,
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
@@ -65,7 +65,7 @@ class _AppManiaState extends State<AppMania> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
@@ -92,7 +92,7 @@ class _AppManiaState extends State<AppMania> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
@@ -118,7 +118,7 @@ class _AppManiaState extends State<AppMania> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
@@ -144,7 +144,7 @@ class _AppManiaState extends State<AppMania> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),
@@ -182,7 +182,7 @@ class _AppManiaState extends State<AppMania> {
               height: 20,
             ),
             Card(
-              color: Colors.white70,
+              color: Colors.white,
               elevation: 5,
               shape: RoundedRectangleBorder(
                   borderRadius: new BorderRadius.circular(10.0)),

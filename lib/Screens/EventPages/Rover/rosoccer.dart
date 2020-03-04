@@ -42,7 +42,7 @@ class _RO_SoccerState extends State<RO_Soccer> {
                       ),
                     ),
                     Card(
-                color: Colors.white70,
+                color: Colors.white,
                 elevation: 5,
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
@@ -54,7 +54,7 @@ class _RO_SoccerState extends State<RO_Soccer> {
               height: 20,
             ),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -79,7 +79,7 @@ class _RO_SoccerState extends State<RO_Soccer> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -104,7 +104,7 @@ class _RO_SoccerState extends State<RO_Soccer> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -138,7 +138,7 @@ class _RO_SoccerState extends State<RO_Soccer> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -189,7 +189,7 @@ class _RO_SoccerState extends State<RO_Soccer> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),

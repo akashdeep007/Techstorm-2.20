@@ -84,7 +84,7 @@ var sw=queryData.size.width;
               Card(
                 semanticContainer: true,
                 child: creativity),
-                Container(padding : EdgeInsets.only(bottom: 10),alignment: Alignment.bottomCenter,child: Text('Creativity', style: TextStyle(fontSize: subHeadingSize, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.white),)),
+                Container(padding : EdgeInsets.only(bottom: 10),alignment: Alignment.bottomCenter,child: Text('Creative', style: TextStyle(fontSize: subHeadingSize, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.white),)),
             ]
           )
 
@@ -121,7 +121,7 @@ var sw=queryData.size.width;
               Card(
                 semanticContainer: true,
                 child: rover),
-                Container(padding : EdgeInsets.only(bottom: 10),alignment: Alignment.bottomCenter,child: Text('Rover', style: TextStyle(fontSize: subHeadingSize, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.white),)),
+                Container(padding : EdgeInsets.only(bottom: 10),alignment: Alignment.bottomCenter,child: Text('Roverse', style: TextStyle(fontSize: subHeadingSize, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.white),)),
             ]
           )
 

@@ -42,7 +42,7 @@ class _RO_PickerState extends State<RO_Picker> {
                       ),
                     ),
                     Card(
-                color: Colors.white70,
+                color: Colors.white,
                 elevation: 5,
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
@@ -54,7 +54,7 @@ class _RO_PickerState extends State<RO_Picker> {
               height: 20,
             ),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -78,7 +78,7 @@ class _RO_PickerState extends State<RO_Picker> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -103,7 +103,7 @@ class _RO_PickerState extends State<RO_Picker> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -137,7 +137,7 @@ class _RO_PickerState extends State<RO_Picker> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -188,7 +188,7 @@ class _RO_PickerState extends State<RO_Picker> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),

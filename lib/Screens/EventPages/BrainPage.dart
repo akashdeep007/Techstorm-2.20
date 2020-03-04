@@ -40,7 +40,7 @@ class BrainPage extends StatelessWidget {
                                 Text(
                 'APPMANIA',
                 style: TextStyle(
-                    fontSize: 36,fontFamily: "TempestApache",
+                    fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
@@ -48,7 +48,7 @@ class BrainPage extends StatelessWidget {
               Center(
                 child: Text(
                     'Showcase your inner Zuckerberg by spitting out the next facebook.',style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 18,
                       color: Colors.black),),
               ),
                 ],
@@ -68,7 +68,7 @@ RaisedButton(
     decoration: BoxDecoration(
       image: DecorationImage(image: 
       AssetImage('assets/images/BRAIN/fc-min.jpg',
-                  ), fit: BoxFit.scaleDown)
+                  ), fit: BoxFit.fitWidth)
     ),
     alignment: Alignment.center,
     child: FlipCard(
@@ -79,7 +79,7 @@ RaisedButton(
         ]),
         back: Container(
             color: Colors.white,
-            alignment: Alignment.center,
+            alignment: Alignment.bottomCenter,
             padding: EdgeInsets.all(20),
             child: Column( mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[
               Column(
@@ -87,15 +87,15 @@ RaisedButton(
                                 Text(
                 'FANTA - C',
                 style: TextStyle(
-                    fontSize: 36,fontFamily: "TempestApache",
+                    fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
-              SizedBox(height: 30,),
+              SizedBox(height: 20,),
               Center(
                 child: Text(
                     'while (!(succeed==try()));\n If you get this, then you know what this event is all about.',style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 18,
                       color: Colors.black),),
               ),
               
@@ -135,15 +135,15 @@ RaisedButton(
                                 Text(
                 'Omegatrix',
                 style: TextStyle(
-                    fontSize: 36,fontFamily: "TempestApache",
+                    fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
-             SizedBox(height: 30,),
+             SizedBox(height: 20,),
               Center(
                 child: Text(
                     'Its not about equations or formulas or calculations. Its about understanding.',style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 18,
                       color: Colors.black),),
               ),
                 ],
@@ -170,32 +170,28 @@ RaisedButton(
         flipOnTouch: true,
         direction: FlipDirection.HORIZONTAL,
         front: Stack(fit: StackFit.expand, children: <Widget>[
-          // Center(
-          //     child: Text(
-          //   'TECHNOMANIA',
-          //   style: TextStyle(
-          //       fontSize: 36, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.white),
-          // )),
         ]),
         back: Container(
             color: Colors.white,
             alignment: Alignment.center,
             padding: EdgeInsets.all(20),
-            child: Column( mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[
+            child: Column( crossAxisAlignment : CrossAxisAlignment.center,mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[
               Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                                 Text(
                 'TECHNOMANIA',
                 style: TextStyle(
-                    fontSize: 36,fontFamily: "TempestApache",
+                    fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
-             SizedBox(height: 30,),
-              Center(
+             SizedBox(height: 20,),
+              Container(
+                alignment: Alignment.center,
                 child: Text(
                     'An idea today can be the technology of tomorrow.',style: TextStyle(
-                      fontSize: 24,
+                      fontSize: 18,
                       color: Colors.black),),
               ),
                 ],
@@ -221,7 +217,7 @@ RaisedButton(
         alignment: Alignment.center,
         child: CarouselSlider.builder(
           enableInfiniteScroll: true,
-          height: 300,
+          height: 220,
    itemCount: brainCards.length,
    itemBuilder: (BuildContext context, int itemIndex) =>
           brainCards[itemIndex]

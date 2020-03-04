@@ -42,7 +42,7 @@ class _RO_NavigatorState extends State<RO_Navigator> {
                       ),
                     ),
                     Card(
-                color: Colors.white70,
+                color: Colors.white,
                 elevation: 5,
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
@@ -54,7 +54,7 @@ class _RO_NavigatorState extends State<RO_Navigator> {
               height: 20,
             ),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -79,7 +79,7 @@ class _RO_NavigatorState extends State<RO_Navigator> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -104,7 +104,7 @@ class _RO_NavigatorState extends State<RO_Navigator> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -143,7 +143,7 @@ class _RO_NavigatorState extends State<RO_Navigator> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -194,7 +194,7 @@ class _RO_NavigatorState extends State<RO_Navigator> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),

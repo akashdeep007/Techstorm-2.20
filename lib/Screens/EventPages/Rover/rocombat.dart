@@ -41,7 +41,7 @@ class _RO_CombatState extends State<RO_Combat> {
                       ),
                     ),
                     Card(
-                color: Colors.white70,
+                color: Colors.white,
                 elevation: 5,
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
@@ -53,7 +53,7 @@ class _RO_CombatState extends State<RO_Combat> {
               height: 20,
             ),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -78,7 +78,7 @@ class _RO_CombatState extends State<RO_Combat> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -103,7 +103,7 @@ class _RO_CombatState extends State<RO_Combat> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -137,7 +137,7 @@ class _RO_CombatState extends State<RO_Combat> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
@@ -190,7 +190,7 @@ class _RO_CombatState extends State<RO_Combat> {
                     ),
                     Divider(height: 20,),
                     Card(
-                      color: Colors.white70,
+                      color: Colors.white,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
                           borderRadius: new BorderRadius.circular(10.0)),
