@@ -22,23 +22,18 @@ class RoboticsPage extends StatelessWidget {
     margin: EdgeInsets.only(left:10, right:10),
     decoration: BoxDecoration(
       image: DecorationImage(image: 
-      AssetImage('assets/images/ROVERS/RO_COMBAT.jpg',
-                  ), fit: BoxFit.cover)
+      AssetImage('assets/images/ROVERS/rocom-min.jpg',
+                  ), fit: BoxFit.scaleDown)
     ),
     alignment: Alignment.center,
     child: FlipCard(
         flipOnTouch: true,
         direction: FlipDirection.HORIZONTAL,
         front: Stack(fit: StackFit.expand, children: <Widget>[
-          Center(
-              child: Text(
-            'RO - COMBAT',
-            style: TextStyle(
-                fontSize: 36,fontFamily: "TempestApache", fontWeight: FontWeight.bold, color: Colors.white),
-          )),
+         
         ]),
         back: Container(
-            color: Colors.white70,
+            color: Colors.white,
             alignment: Alignment.center,
             padding: EdgeInsets.all(20),
             child: Column( mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[
@@ -51,9 +46,11 @@ class RoboticsPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
+               SizedBox(height:20),
               Text(
-                  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
-              
+                  'You don\'t want to stand too close to a robot arm; it can turn you to mush !',style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black)),
                 ],
               ),
 RaisedButton(
@@ -70,23 +67,18 @@ RaisedButton(
     margin: EdgeInsets.only(left:10, right:10),
     decoration: BoxDecoration(
       image: DecorationImage(image: 
-      AssetImage('assets/images/ROVERS/RO_NAVIGATOR.jpg',
-                  ), fit: BoxFit.cover)
+      AssetImage('assets/images/ROVERS/ronav-min.jpg',
+                  ), fit: BoxFit.scaleDown)
     ),
     alignment: Alignment.center,
     child: FlipCard(
         flipOnTouch: true,
         direction: FlipDirection.HORIZONTAL,
         front: Stack(fit: StackFit.expand, children: <Widget>[
-          Center(
-              child: Text(
-            'RO_NAVIGATOR',
-            style: TextStyle(
-                fontSize: 36, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.white),
-          )),
+         
         ]),
         back: Container(
-            color: Colors.white70,
+            color: Colors.white,
             alignment: Alignment.center,
             padding: EdgeInsets.all(20),
             child: Column( mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[
@@ -99,9 +91,11 @@ RaisedButton(
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
+              SizedBox(height:20),
               Text(
-                  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
-              
+                  'Discipline is the key to stay on track. May your bot be disciplined enough.',style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black)),
                 ],
               ),
 RaisedButton(
@@ -118,23 +112,18 @@ RaisedButton(
     margin: EdgeInsets.only(left:10, right:10),
     decoration: BoxDecoration(
       image: DecorationImage(image: 
-      AssetImage('assets/images/ROVERS/Ro_PICKER.jpg',
-                  ), fit: BoxFit.cover)
+      AssetImage('assets/images/ROVERS/ropicker-min.jpg',
+                  ), fit: BoxFit.scaleDown)
     ),
     alignment: Alignment.center,
     child: FlipCard(
         flipOnTouch: true,
         direction: FlipDirection.HORIZONTAL,
         front: Stack(fit: StackFit.expand, children: <Widget>[
-          Center(
-              child: Text(
-            'RO - PICKER',
-            style: TextStyle(
-                fontSize: 36, fontWeight: FontWeight.bold, color: Colors.black),
-          )),
+          
         ]),
         back: Container(
-            color: Colors.white70,
+            color: Colors.white,
             alignment: Alignment.center,
             padding: EdgeInsets.all(20),
             child: Column( mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[
@@ -147,9 +136,11 @@ RaisedButton(
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
+              SizedBox(height:20),
               Text(
-                  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
-              
+                  'At the end of the day, the job is to pick the blocks and move to the finish line as fast as you can !',style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black)),
                 ],
               ),
 RaisedButton(
@@ -166,23 +157,18 @@ RaisedButton(
     margin: EdgeInsets.only(left:10, right:10),
     decoration: BoxDecoration(
       image: DecorationImage(image: 
-      AssetImage('assets/images/ROVERS/RO_SOCCER.jpg',
-                  ), fit: BoxFit.cover)
+      AssetImage('assets/images/ROVERS/rosocc-min.jpg',
+                  ), fit: BoxFit.scaleDown)
     ),
     alignment: Alignment.center,
     child: FlipCard(
         flipOnTouch: true,
         direction: FlipDirection.HORIZONTAL,
         front: Stack(fit: StackFit.expand, children: <Widget>[
-          Center(
-              child: Text(
-            'RO SOCCER',
-            style: TextStyle(
-                fontSize: 36, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.white),
-          )),
+         
         ]),
         back: Container(
-            color: Colors.white70,
+            color: Colors.white,
             alignment: Alignment.center,
             padding: EdgeInsets.all(20),
             child: Column( mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[
@@ -195,9 +181,11 @@ RaisedButton(
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
+              SizedBox(height:20),
               Text(
-                  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
-              
+                  'As long as no one scored, it\'s always going to be close.',style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black)),
                 ],
               ),
 RaisedButton(
@@ -212,23 +200,18 @@ RaisedButton(
     margin: EdgeInsets.only(left:10, right:10),
     decoration: BoxDecoration(
       image: DecorationImage(image: 
-      AssetImage('assets/images/ROVERS/RO_WINGS.jpg',
-                  ), fit: BoxFit.cover)
+      AssetImage('assets/images/ROVERS/rot-min.jpg',
+                  ), fit: BoxFit.scaleDown)
     ),
     alignment: Alignment.center,
     child: FlipCard(
         flipOnTouch: true,
         direction: FlipDirection.HORIZONTAL,
         front: Stack(fit: StackFit.expand, children: <Widget>[
-          Center(
-              child: Text(
-            'RO_Terrace',
-            style: TextStyle(
-                fontSize: 36,fontFamily: "TempestApache", fontWeight: FontWeight.bold, color: Colors.white),
-          )),
+        
         ]),
         back: Container(
-            color: Colors.white70,
+            color: Colors.white,
             alignment: Alignment.center,
             padding: EdgeInsets.all(20),
             child: Column( mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[
@@ -241,9 +224,11 @@ RaisedButton(
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
+             SizedBox(height:20),
               Text(
-                  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
-              
+                  'Life will throw many obstacles. But we\'ll throw mountains, desserts, bridges and may be even a river. Just don\'t let your wheels fall apart.',style: TextStyle(
+                      fontSize: 22,
+                      color: Colors.black)),
                 ],
               ),
 RaisedButton(
@@ -258,23 +243,18 @@ RaisedButton(
     margin: EdgeInsets.only(left:10, right:10),
     decoration: BoxDecoration(
       image: DecorationImage(image: 
-      AssetImage('assets/images/ROVERS/RO_WINGS.jpg',
-                  ), fit: BoxFit.cover)
+      AssetImage('assets/images/ROVERS/rowings-min.jpg',
+                  ), fit: BoxFit.scaleDown)
     ),
     alignment: Alignment.center,
     child: FlipCard(
         flipOnTouch: true,
         direction: FlipDirection.HORIZONTAL,
         front: Stack(fit: StackFit.expand, children: <Widget>[
-          Center(
-              child: Text(
-            'RO_Wings',
-            style: TextStyle(
-                fontSize: 36,fontFamily: "TempestApache", fontWeight: FontWeight.bold, color: Colors.white),
-          )),
+          
         ]),
         back: Container(
-            color: Colors.white70,
+            color: Colors.white,
             alignment: Alignment.center,
             padding: EdgeInsets.all(20),
             child: Column( mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[
@@ -287,9 +267,11 @@ RaisedButton(
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
+              SizedBox(height:20),
               Text(
-                  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
-              
+                  'Please make sure to fasten your seat belts, keep your seats upright and keep your windows open during take-off.',style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black)),
                 ],
               ),
 RaisedButton(
@@ -306,23 +288,18 @@ RaisedButton(
     margin: EdgeInsets.only(left:10, right:10),
     decoration: BoxDecoration(
       image: DecorationImage(image: 
-      AssetImage('assets/images/ROVERS/RO_WINGS.jpg',
-                  ), fit: BoxFit.cover)
+      AssetImage('assets/images/ROVERS/rocar-min.jpg',
+                  ), fit: BoxFit.scaleDown)
     ),
     alignment: Alignment.center,
     child: FlipCard(
         flipOnTouch: true,
         direction: FlipDirection.HORIZONTAL,
         front: Stack(fit: StackFit.expand, children: <Widget>[
-          Center(
-              child: Text(
-            'RO_Carrom',
-            style: TextStyle(
-                fontSize: 36,fontFamily: "TempestApache", fontWeight: FontWeight.bold, color: Colors.white),
-          )),
+          
         ]),
         back: Container(
-            color: Colors.white70,
+            color: Colors.white,
             alignment: Alignment.center,
             padding: EdgeInsets.all(20),
             child: Column( mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[
@@ -335,9 +312,11 @@ RaisedButton(
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
+             SizedBox(height:20),
               Text(
-                  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
-              
+                  'One Objective.\nScore more than the opposition',style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black)),
                 ],
               ),
 RaisedButton(
@@ -356,12 +335,12 @@ RaisedButton(
       ),
       body: Container(
         decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/images/back.gif'), fit: BoxFit.cover)
+          image: DecorationImage(image: AssetImage('assets/images/back.gif'), fit: BoxFit.fill)
         ),
         alignment: Alignment.center,
         child: CarouselSlider.builder(
           enableInfiniteScroll: true,
-          height: 500,
+          height: 300,
    itemCount: RoverCards.length,
    itemBuilder: (BuildContext context, int itemIndex) =>
           RoverCards[itemIndex]

@@ -20,23 +20,18 @@ class BrainPage extends StatelessWidget {
     margin: EdgeInsets.only(left:10, right:10),
     decoration: BoxDecoration(
       image: DecorationImage(image: 
-      AssetImage('assets/images/BRAIN/APPMANIA.png',
-                  ), fit: BoxFit.cover)
+      AssetImage('assets/images/BRAIN/am-min.jpg',
+                  ), fit: BoxFit.scaleDown)
     ),
     alignment: Alignment.center,
     child: FlipCard(
         flipOnTouch: true,
         direction: FlipDirection.HORIZONTAL,
         front: Stack(fit: StackFit.expand, children: <Widget>[
-          Center(
-              child: Text(
-            'APPMANIA',
-            style: TextStyle(
-                fontSize: 36, fontWeight: FontWeight.bold,fontFamily: "TempestApache", color: Colors.white),
-          )),
+       
         ]),
         back: Container(
-            color: Colors.white70,
+            color: Colors.white,
             alignment: Alignment.center,
             padding: EdgeInsets.all(20),
             child: Column( mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[
@@ -72,23 +67,18 @@ RaisedButton(
     margin: EdgeInsets.only(left:10, right:10),
     decoration: BoxDecoration(
       image: DecorationImage(image: 
-      AssetImage('assets/images/BRAIN/FANTA-C.jpg',
-                  ), fit: BoxFit.cover)
+      AssetImage('assets/images/BRAIN/fc-min.jpg',
+                  ), fit: BoxFit.scaleDown)
     ),
     alignment: Alignment.center,
     child: FlipCard(
         flipOnTouch: true,
         direction: FlipDirection.HORIZONTAL,
         front: Column(children: <Widget>[
-          Center(
-              child: Text(
-            'FANTA-C',
-            style: TextStyle(
-                fontSize: 36,fontFamily: "TempestApache", fontWeight: FontWeight.bold, color: Colors.white),
-          )),
+         
         ]),
         back: Container(
-            color: Colors.white70,
+            color: Colors.white,
             alignment: Alignment.center,
             padding: EdgeInsets.all(20),
             child: Column( mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[
@@ -125,23 +115,18 @@ RaisedButton(
     margin: EdgeInsets.only(left:10, right:10),
     decoration: BoxDecoration(
       image: DecorationImage(image: 
-      AssetImage('assets/images/BRAIN/OMEGATRIX.jpg',
-                  ), fit: BoxFit.cover)
+      AssetImage('assets/images/BRAIN/omega-min.jpg',
+                  ), fit: BoxFit.scaleDown)
     ),
     alignment: Alignment.center,
     child: FlipCard(
         flipOnTouch: true,
         direction: FlipDirection.HORIZONTAL,
         front: Stack(fit: StackFit.expand, children: <Widget>[
-          Center(
-              child: Text(
-            'OMEGATRIX',
-            style: TextStyle(
-                fontSize: 36, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.black),
-          )),
+        
         ]),
         back: Container(
-            color: Colors.white70,
+            color: Colors.white,
             alignment: Alignment.center,
             padding: EdgeInsets.all(20),
             child: Column( mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[
@@ -177,23 +162,23 @@ RaisedButton(
     margin: EdgeInsets.only(left:10, right:10),
     decoration: BoxDecoration(
       image: DecorationImage(image: 
-      AssetImage('assets/images/BRAIN/TECHNOMANIA.jpg',
-                  ), fit: BoxFit.cover)
+      AssetImage('assets/images/BRAIN/tm-min.jpg',
+                  ), fit: BoxFit.scaleDown)
     ),
     alignment: Alignment.center,
     child: FlipCard(
         flipOnTouch: true,
         direction: FlipDirection.HORIZONTAL,
         front: Stack(fit: StackFit.expand, children: <Widget>[
-          Center(
-              child: Text(
-            'TECHNOMANIA',
-            style: TextStyle(
-                fontSize: 36, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.white),
-          )),
+          // Center(
+          //     child: Text(
+          //   'TECHNOMANIA',
+          //   style: TextStyle(
+          //       fontSize: 36, fontFamily: "TempestApache",fontWeight: FontWeight.bold, color: Colors.white),
+          // )),
         ]),
         back: Container(
-            color: Colors.white70,
+            color: Colors.white,
             alignment: Alignment.center,
             padding: EdgeInsets.all(20),
             child: Column( mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[

@@ -28,15 +28,6 @@ class _TeamFormPageState extends State<TeamFormPage> {
  
   @override
   Widget build(BuildContext context) {
-    List<dynamic> members = [];
-    for(int i = widget.minMembers; i <= widget.maxMembers; i++){
-      members.add({
-        "display" : i.toString(),
-        "value" : i,
-      });
-    }
-    print("Number of Members : ${members.length}");
-    print(members);
     return Scaffold(
       
       extendBody: true,
@@ -360,24 +351,20 @@ class _TeamFormPageState extends State<TeamFormPage> {
                             print(datasnapshot.value);
                             if(datasnapshot.value == null){
                               await database.child(widget.eventType + '/' + widget.eventName + '/' + contact[0]).set({
-                                'team_name' : teamName,
-                                'contact' : contact[0],
-                                'year' : year[0],
-                                'name' : name[0],
-                                'email' : email[0],
-                                'college' : college[0],
+                                'a_teamName' : teamName,
+                                'd_department' : department[0],
+                                'f_phone' : contact[0],
+                                'b_leaderName' : name[0],
+                                'e_email' : email[0],
+                                'c_college' : college[0],
                                 'payment' : 'false',
                               });
                               for(int i = 0; i < widget.maxMembers-1; i++){
-                                await database.child(widget.eventType + '/' + widget.eventName + '/' +contact[0] + '/' + 'g_members').set({
-                                'email' : email[i+1],
+                                await database.child(widget.eventType + '/' + widget.eventName + '/' +contact[0] + '/' + 'g_members' + '/' + i.toString()).set({
                                 'name' : name[i+1],
-                                'phone' : contact[i+1],
                                 'department' : department[i+1],
-                                'year' : year[i+1],
-                                'college' : college[i+1],
                                 });
-                                String data = "TeamName:$teamName\nName:$name\nEvent:${widget.eventName}\nCollege:$college\nDepartment: $department\nYear:$year\nContact:$contact,";
+                                String data = "TeamName:$teamName\nName:${name[0]}\nEvent:${widget.eventName}\nCollege:${college[0]}\nDepartment: ${department[0]}\nYear:${year[0]}\nContact:$contact\nEventType:${widget.eventType}";
                                 Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data)));
                               }
                             } else {

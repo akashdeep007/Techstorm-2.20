@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:techstorm/Screens/EventPages/Form/FormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 class MMLIVE extends StatefulWidget {
   @override
@@ -9,7 +10,9 @@ class _MMLIVEState extends State<MMLIVE> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton.extended(onPressed: () {}, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
+      floatingActionButton: FloatingActionButton.extended(onPressed: () {
+        Navigator.push(context,new MaterialPageRoute(builder: (context) =>RegisterForm(eventType: 'Creative', eventName: "35MMLIVE",)));
+      }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
               appBar: AppBar(
                 title: Text('35MM LIVE'),
@@ -43,7 +46,7 @@ class _MMLIVEState extends State<MMLIVE> {
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
                 child: Image.asset(
-                  'assets/images/CREATIVITY/35MM.jpg',
+                  'assets/images/CREATIVITY/35mm-min.jpg',
                   fit: BoxFit.fitWidth,
                 )),
             Divider(
@@ -166,7 +169,7 @@ class _MMLIVEState extends State<MMLIVE> {
                               SizedBox(width:20),
                                IconButton(icon: Icon(Icons.phone), 
                             onPressed:() {
-                              launch('tel:+${'8240579258'}');
+                              launch('tel:${'8240579258'}');
                             },
 
       ),
@@ -191,17 +194,10 @@ class _MMLIVEState extends State<MMLIVE> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "1st prize : 5000",
+                                "To be Announced",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "2nd prize : 2000",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                "3rd prize : 1000",
-                                style: TextStyle(fontSize: 18),
-                              ),
+                            
                             ],
                           )),
                     ),

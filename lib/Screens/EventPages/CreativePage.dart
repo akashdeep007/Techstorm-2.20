@@ -16,37 +16,35 @@ class CreativePage extends StatelessWidget {
     margin: EdgeInsets.only(left:10, right:10),
     decoration: BoxDecoration(
       image: DecorationImage(image: 
-      AssetImage('assets/images/CREATIVITY/35MM.jpg',
-                  ), fit: BoxFit.cover)
+      AssetImage('assets/images/CREATIVITY/35mm-min.jpg',
+                  ), fit: BoxFit.scaleDown)
     ),
     alignment: Alignment.center,
     child: FlipCard(
         flipOnTouch: true,
         direction: FlipDirection.HORIZONTAL,
         front: Stack(fit: StackFit.expand, children: <Widget>[
-          Center(
-              child: Text(
-            '35MM',
-            style: TextStyle(
-                fontSize: 36,fontFamily: "TempestApache", fontWeight: FontWeight.bold, color: Colors.white),
-          )),
+         
         ]),
         back: Container(
-            color: Colors.white70,
+            color: Colors.white,
             alignment: Alignment.center,
             padding: EdgeInsets.all(20),
             child: Column( mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[
               Column(
                 children: <Widget>[
                                 Text(
-                '35MM',
+                '35MM LIVE',
                 style: TextStyle(
                     fontSize: 36,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
+              SizedBox(height: 20,),
               Text(
-                  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
+                  'Keep it simple',style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black)),
               
                 ],
               ),
@@ -64,23 +62,18 @@ RaisedButton(
     margin: EdgeInsets.only(left:10, right:10),
     decoration: BoxDecoration(
       image: DecorationImage(image: 
-      AssetImage('assets/images/CREATIVITY/PASSIONWITHREELS.jpg',
-                  ), fit: BoxFit.cover)
+      AssetImage('assets/images/CREATIVITY/pwr-min.jpg',
+                  ), fit: BoxFit.scaleDown)
     ),
     alignment: Alignment.center,
     child: FlipCard(
         flipOnTouch: true,
         direction: FlipDirection.HORIZONTAL,
         front: Stack(fit: StackFit.expand, children: <Widget>[
-          Center(
-              child: Text(
-            'PASSION WITH REELS',
-            style: TextStyle(
-                fontSize: 28,fontFamily: "TempestApache", fontWeight: FontWeight.bold, color: Colors.white),
-          )),
+        
         ]),
         back: Container(
-            color: Colors.white70,
+            color: Colors.white,
             alignment: Alignment.center,
             padding: EdgeInsets.all(20),
             child: Column( mainAxisAlignment : MainAxisAlignment.spaceEvenly,children: <Widget>[
@@ -93,8 +86,11 @@ RaisedButton(
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
+              SizedBox(height: 20,),
               Text(
-                  'Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum'),
+                  'Portray yourself through technology.',style: TextStyle(
+                      fontSize: 24,
+                      color: Colors.black)),
               
                 ],
               ),
@@ -120,7 +116,7 @@ RaisedButton(
         alignment: Alignment.center,
         child: CarouselSlider.builder(
           enableInfiniteScroll: true,
-          height: 500,
+          height: 300,
    itemCount: CreativeCards.length,
    itemBuilder: (BuildContext context, int itemIndex) =>
           CreativeCards[itemIndex]

@@ -12,7 +12,7 @@ class _TechnomaniaState extends State<Technomania> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(onPressed: () { 
-      Navigator.push(context,new MaterialPageRoute(builder: (context) =>TeamFormPage(eventName : 'Technomania',eventType : 'BrainTeasers' , minMembers: 2, maxMembers: 2,)));
+      Navigator.push(context,new MaterialPageRoute(builder: (context) =>TeamFormPage(eventType : 'Brain_Teasers', eventName : 'Technomania', minMembers: 1, maxMembers: 2,)));
 
       }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
@@ -47,7 +47,7 @@ class _TechnomaniaState extends State<Technomania> {
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
                 child: Image.asset(
-                  'assets/images/BRAIN/TECHNOMANIA.jpg',
+                  'assets/images/BRAIN/tm-min.jpg',
                   fit: BoxFit.fitWidth,
                 )),
             Divider(
@@ -184,7 +184,7 @@ class _TechnomaniaState extends State<Technomania> {
                                   SizedBox(width:20),
                                    IconButton(icon: Icon(Icons.phone), 
                                 onPressed:() {
-                                  launch('tel:+${'8100414557'}');
+                                  launch('tel:${'8100414557'}');
                                 },
 
       ),
@@ -200,7 +200,7 @@ class _TechnomaniaState extends State<Technomania> {
                                   SizedBox(width:20),
                                    IconButton(icon: Icon(Icons.phone), 
                                 onPressed:() {
-                                  launch('tel:+${'9831071442'}');
+                                  launch('tel:${'9831071442'}');
                                 },
 
       ),
@@ -227,17 +227,10 @@ class _TechnomaniaState extends State<Technomania> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "1st prize : 5000",
+                                "To be Announced",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "2nd prize : 2000",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                "3rd prize : 1000",
-                                style: TextStyle(fontSize: 18),
-                              ),
+                              
                             ],
                           )),
                     ),

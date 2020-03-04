@@ -17,7 +17,7 @@ class _OmegatrixState extends State<Omegatrix> {
                 context,
                 new MaterialPageRoute(
                     builder: (context) => RegisterForm(
-                       eventType: 'BrainTeasers', eventName: 'Omegatrix')));
+                       eventType: 'Brain_Teasers', eventName: 'Omegatrix')));
           },
           label: Container(
               width: 100,
@@ -58,7 +58,7 @@ class _OmegatrixState extends State<Omegatrix> {
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
                 child: Image.asset(
-                  'assets/images/BRAIN/OMEGATRIX.jpg',
+                  'assets/images/BRAIN/omega-min.jpg',
                   fit: BoxFit.fitWidth,
                 )),
             Divider(
@@ -173,7 +173,7 @@ class _OmegatrixState extends State<Omegatrix> {
                           IconButton(
                             icon: Icon(Icons.phone),
                             onPressed: () {
-                              launch('tel:+${'8777056914'}');
+                              launch('tel:${'8777056914'}');
                             },
                           ),
                         ],
@@ -189,7 +189,7 @@ class _OmegatrixState extends State<Omegatrix> {
                           IconButton(
                             icon: Icon(Icons.phone),
                             onPressed: () {
-                              launch('tel:+${'6291571746'}');
+                              launch('tel:${'6291571746'}');
                             },
                           ),
                         ],
@@ -217,17 +217,10 @@ class _OmegatrixState extends State<Omegatrix> {
                   subtitle: Column(
                     children: <Widget>[
                       Text(
-                        "1st prize : 5000",
+                        "To be announced",
                         style: TextStyle(fontSize: 18),
                       ),
-                      Text(
-                        "2nd prize : 2000",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                      Text(
-                        "3rd prize : 1000",
-                        style: TextStyle(fontSize: 18),
-                      ),
+                      
                     ],
                   )),
             ),

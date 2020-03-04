@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:techstorm/Screens/EventPages/Form/FormPage.dart';
+import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 class RO_Carrom extends StatefulWidget {
   @override
@@ -9,7 +11,9 @@ class _RO_CarromState extends State<RO_Carrom> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton.extended(onPressed: () {}, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
+      floatingActionButton: FloatingActionButton.extended(onPressed: () {
+        Navigator.push(context,new MaterialPageRoute(builder: (context) =>TeamFormPage(eventType: 'Roverse', eventName: "ROCARROM", minMembers: 1, maxMembers: 5,)));
+      }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
               appBar: AppBar(
                 title: Text('RO Carrom'),
@@ -43,7 +47,7 @@ class _RO_CarromState extends State<RO_Carrom> {
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
                 child: Image.asset(
-                  'assets/images/ROVERS/RO_WINGS.jpg',
+                  'assets/images/ROVERS/rocar-min.jpg',
                   fit: BoxFit.fitWidth,
                 )),
             Divider(
@@ -168,7 +172,7 @@ class _RO_CarromState extends State<RO_Carrom> {
                                   SizedBox(width:20),
                                    IconButton(icon: Icon(Icons.phone), 
                                 onPressed:() {
-                                  launch('tel:+${'9852169210'}');
+                                  launch('tel:${'9852169210'}');
                                 },
 
       ),
@@ -186,7 +190,7 @@ class _RO_CarromState extends State<RO_Carrom> {
                                   SizedBox(width:20),
                                    IconButton(icon: Icon(Icons.phone), 
                                 onPressed:() {
-                                  launch('tel:+${'98697238442'}');
+                                  launch('tel:${'98697238442'}');
                                 },
 
       ),
@@ -213,17 +217,10 @@ class _RO_CarromState extends State<RO_Carrom> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "1st prize : 5000",
+                                "To be Announced",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "2nd prize : 2000",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                "3rd prize : 1000",
-                                style: TextStyle(fontSize: 18),
-                              ),
+                             
                             ],
                           )),
                     ),

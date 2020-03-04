@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:qr_flutter/qr_flutter.dart';
 import 'dart:typed_data';
 import 'dart:ui' as ui;
-import 'package:image_picker_saver/image_picker_saver.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 
@@ -19,23 +18,6 @@ class _QrGenState extends State<QrGen> {
   Widget build(BuildContext context) {
     GlobalKey screen = new GlobalKey();
 
-
-    void _screenshot() async {
-      RenderRepaintBoundary boundary = screen.currentContext.findRenderObject();
-
-      ui.Image image = await boundary.toImage();
-
-      ByteData byteData =
-          await image.toByteData(format: ui.ImageByteFormat.rawRgba);
-      var filePath = await ImagePickerSaver.saveFile(
-          fileData: byteData.buffer.asUint8List());
-
-      print(filePath);
-    }
-
-    // String data =
-    //     "Name:${widget.name} \nEvent:${widget.event}\nCollege:${widget.college}\nDepartment: ${widget.department}\nYear:${widget.year}\nContact:${widget.contact},";
-
     return Scaffold(
       appBar: AppBar(
         title: Text('SCAN IT'),
@@ -46,22 +28,21 @@ class _QrGenState extends State<QrGen> {
           Center(
             child: Column(
               children: <Widget>[
+                
                 Text(
                   "${widget.eventName}",
                   style: TextStyle(
-                    fontSize: 20.0,
-                    color: Colors.deepOrange,
+                    fontSize: 32.0,
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold
                   ),
                 ),
                 RepaintBoundary(
-                    
                     child: QrImage(
                       data: widget.data,
                     )),
-                RaisedButton(
-                  onPressed: _screenshot,
-                  child: Text("Save Image"),
-                )
+                    SizedBox(height: 50,),
+                    Text('Please Take ScreenShot', style: TextStyle(fontSize : 32, color:Colors.red, fontWeight:FontWeight.bold),)
               ],
             ),
           ),

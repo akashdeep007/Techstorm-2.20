@@ -53,24 +53,27 @@ var sw=queryData.size.width;
               SliverAppBar(
                 automaticallyImplyLeading: true,
                 backgroundColor: Colors.black,
-                expandedHeight: 180.0,
+                expandedHeight: 160.0,
                 floating: false,
                 pinned: true,
-                bottom: PreferredSize(                       // Add this code
-                preferredSize: Size.fromHeight(15.0),      // Add this code
-                child: Text(''),                           // Add this code
-              ),  
                 stretch: false,
                 flexibleSpace: LayoutBuilder(
                   builder: (BuildContext context, BoxConstraints constraints) {
                     return FlexibleSpaceBar(
                         collapseMode: CollapseMode.parallax,
                         centerTitle: true,
+                        // title: Text(constraints.maxHeight.toString(),
+                        //     style: TextStyle(
+                        //       color: Colors.white,
+                        //       fontSize: 24.0,
+                        //       fontFamily: 'TempestApache'
+                        //     )),
                         title: constraints.maxHeight <= 100.0
                             ? Container(
-                              padding: EdgeInsets.only(top : 20),
+                                padding: EdgeInsets.only(top: 30),
+                                height: 128,
                                 alignment: Alignment.bottomCenter,
-                                child: Image.asset('assets/images/logo.png', height: 100,))
+                                child: Image.asset('assets/images/logo.png'))
                             : Container(),
                         background: Container(
                             padding: EdgeInsets.only(bottom: 10, top: 30),
@@ -177,7 +180,7 @@ var sw=queryData.size.width;
                                           image: DecorationImage(
                                             fit: BoxFit.cover,
                                             image: AssetImage(
-                                                "assets/images/newlogo.png"),
+                                                "assets/images/LOGOfo.png"),
                                           )))),
                               Container(
                                 alignment: Alignment.center,

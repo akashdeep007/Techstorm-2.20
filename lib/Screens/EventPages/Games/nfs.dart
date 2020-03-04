@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:techstorm/Screens/EventPages/Form/FormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 class NFS extends StatefulWidget {
   @override
@@ -9,7 +10,9 @@ class _NFSState extends State<NFS> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton.extended(onPressed: () {}, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
+      floatingActionButton: FloatingActionButton.extended(onPressed: () {
+        Navigator.push(context,new MaterialPageRoute(builder: (context) =>RegisterForm(eventType: 'Games', eventName: "NFS",)));
+      }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
               appBar: AppBar(
                 title: Text('Need For Speed'),
@@ -43,7 +46,7 @@ class _NFSState extends State<NFS> {
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
                 child: Image.asset(
-                  'assets/images/GAMES/NFS.jpg',
+                  'assets/images/GAMES/nfs-min.jpg',
                   fit: BoxFit.fitWidth,
                 )),
             Divider(
@@ -125,19 +128,10 @@ class _NFSState extends State<NFS> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rule1",
+                                "Game Version : NFS Most Wanted 1.3\nGeneral Competition Method : 4 players\nCOMPETITION STRUCTURE\nFirst day of the event : Preliminaries\nSecond day of the event : Main Tournament\nRULES FOR PRELIMINARIESGame Type : Circuit , Sprint\nThe Circuit is for 2 rounds.\nPlayers getting the 1st position shall qualify for the next round.\nRULES FOR THE TOURNAMENT1.The tournament will be knock out.\n2.The player who wins there 1st stage match advances to the next stage.\n3.There will not be any match played for the third spot.\nGAME SETTING\n1.Courses: Course selection is done by the game administrator.\n2.Car settings : All cars are available.\n3.Race Mode Options :\n*Nitrous : On\n*Collision Detection : On\n*Performance Matching : Off\n*Units : Players own discretion\n4.Player Mode Options :\n*Game Moment Camera : Off\n*Car Damage : Off\n*Rear View Mirror : Player’s own discretion\n5.Players are provided with a standard keyboard and mouse.Other controllers and Steering Wheels are not allowed.\nPENALTY FOR UNFAIR PLAY\nUnfair Play\nUse of any cheat program\nIntentional disconnection\nUse of any settings exceeding standard and permitted settings.\nIf the match is disrupted due to unnecessary chatting,the players may be given a warning or lose bydefault at the referee’s sole discretion.Upon discovery of any player committing any violations regarded as unfair play that player will be disqualified from the tournament preliminaries.During the course of any match , the operations staff or referee may determine other actions to be unfair play at any time.Two warnings constitute being disqualified from the tournament Preliminaries.",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "Rule2",
-                                style: TextStyle(
-                                    fontSize: 18),
-                              ),
-                              Text(
-                                "Rule3",
-                                style: TextStyle(
-                                    fontSize: 18),
-                              ),
+                              
                             ],
                           )),
                     ),
@@ -166,7 +160,7 @@ class _NFSState extends State<NFS> {
                               SizedBox(width:20),
                                IconButton(icon: Icon(Icons.phone), 
                             onPressed:() {
-                              launch('tel:+${'8083336565'}');
+                              launch('tel:${'8083336565'}');
                             },
 
       ),
@@ -191,17 +185,10 @@ class _NFSState extends State<NFS> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "1st prize : 5000",
+                                "To be announced",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "2nd prize : 2000",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                "3rd prize : 1000",
-                                style: TextStyle(fontSize: 18),
-                              ),
+                              
                             ],
                           )),
                     ),

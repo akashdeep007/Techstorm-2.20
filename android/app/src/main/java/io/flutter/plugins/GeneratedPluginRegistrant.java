@@ -18,7 +18,6 @@ public final class GeneratedPluginRegistrant {
     flutterEngine.getPlugins().add(new io.flutter.plugins.firebase.database.FirebaseDatabasePlugin());
       io.github.ponnamkarthik.flutteryoutube.FlutterYoutubePlugin.registerWith(shimPluginRegistry.registrarFor("io.github.ponnamkarthik.flutteryoutube.FlutterYoutubePlugin"));
       io.flutter.plugins.imagepickersaver.ImagePickerSaverPlugin.registerWith(shimPluginRegistry.registrarFor("io.flutter.plugins.imagepickersaver.ImagePickerSaverPlugin"));
-      io.flutter.plugins.pathprovider.PathProviderPlugin.registerWith(shimPluginRegistry.registrarFor("io.flutter.plugins.pathprovider.PathProviderPlugin"));
     flutterEngine.getPlugins().add(new io.flutter.plugins.urllauncher.UrlLauncherPlugin());
   }
 }

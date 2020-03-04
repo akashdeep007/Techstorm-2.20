@@ -16,8 +16,8 @@ class _AppManiaState extends State<AppMania> {
             Navigator.push(
                 context,
                 new MaterialPageRoute(
-                    builder: (context) => TeamFormPage(
-                        eventName: 'AppMania', eventType: 'BrainTeasers', minMembers: 2, maxMembers: 4,)));
+                    builder: (context) => TeamFormPage(eventType: 'Brain_Teasers',
+                        eventName: 'AppMania', minMembers: 1, maxMembers: 2,)));
           },
           label: Container(
               width: 100,
@@ -58,7 +58,7 @@ class _AppManiaState extends State<AppMania> {
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
                 child: Image.asset(
-                  'assets/images/BRAIN/APPMANIA.png',
+                  'assets/images/BRAIN/am-min.jpg',
                   fit: BoxFit.fitWidth,
                 )),
             Divider(
@@ -81,7 +81,7 @@ class _AppManiaState extends State<AppMania> {
                   subtitle: Column(
                     children: <Widget>[
                       Text(
-                        "BP PODDAR INSTITUTE OF MANAGEMENT AND TECHNOLOGY presents APPMANIA in the awaitedTECHSTORM 2.19 Calling all the young innovators with a knack to hack together the nextdisruptive *Android, Web, iOS, Windows* applications to take the ever-growing marketof apps by storm. Register and present your application. This is your chance to make adent in the universe. The *APPMANIA* event will be held at our college on 12th April 2019.Interested teams (Minimum 1 Maximum 2 Members) can submit their names and complete theregistration .Our registration portal on our App/Website is OPEN!!!",
+                        "BP PODDAR INSTITUTE OF MANAGEMENT AND TECHNOLOGY presents APPMANIA in the awaitedTECHSTORM 2.20 Calling all the young innovators with a knack to hack together the nextdisruptive *Android, Web, iOS, Windows* applications to take the ever-growing marketof apps by storm. Register and present your application. This is your chance to make adent in the universe. The *APPMANIA* event will be held at our college on 12th April 2019.Interested teams (Minimum 1 Maximum 2 Members) can submit their names and complete theregistration .Our registration portal on our App/Website is OPEN!!!",
                         style: TextStyle(
                             fontWeight: FontWeight.w500, fontSize: 15),
                       ),
@@ -108,7 +108,7 @@ class _AppManiaState extends State<AppMania> {
                   subtitle: Column(
                     children: <Widget>[
                       Text(
-                        "Rs 10",
+                        "BPPIMT Teams: INR 100 /-\nOther Teams: INR 150 /-",
                         style: TextStyle(fontSize: 18),
                       ),
                     ],
@@ -170,7 +170,7 @@ class _AppManiaState extends State<AppMania> {
                           IconButton(
                             icon: Icon(Icons.phone),
                             onPressed: () {
-                              launch('tel:+${'9804747631'}');
+                              launch('tel:${'9804747631'}');
                             },
                           ),
                         ],
@@ -198,17 +198,10 @@ class _AppManiaState extends State<AppMania> {
                   subtitle: Column(
                     children: <Widget>[
                       Text(
-                        "1st prize : 5000",
+                        "To be Announced",
                         style: TextStyle(fontSize: 18),
                       ),
-                      Text(
-                        "2nd prize : 2000",
-                        style: TextStyle(fontSize: 18),
-                      ),
-                      Text(
-                        "3rd prize : 1000",
-                        style: TextStyle(fontSize: 18),
-                      ),
+                     
                     ],
                   )),
             ),

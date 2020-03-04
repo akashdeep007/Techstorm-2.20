@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:techstorm/Screens/EventPages/Form/FormPage.dart';
+import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 class RO_Soccer extends StatefulWidget {
   @override
@@ -9,7 +11,9 @@ class _RO_SoccerState extends State<RO_Soccer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton.extended(onPressed: () {}, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
+      floatingActionButton: FloatingActionButton.extended(onPressed: () {
+        Navigator.push(context,new MaterialPageRoute(builder: (context) =>TeamFormPage(eventType: 'Roverse', eventName: "ROSOCCER", minMembers: 1, maxMembers: 5,)));
+      }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
               appBar: AppBar(
                 title: Text('RO Soccer'),
@@ -43,7 +47,7 @@ class _RO_SoccerState extends State<RO_Soccer> {
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
                 child: Image.asset(
-                  'assets/images/ROVERS/RO_SOCCER.jpg',
+                  'assets/images/ROVERS/rosocc-min.jpg',
                   fit: BoxFit.fitWidth,
                 )),
             Divider(
@@ -66,19 +70,10 @@ class _RO_SoccerState extends State<RO_Soccer> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rule1",
+                                "Explore the thrill of soccer, the challenge of team co-ordination, your skills of control over the bot & your limit to resist the pressure and deliver at the same time. In this event, teams have to try to score goals against their opponents & save their goal at the same time. Extend your imagination in gameplay and tactics. If you think you are up to the mark Ro-Soccer is the platform for robotics enthusiasts like you.",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "rule2",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
-                              Text(
-                                "rule3",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
+                              
                             ],
                           )),
                     ),
@@ -125,16 +120,16 @@ class _RO_SoccerState extends State<RO_Soccer> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rule1",
+                                "Scoring\n1.	THE TEAM WHICH SCORES THE FIRST GOAL WOULD BE AWARDED 100 POINTS.\n2.	50 POINTS WOULD BE AWARDED FOR ALL FURTHER GOALS.\n3.	EACH PENALTY WOULD BE AWARDED 50 POINTS.\n4.	EACH HAND TOUCH WOULD COST THE TEAM 20 POINTS. ANY KIND OF TECHNICAL FAULT MAY ALSO COST POINTS TO THE TEAM.\n",
                                 style: TextStyle(fontSize: 18),
                               ),
                               Text(
-                                "Rule2",
+                                "General Rules\n1.	Each team has to have two manual bots, one as striker & the other one as defender.\n2.	Maximum 5 members are allowed in each team.\n3.	 Students from different institutions can form a team provided that each member of the team contains the identity card of his/her respective institute along with a Xerox copy of voter ID card or PAN card or AADHAR card.\n4.	No fans or blowing devices are allowed.\n5.	The ball can’t be trapped in any form.\n6.	In prelims one bot from each team will participate in the gameplay.\n",
                                 style: TextStyle(
                                     fontSize: 18),
                               ),
                               Text(
-                                "Rule3",
+                                "Technical Rules\n1)	A team can take maximum of two technical time outs for not more than 5 minutes with valid reasons.\n2)	Unethical behavior could lead to disqualification.\n3)	Coordinators have all the rights to take final decision for any matter during the event.\n",
                                 style: TextStyle(
                                     fontSize: 18),
                               ),
@@ -167,7 +162,7 @@ class _RO_SoccerState extends State<RO_Soccer> {
                                   SizedBox(width:20),
                                    IconButton(icon: Icon(Icons.phone), 
                                 onPressed:() {
-                                  launch('tel:+${'98777368399'}');
+                                  launch('tel:${'98777368399'}');
                                 },
 
       ),
@@ -183,7 +178,7 @@ class _RO_SoccerState extends State<RO_Soccer> {
                                   SizedBox(width:20),
                                    IconButton(icon: Icon(Icons.phone), 
                                 onPressed:() {
-                                  launch('tel:+${'8420215973'}');
+                                  launch('tel:${'8420215973'}');
                                 },
 
       ),
@@ -210,17 +205,10 @@ class _RO_SoccerState extends State<RO_Soccer> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "1st prize : 5000",
+                                "To be Announced",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "2nd prize : 2000",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                "3rd prize : 1000",
-                                style: TextStyle(fontSize: 18),
-                              ),
+                            
                             ],
                           )),
                     ),

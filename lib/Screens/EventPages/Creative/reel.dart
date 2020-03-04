@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 class PASSIONWITHREELS extends StatefulWidget {
   @override
@@ -9,7 +10,9 @@ class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      floatingActionButton: FloatingActionButton.extended(onPressed: () {}, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
+      floatingActionButton: FloatingActionButton.extended(onPressed: () {
+        Navigator.push(context,new MaterialPageRoute(builder: (context) =>TeamFormPage(eventType: 'Creative', eventName: "REELS", minMembers: 1, maxMembers: 5,)));
+      }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
               appBar: AppBar(
                 title: Text('Passion With Reels'),
@@ -43,7 +46,7 @@ class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
                 shape: RoundedRectangleBorder(
                     borderRadius: new BorderRadius.circular(10.0)),
                 child: Image.asset(
-                  'assets/images/CREATIVITY/PASSIONWITHREELS.jpg',
+                  'assets/images/CREATIVITY/pwr-min.jpg',
                   fit: BoxFit.fitWidth,
                 )),
             Divider(
@@ -66,19 +69,10 @@ class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rule1",
+                                "Film as dream, film as music. No art passes our conscience in the way film does,and goes directly to our feelings, deep down into the dark rooms of our souls.” -Ingmar Bergman. The essence of movie-making is using film’s own visual language to create meaning and the highest achievement of the cinematic form is fusing film and viewer into one. If you are passionate about it and have a capable team, then step up, participate this wonderful event and show us your PASSION WITH REELS!!!",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "rule2",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
-                              Text(
-                                "rule3",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
+                              
                             ],
                           )),
                     ),
@@ -100,7 +94,7 @@ class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rs 10",
+                                "Team registration: INR 250",
                                 style: TextStyle(fontSize: 18),
                               ),
                              
@@ -124,10 +118,7 @@ class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
                           ),
                           subtitle: Column(
                             children: <Widget>[
-                              Text(
-                                "Rule1",
-                                style: TextStyle(fontSize: 18),
-                              ),
+                              
                               Text(
                                 "Rule2",
                                 style: TextStyle(
@@ -166,7 +157,7 @@ class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
                               SizedBox(width:20),
                                IconButton(icon: Icon(Icons.phone), 
                             onPressed:() {
-                              launch('tel:+${'7278456054'}');
+                              launch('tel:${'7278456054'}');
                             },
 
       ),
@@ -191,17 +182,10 @@ class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "1st prize : 5000",
+                                "To be Announced",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "2nd prize : 2000",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                "3rd prize : 1000",
-                                style: TextStyle(fontSize: 18),
-                              ),
+                              
                             ],
                           )),
                     ),

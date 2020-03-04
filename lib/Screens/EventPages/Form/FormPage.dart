@@ -228,14 +228,15 @@ class _RegisterFormState extends State<RegisterForm> {
                               print(dataSnapshot.value);
                               if (dataSnapshot.value == null){
                                 database.child(widget.eventType + '/' + widget.eventName + '/' + contact).set({
-                                  'email' : email,
-                                  'name' : name,
-                                  'phone' : contact,
-                                  'department' : department,
-                                  'year' : year,
-                                  'college' : college,                           
+                                  'e_email' : email,
+                                  'b_leaderName' : name,
+                                  'f_phoneNo' : contact,
+                                  'd_department' : department,
+                                  'c_college' : college,
+                                  'payment' : 'false',
+                                  'time' : DateTime.now().toString(),                           
                                 });
-                                    String data = "Name:$name \nEvent:${widget.eventName}\nCollege:$college\nDepartment: $department\nYear:$year\nContact:$contact,";
+                                    String data = "Name:$name\nEvent:${widget.eventName}\nCollege:$college\nDepartment:$department\nYear:$year\nContact:$contact\nEventType:${widget.eventType}";
                                 Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data)));
                               }
                               else {
