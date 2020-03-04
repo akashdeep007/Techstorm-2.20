@@ -114,7 +114,7 @@ var sw=queryData.size.width;
                       context: context,
                     ),
                     Padding(
-                      padding: EdgeInsets.all(20),
+                      padding: EdgeInsets.only(top: 20, bottom: 5),
                       child: Center(
                           child: Text(
                         "Trailer",
