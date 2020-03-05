@@ -1,4 +1,3 @@
-import 'package:dropdown_formfield/dropdown_formfield.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:string_validator/string_validator.dart';
@@ -14,6 +13,7 @@ class TeamFormPage extends StatefulWidget {
 }
 
 class _TeamFormPageState extends State<TeamFormPage> {
+  TextEditingController _membersNum;
   int numMembers = 1;
   _TeamFormPageState();
   String error = '';
@@ -79,12 +79,27 @@ class _TeamFormPageState extends State<TeamFormPage> {
                               ),
                             ),
                             widget.minMembers != widget.maxMembers ? TextFormField(
+                              maxLength: 1,
+                              controller: _membersNum,
                             keyboardType: TextInputType.number,
+
                           validator: (text) {
                           if(text.isEmpty){
-                            return 'Enter College Name';
+                            
+                            return 'Minimum : ${widget.minMembers} Maximum : ${widget.maxMembers}';
                           }
-                          else if(int.parse(text) < widget.minMembers || int.parse(text) > widget.maxMembers){
+                          else if(!isNumeric(text)){                            
+                            return 'Minimum : ${widget.minMembers} Maximum : ${widget.maxMembers}';
+                          }
+                          else if(int.parse(text) < widget.minMembers){
+                            setState(() {
+                              _membersNum.text = widget.minMembers.toString();
+                              print('llll');
+                            });
+                            return 'Minimum : ${widget.minMembers} Maximum : ${widget.maxMembers}';
+                            }
+                          else if(int.parse(text) > widget.maxMembers){
+
                             return 'Minimum : ${widget.minMembers} Maximum : ${widget.maxMembers}';
                           }
                           return null;
@@ -106,7 +121,8 @@ class _TeamFormPageState extends State<TeamFormPage> {
                                 
                               },
                               decoration: InputDecoration(
-                                labelText : 'Members'
+                                labelText : 'Members',
+                                hintText: 'Min ${widget.minMembers} and Max ${widget.maxMembers} Members',
                               ),                    
                             ) : Container(),
                             Card(
@@ -115,8 +131,7 @@ class _TeamFormPageState extends State<TeamFormPage> {
                           child: Column(
                             children : <Widget> [
                               Center(child : Text('Team Leader', style: TextStyle(fontSize : 28, fontWeight : FontWeight.bold),)),
-                                                      TextFormField(
-
+                          TextFormField(
                           validator: (text) {
                           if(text.isEmpty){
                             return 'Enter Name';
@@ -181,57 +196,21 @@ class _TeamFormPageState extends State<TeamFormPage> {
                               decoration: InputDecoration(
                                 labelText : 'College Name'
                               ),
-                            ),                        SizedBox(height: 20,),
-                        DropDownFormField(
-                          validator: (value){
-                          if (value==null){
-                            return 'Enter your Department';
+                            ),                   
+                            TextFormField(
+                          validator: (text) {
+                          if(text.isEmpty){
+                            return 'Enter Department';
                           }
                           return null;
                           },
-                    titleText: 'Department',
-                    hintText: 'Please choose one',
-                    value: department[0],
-                    onSaved: (value) {
-                      setState(() {
-                        department[0]= value;
-                      });
-                    },
-                    onChanged: (value) {
-                      setState(() {
-                        department[0] = value;
-                      });
-                    },
-                    
-                    dataSource: [
-                      {
-                        "display": "IT",
-                        "value": "IT",
-                      },
-                      {
-                        "display": "CSE",
-                        "value": "CSE",
-                      },
-                      {
-                        "display": "ECE",
-                        "value": "ECE",
-                      },
-                      {
-                        "display": "EE",
-                        "value": "EE",
-                      },
-                      {
-                        "display": "MCA",
-                        "value": "MCA",
-                      },
-                      {
-                        "display": "BCA",
-                        "value": "BCA",
-                      },
-                    ],
-                    textField: 'display',
-                    valueField: 'value',
-                ),
+                              onChanged: (text) {
+                                department[0] = text;
+                              },
+                              decoration: InputDecoration(
+                                labelText : 'Department'
+                              ),
+                            ),  
 
                         SizedBox(height: 20,),
                             ]
@@ -267,56 +246,20 @@ class _TeamFormPageState extends State<TeamFormPage> {
                                 name[index+1] = text;
                               },
                             ),
-                    SizedBox(height: 20,),
-                        DropDownFormField(
-                          validator: (value){
-                          if (value==null){
-                            return 'Enter your Department';
+                      TextFormField(
+                          validator: (text) {
+                          if(text.isEmpty){
+                            return 'Enter Department';
                           }
                           return null;
                           },
-                    titleText: 'Department',
-                    hintText: 'Please choose one',
-                    value: department[index+1],
-                    onSaved: (value) {
-                      setState(() {
-                        department[index+1]= value;
-                      });
-                    },
-                    onChanged: (value) {
-                      setState(() {
-                        department[index+1] = value;
-                      });
-                    },
-                    dataSource: [
-                      {
-                        "display": "IT",
-                        "value": "IT",
-                      },
-                      {
-                        "display": "CSE",
-                        "value": "CSE",
-                      },
-                      {
-                        "display": "ECE",
-                        "value": "ECE",
-                      },
-                      {
-                        "display": "EE",
-                        "value": "EE",
-                      },
-                      {
-                        "display": "MCA",
-                        "value": "MCA",
-                      },
-                      {
-                        "display": "BCA",
-                        "value": "BCA",
-                      },
-                    ],
-                    textField: 'display',
-                    valueField: 'value',
-                ),
+                              onChanged: (text) {
+                                department[index+1] = text;
+                              },
+                              decoration: InputDecoration(
+                                labelText : 'Department'
+                              ),
+                            ), 
 
                         SizedBox(height: 20,),
                             ]
@@ -327,55 +270,62 @@ class _TeamFormPageState extends State<TeamFormPage> {
                     SizedBox(height: 20,),
                      Text(error, style: TextStyle(color: Colors.red, fontSize: 16, fontWeight: FontWeight.bold),),
                     FlatButton(onPressed: ()  {
-                      print(widget.eventName);
-                      print(widget.eventType);
-                      print(teamName);
-                      print(contact);
                       if(_formKey.currentState.validate()){
-                        final database = FirebaseDatabase.instance.reference();
-                        String path = widget.eventType + '/' + widget.eventName + '/' + contact[0];
-                          database.reference().child(path).once().then((DataSnapshot datasnapshot) async {
-                            print(datasnapshot.value);
-                            if(datasnapshot.value == null){
-                              await database.child(widget.eventType + '/' + widget.eventName + '/' + contact[0]).set({
-                                'a_teamName' : teamName,
-                                'd_department' : department[0],
-                                'f_phoneNo' : contact[0],
-                                'b_leaderName' : name[0],
-                                'e_email' : email[0],
-                                'c_college' : college[0],
-                                'payment' : 'false',
-                              });
-                              for(int i = 1; i < numMembers; i++){
-                                await database.child(widget.eventType + '/' + widget.eventName + '/' +contact[0] + '/' + 'g_members' + '/' + (i-1).toString()).set({
-                                'name' : name[i],
-                                'department' : department[i],
-                                });
-                                String data = "${widget.eventType} ${widget.eventName} ${contact[0]}";
-                                      showDialog(
-                                      context: context,
-                                      builder: (BuildContext context){
-                                          return AlertDialog(
-                                            title: Text("Confirm Registration"),
-                                            content: Text("Press Confirm to Generate QR Code"),
-                                            actions: <Widget>[
-                                              RaisedButton(
-                                                child: Text('Confirm'),
-                                                onPressed: () => Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data))),
-                                              ),
-                                            ],
-                                          );
-                                      }
-                                    );                     
-                                // Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data)));
-                              }
-                            } else {
-                              setState(() {
-                                error = 'Already Registered';  
-                              });
-                            }
-                          });
-                      }
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context){
+                            String msg = 'Press Confirm to Generate QR Code';
+                            return AlertDialog(
+                              title: Text("Confirm Registration"),
+                              content: Text(msg),
+                              actions: <Widget>[
+                                RaisedButton(
+                                  child: Text('Confirm'),
+                                  onPressed: ()  {
+                                    print(widget.eventName);
+                                    print(widget.eventType);
+                                    print(teamName);
+                                    print(contact);
+                                    
+                                      final database = FirebaseDatabase.instance.reference();
+                                      String path = widget.eventType + '/' + widget.eventName + '/' + contact[0];
+ 
+                                        database.reference().child(path).once().then((DataSnapshot datasnapshot) async {
+                                          print(datasnapshot.value);
+                                          if(datasnapshot.value == null){
+                                              String data = "${widget.eventType} ${widget.eventName} ${contact[0]}";
+                                              Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data)));   
+                                            await database.child(widget.eventType + '/' + widget.eventName + '/' + contact[0]).set({
+                                              'a_teamName' : teamName,
+                                              'd_department' : department[0],
+                                              'f_phoneNo' : contact[0],
+                                              'b_leaderName' : name[0],
+                                              'e_email' : email[0],
+                                              'c_college' : college[0],
+                                              'payment' : 'false',
+                                            });
+                                            for(int i = 1; i < numMembers; i++){
+                                              database.child(widget.eventType + '/' + widget.eventName + '/' +contact[0] + '/' + 'g_members' + '/' + (i-1).toString()).set({
+                                              'name' : name[i],
+                                              'department' : department[i],
+                                              });
+                
+                                              // Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data)));
+                                            }
+                                          } else {
+                                            setState(() {
+                                              error = 'Already Registered';
+                                              Navigator.pop(context);  
+                                            });
+                                          }
+                                        });
+                                  }
+                                ),
+                              ],
+                            );
+                        }
+                      ); }
+
                     }, child: Container(alignment: Alignment.center,height : 40, width: 200,color: Colors.red,  child:Container(alignment: Alignment.center,height : 40, width: 200,color: Colors.red,  child: Text('Register', style: TextStyle(fontSize: 24, fontWeight:FontWeight.bold),),),),),
                     SizedBox(height: 20,),
               ],
@@ -386,3 +336,111 @@ class _TeamFormPageState extends State<TeamFormPage> {
       );
   }
 }
+
+
+
+
+                      // print(widget.eventName);
+                      // print(widget.eventType);
+                      // print(teamName);
+                      // print(contact);
+                      // if(_formKey.currentState.validate()){
+                      //   final database = FirebaseDatabase.instance.reference();
+                      //   String path = widget.eventType + '/' + widget.eventName + '/' + contact[0];
+                      //     database.reference().child(path).once().then((DataSnapshot datasnapshot) async {
+                      //       print(datasnapshot.value);
+                      //       if(datasnapshot.value == null){
+                      //         await database.child(widget.eventType + '/' + widget.eventName + '/' + contact[0]).set({
+                      //           'a_teamName' : teamName,
+                      //           'd_department' : department[0],
+                      //           'f_phoneNo' : contact[0],
+                      //           'b_leaderName' : name[0],
+                      //           'e_email' : email[0],
+                      //           'c_college' : college[0],
+                      //           'payment' : 'false',
+                      //         });
+                      //         for(int i = 1; i < numMembers; i++){
+                      //           await database.child(widget.eventType + '/' + widget.eventName + '/' +contact[0] + '/' + 'g_members' + '/' + (i-1).toString()).set({
+                      //           'name' : name[i],
+                      //           'department' : department[i],
+                      //           });
+                      //           String data = "${widget.eventType} ${widget.eventName} ${contact[0]}";
+                      //                 showDialog(
+                      //                 context: context,
+                      //                 builder: (BuildContext context){
+                      //                     return AlertDialog(
+                      //                       title: Text("Confirm Registration"),
+                      //                       content: Text("Press Confirm to Generate QR Code"),
+                      //                       actions: <Widget>[
+                      //                         RaisedButton(
+                      //                           child: Text('Confirm'),
+                      //                           onPressed: () => Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data))),
+                      //                         ),
+                      //                       ],
+                      //                     );
+                      //                 }
+                      //               );                     
+                      //           // Navigator.push(context,new MaterialPageRoute(builder: (context) =>QrGen(widget.eventName, data)));
+                      //         }
+                      //       } else {
+                      //         setState(() {
+                      //           error = 'Already Registered';  
+                      //         });
+                      //       }
+                      //     });
+                      // }
+
+
+
+
+
+                //         DropDownFormField(
+                //           validator: (value){
+                //           if (value==null){
+                //             return 'Enter your Department';
+                //           }
+                //           return null;
+                //           },
+                //     titleText: 'Department',
+                //     hintText: 'Please choose one',
+                //     value: department[0],
+                //     onSaved: (value) {
+                //       setState(() {
+                //         department[0]= value;
+                //       });
+                //     },
+                //     onChanged: (value) {
+                //       setState(() {
+                //         department[0] = value;
+                //       });
+                //     },
+                    
+                //     dataSource: [
+                //       {
+                //         "display": "IT",
+                //         "value": "IT",
+                //       },
+                //       {
+                //         "display": "CSE",
+                //         "value": "CSE",
+                //       },
+                //       {
+                //         "display": "ECE",
+                //         "value": "ECE",
+                //       },
+                //       {
+                //         "display": "EE",
+                //         "value": "EE",
+                //       },
+                //       {
+                //         "display": "MCA",
+                //         "value": "MCA",
+                //       },
+                //       {
+                //         "display": "BCA",
+                //         "value": "BCA",
+                //       },
+                //     ],
+                //     textField: 'display',
+                //     valueField: 'value',
+                // ),

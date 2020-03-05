@@ -47,6 +47,9 @@ var sw=queryData.size.width;
       onWillPop: () async => false,
       
           child: SafeArea(
+            maintainBottomViewPadding: true,
+            bottom: true,
+            minimum: EdgeInsets.only(top: 50),
             top: true,
                       child: Scaffold(
         drawer: CustomDrawer(),

@@ -93,7 +93,7 @@ class AboutusPage extends StatelessWidget {
                           ),
                         ],
                       ),
-Row(
+                      Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Text(
