@@ -9,7 +9,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomDrawer extends StatelessWidget {
   _launchFacebook() async {
-    const url = 'https://www.facebook.com/AmorTentia1515/';
+    const url = 'https://www.facebook.com/techstorm2.20/';
     if (await canLaunch(url)) {
       await launch(url);
     } else {
@@ -28,7 +28,7 @@ class CustomDrawer extends StatelessWidget {
   }
 
   _launchWebsite() async {
-    const url = 'https://www.facebook.com/AmorTentia1515/';
+    const url = 'https://www.facebook.com/techstorm2.20/';
     if (await canLaunch(url)) {
       await launch(url);
     } else {

@@ -88,12 +88,12 @@ class AboutusPage extends StatelessWidget {
                           IconButton(
                             icon: Icon(Icons.phone),
                             onPressed: () {
-                              launch('tel:+${'9051633040'}');
+                              launch('tel:+${'03340619174'}');
                             },
                           ),
                         ],
                       ),
-Row(
+                      Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Text(

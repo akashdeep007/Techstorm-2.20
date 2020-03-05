@@ -9,6 +9,7 @@ class PASSIONWITHREELS extends StatefulWidget {
 class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
   @override
   Widget build(BuildContext context) {
+    double c_width = MediaQuery.of(context).size.width*0.8;
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(onPressed: () {
         Navigator.push(context,new MaterialPageRoute(builder: (context) =>TeamFormPage(eventType: 'Creativity', eventName: "PASSIONWITHREELS", minMembers: 1, maxMembers: 5,)));
@@ -66,14 +67,18 @@ class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
                                   fontSize: 24, fontWeight: FontWeight.w500),
                             ),
                           ),
-                          subtitle: Column(
-                            children: <Widget>[
-                              Text(
-                                "Film as dream, film as music. No art passes our conscience in the way film does,and goes directly to our feelings, deep down into the dark rooms of our souls.” -Ingmar Bergman. The essence of movie-making is using film’s own visual language to create meaning and the highest achievement of the cinematic form is fusing film and viewer into one. If you are passionate about it and have a capable team, then step up, participate this wonderful event and show us your PASSION WITH REELS!!!",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              
-                            ],
+                          subtitle: Container(
+                            width: c_width,
+                            padding: EdgeInsets.all(5),
+                            child: Column(
+                              children: <Widget>[
+                                Text(
+                                    "Filmmaking involves a number of discrete stages including an initial story, idea, or commission, through screenwriting, casting, shooting, sound recording and pre-production, editing, and screening the finished product before an audience that may result in a film release and exhibition. Filmmaking takes place in many places around the world in a range of economic, social, and political contexts, and using a variety of technologies and cinematic techniques.Filmmaking is not only an art but is also a perfect portrayal of the ever-changing life & rapid scientific & technological growth of mankind. Now, if you are passionate about it and have a team that has the potential to make a movie, then step up, participate in this wonderful event & show us your passion with reels!!!",
+                                    style: TextStyle(fontSize: 18),
+                                  ),
+                                
+                              ],
+                            ),
                           )),
                     ),
                     Divider(height: 20,),
@@ -120,12 +125,24 @@ class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
                             children: <Widget>[
                               
                               Text(
-                                "Rule2",
-                                style: TextStyle(
-                                    fontSize: 18),
-                              ),
-                              Text(
-                                "Rule3",
+                                """1. Must be a short film with a story, runtime of film should not exceed 11 minutes(Including the beginning and end credits).  Participants must ensure that the titles and credits displayed do not last for more than 1 minute. Films exceeding this time limit are likely to be rejected.
+2. Political biasness, Religional biasness, Pornographic content will not be entertained and would lead to direct disqualification. AVOID EXCESSIVE VIOLENCE. 
+3. Movies should be in 720p(HD) minimum. FORMAT: The films may be shot in MPEG4 or AVI format. The recommended ratios are: 16:9 / 16:9 Full Height Anamorphic – in DV / HDV.
+4. Films may be in any language or have no dialogue at all. Films in Language other than English should carry subtitles in English.
+5. Due credits must be given to the cast and the crew in the film though the final prize would go to the team.
+6. There is no particular theme for the short film.
+7. Films once entered cannot be withdrawn.
+8. The short film must be original(should not be copied from other sources) and no watermark of any kind should be on the film.
+9.  ONLY Short Films should be submitted NO DOCUMENTARIES, ANIMATIONS OR EXPERIMENTAL ART FORMS. 
+10. Submission of video should be done through CD, DVD or Pen drive.
+11. Multiple entries of same team is not allowed.
+12. Movies that were submitted last year in Techstorm would not be accepted.
+13. Participants may or may not be from same college but submission of a copy of their college id card is compulsory. All participants must be college students(either UG or PG).
+14. Each film should begin with a disclaimer, which should also include the title of the movie and TEAM NAME.
+15. The maximum number of team members can be 8 (including the cast) and minimum number of team members can be 1.
+16. Judges’ decision will be final and binding.
+17. The last date of submitting the short film is 3rd April. (Participant can also email their film to the co-ordinator of the event.)
+18. TECHSTORM 2.20 organizers reserve the right to change / modify / alter any rule or its part or event of this competition anytime.""",
                                 style: TextStyle(
                                     fontSize: 18),
                               ),

@@ -17,7 +17,7 @@ class CreativePage extends StatelessWidget {
     margin: EdgeInsets.only(left:10, right:10),
     decoration: BoxDecoration(
       image: DecorationImage(image: 
-      AssetImage('assets/images/CREATIVITY/35mm-min.jpg',
+      AssetImage('assets/images/CREATIVITY/pwr-min.jpg',
                   ), fit: BoxFit.scaleDown)
     ),
     alignment: Alignment.center,
@@ -35,7 +35,7 @@ class CreativePage extends StatelessWidget {
               Column(
                 children: <Widget>[
                                 Text(
-                '35MM LIVE',
+                'Passion with Reels',
                 style: TextStyle(
                     fontSize: 28,fontFamily: "TempestApache",
                     fontWeight: FontWeight.bold,
@@ -51,7 +51,7 @@ class CreativePage extends StatelessWidget {
               ),
 RaisedButton(
                 onPressed: () {
-                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>MMLIVE()));
+                  Navigator.push(context,new MaterialPageRoute(builder: (context) =>PASSIONWITHREELS()));
                 },
                 child: const Text('Dive In', style: TextStyle(fontSize: 20)),
               ),
