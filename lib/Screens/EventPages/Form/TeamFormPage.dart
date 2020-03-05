@@ -91,7 +91,16 @@ class _TeamFormPageState extends State<TeamFormPage> {
                           },
                               onChanged: (text) {
                                 setState(() {
-                                  numMembers = int.parse(text);
+                                  if(int.parse(text) > widget.maxMembers){
+                                    numMembers = widget.maxMembers;
+                                  }
+                                  else if(int.parse(text) < widget.minMembers){
+                                    numMembers = widget.minMembers;
+                                  }
+                                  else{
+                                    numMembers = int.parse(text);
+                                  }
+                                  text = numMembers.toString();
                                   print("Changed Value $numMembers");
                                 });
                                 
