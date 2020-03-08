@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:techstorm/Screens/EventPages/Form/NFormPage.dart';
 
 class FantaC extends StatefulWidget {
   @override
@@ -16,7 +16,7 @@ class _FantaCState extends State<FantaC> {
             Navigator.push(
                 context,
                 new MaterialPageRoute(
-                    builder: (context) => TeamFormPage(
+                    builder: (context) => NFormPage(
                         eventType: 'Brain_Teasers', eventName: 'FANTAC', minMembers: 2, maxMembers: 2,)));
           },
           label: Container(

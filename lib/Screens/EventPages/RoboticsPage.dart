@@ -227,7 +227,7 @@ RaisedButton(
              SizedBox(height:10),
               Text(
                   'Life will throw many obstacles. But we\'ll throw mountains, desserts, bridges and may be even a river. Just don\'t let your wheels fall apart.',style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 14,
                       color: Colors.black)),
                 ],
               ),
@@ -270,7 +270,7 @@ RaisedButton(
               SizedBox(height:20),
               Text(
                   'Please make sure to fasten your seat belts, keep your seats upright and keep your windows open during take-off.',style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 14,
                       color: Colors.black)),
                 ],
               ),

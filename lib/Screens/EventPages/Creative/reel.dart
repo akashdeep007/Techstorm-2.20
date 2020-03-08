@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
+import 'package:techstorm/Screens/EventPages/Form/NFormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 class PASSIONWITHREELS extends StatefulWidget {
   @override
@@ -12,7 +12,7 @@ class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
     double c_width = MediaQuery.of(context).size.width*0.8;
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(onPressed: () {
-        Navigator.push(context,new MaterialPageRoute(builder: (context) =>TeamFormPage(eventType: 'Creativity', eventName: "PASSIONWITHREELS", minMembers: 1, maxMembers: 5,)));
+        Navigator.push(context,new MaterialPageRoute(builder: (context) =>NFormPage(eventType: 'Creativity', eventName: "PASSIONWITHREELS", minMembers: 1, maxMembers: 5,)));
       }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
               appBar: AppBar(

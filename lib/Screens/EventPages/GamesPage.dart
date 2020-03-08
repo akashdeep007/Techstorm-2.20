@@ -92,7 +92,7 @@ RaisedButton(
               SizedBox(height:20),
               Text(
                   'The blunders are all there on the board, waiting to be made. When you see a good move, look for a better one.',style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 15,
                       color: Colors.black)),
               
                 ],
@@ -138,7 +138,7 @@ RaisedButton(
               SizedBox(height:20),
               Text(
                   'There is no good or bad in this world,\nthere are just people whose intentions and clans clash',style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 15,
                       color: Colors.black)),
               
                 ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:techstorm/Screens/EventPages/Form/NFormPage.dart';
 import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -16,7 +17,7 @@ class _AppManiaState extends State<AppMania> {
             Navigator.push(
                 context,
                 new MaterialPageRoute(
-                    builder: (context) => TeamFormPage(eventType: 'Brain_Teasers',
+                    builder: (context) => NFormPage(eventType: 'Brain_Teasers',
                         eventName: 'APPMANIA', minMembers: 1, maxMembers: 2,)));
           },
           label: Container(
