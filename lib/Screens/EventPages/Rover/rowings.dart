@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
+import 'package:techstorm/Screens/EventPages/Form/NFormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 class RO_Wings extends StatefulWidget {
   @override
@@ -11,7 +11,7 @@ class _RO_WingsState extends State<RO_Wings> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(onPressed: () {
-        Navigator.push(context,new MaterialPageRoute(builder: (context) =>TeamFormPage(eventType: 'Roverse', eventName: "ROWINGS", minMembers: 1, maxMembers: 5,)));
+        Navigator.push(context,new MaterialPageRoute(builder: (context) =>NFormPage(eventType: 'Roverse', eventName: "ROWINGS", minMembers: 1, maxMembers: 5,)));
       }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
               appBar: AppBar(

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
+import 'package:techstorm/Screens/EventPages/Form/NFormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 class Technomania extends StatefulWidget {
   @override
@@ -11,7 +11,7 @@ class _TechnomaniaState extends State<Technomania> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(onPressed: () { 
-      Navigator.push(context,new MaterialPageRoute(builder: (context) =>TeamFormPage(eventType : 'Brain_Teasers', eventName : 'TECHNOMANIA', minMembers: 1, maxMembers: 2,)));
+      Navigator.push(context,new MaterialPageRoute(builder: (context) =>NFormPage(eventType : 'Brain_Teasers', eventName : 'TECHNOMANIA', minMembers: 1, maxMembers: 2,)));
 
       }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
@@ -94,8 +94,16 @@ class _TechnomaniaState extends State<Technomania> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "1. Team Size: 2(Exact)\n2. Each Team will be provided with a Linux (Ubuntu) based System having supportable compilers in each round.\n3. The whole competition will be done through a web portal. So better you be familiar yourself with autojudge Codechef platform or any other autojudged webportal available.\n 4. Utilizing any kind of external electronic aid will lead to disqualification.\n 5. A group may comprise of members from different streams and/or different years and/or different colleges. If at least one member of a team is from a different college, the team will be treated as an outside team.\n6. No paper carried by the participants will be allowed during the whole contest.\n7. Team members cannot be changed after registration.\n",
-                                style: TextStyle(fontSize: 18),
+                                """                           
+1. It should consist of hardware model on science and technology along with a powerpoint presentation.
+2. The members of a single team should be from the same institute.
+3. Each team must consist of 4 members.
+4. Each team must display their hardware model and have a presentation about their entire project.
+5. Each team will get 10 minutes for showing their hardware model and 10 minutes to perform the presentation.
+6. Marks will be provided on both the model and presentation
+7. The decision of the judges will be final.
+""",
+                                 style: TextStyle(fontSize: 18),
                               ),
                 
                             ],

@@ -69,19 +69,10 @@ class _NFSState extends State<NFS> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rule1",
+                                "Take the wheel and drive your car to the chequered flag cause this game is all about speed. The faster you are, the better your chances",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "rule2",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
-                              Text(
-                                "rule3",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
+                              
                             ],
                           )),
                     ),

@@ -93,7 +93,7 @@ class _FIFAState extends State<FIFA> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "BPPIMT students: INR 30 /-\n\nOther students: INR 50 ",
+                                "BPPIMT students: INR 40 /-\n\nOther students: INR 60 ",
                                 style: TextStyle(fontSize: 18),
                               ),
                              

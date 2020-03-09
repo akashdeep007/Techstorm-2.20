@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:techstorm/Screens/EventPages/Form/FormPage.dart';
+import 'package:techstorm/Screens/EventPages/Form/NFormPage.dart';
 import 'package:techstorm/Screens/EventPages/Form/TeamFormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 class RO_Soccer extends StatefulWidget {
@@ -12,7 +12,7 @@ class _RO_SoccerState extends State<RO_Soccer> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(onPressed: () {
-        Navigator.push(context,new MaterialPageRoute(builder: (context) =>TeamFormPage(eventType: 'Roverse', eventName: "ROSOCCER", minMembers: 1, maxMembers: 5,)));
+        Navigator.push(context,new MaterialPageRoute(builder: (context) =>NFormPage(eventType: 'Roverse', eventName: "ROSOCCER", minMembers: 1, maxMembers: 5,)));
       }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
               appBar: AppBar(
@@ -95,7 +95,7 @@ class _RO_SoccerState extends State<RO_Soccer> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rs 10",
+                                "FEE 100 for bppimt\n150 for non bppimt",
                                 style: TextStyle(fontSize: 18),
                               ),
                              

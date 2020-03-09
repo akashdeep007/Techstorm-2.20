@@ -66,7 +66,8 @@ class _ExpoState extends State<Expo> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                " ",
+                               """Exposcience is a science model competition for the school students with the sole objective of fostering scientific curiosity, creativity among students. This competition provides a platform to exhibit and share their knowledge and passion for science through interaction with peers and audiences.
+""",
                                 style: TextStyle(fontSize: 18),
                               ),
                             ],
@@ -82,7 +83,7 @@ class _ExpoState extends State<Expo> {
                           contentPadding: EdgeInsets.all(20),
                           title: Center(
                                 child: Text(
-                                  "Registration fees",
+                                  "Objective",
                                   style: TextStyle(
                                       fontSize: 24, fontWeight: FontWeight.w500),
                                 ),
@@ -90,7 +91,8 @@ class _ExpoState extends State<Expo> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "",
+                                """Science always reveals a new truth, a new discovery, an unknown reality. As the necessities change and so the inventions and development. It keeps growing and can never be dull and boring. Science exhibitions explore the creative talent of the students and force them to think outside of the box. Science exhibitions develop a scientific spirit and curiosity in a student which in turn forces them to think and creatively find solutions to the challenges. Students enjoy learning through such exhibitions and feel a sense of belonging as they make the models with their own hands.
+ """,
                                 style: TextStyle(fontSize: 18),
                               ),
                              
@@ -114,44 +116,37 @@ class _ExpoState extends State<Expo> {
                           ),
                           subtitle: Column(
                             children: <Widget>[
-                             Text("")
+                             Text("""Qualification Rules
+Teams should be nominated by school. Each team can have 4 members.  One teacher mentor need to associate with the team.
+One school may have multiple teams.
+Each team should submit a proposal or report of the model including the following points:
+Title of the model/project
+Working Principle.
+Component.
+Requirements (if any for exhibition)
+""",style: TextStyle(fontSize: 18)),
+                             Text("""Rules of the competition
+Science models should belongs to any of the following category:
+Recycle of waste management.
+Non conventional enery.
+Application of Electricity & Electronics concepts.
+Robotics.
+Competiotion will be held in two categories 
+Category I : Class IX-X
+Category II : Class XI-XII
+Proposals will be scrutinize by the Techstorm committee and selected teams will be invited to participate in the competition.
+Each team should present their model on the day of the event.The model can be of any form (working model or theoretical model or dummy model).
+Competition will be held on April 07, 2020 between 10.30 AM to 5.30 PM
+""",style: TextStyle(fontSize: 18)),
+                             Text("""Participation
+Soft copy of the report should be submitted via email to the following e-mail address sensanjuktasen@gmail.com,prb000047@gmail.com  with in April 02, 2020. 
+""",style: TextStyle(fontSize: 18))
                              
                             ],
                           )),
                     ),
                     Divider(height: 20,),
-                    Card(
-                      color: Colors.white,
-                      elevation: 5,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: new BorderRadius.circular(10.0)),
-                      child: ListTile(
-                          contentPadding: EdgeInsets.all(20),
-                          title: Center(
-                            child: Text(
-                              "Contact Us",
-                              style: TextStyle(
-                                  fontSize: 24, fontWeight: FontWeight.w500),
-                            ),
-                          ),
-                          subtitle: Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Text(
-                                "Dummy",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              SizedBox(width:20),
-                               IconButton(icon: Icon(Icons.phone), 
-                            onPressed:() {
-                              launch('tel:${'00000000000'}');
-                            },
-
-      ),
-                            ],
-                          )),
-                    ),
-                    Divider(height: 20,),
+            
                     Card(
                       color: Colors.white,
                       elevation: 5,

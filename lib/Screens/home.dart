@@ -164,9 +164,8 @@ var sw=queryData.size.width;
                       Container(
                         height: 80,
                                               color: Colors.white38,
-                      width: sw,
+                      width: sw*.98,
                                               child: Container(
-                          width: sw * .95,
                           child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: <Widget>[

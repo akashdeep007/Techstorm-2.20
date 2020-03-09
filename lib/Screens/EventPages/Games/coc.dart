@@ -119,7 +119,7 @@ class _COCState extends State<COC> {
                           ),
                           subtitle: Column(
                             children: <Widget>[
-                             Text("1.	Townhall 7 to Townhall 9 only.\n2.	Mod or any other 3rd party softwares are not allowed.\n3.	One entry per person.\n4.	Organizers will not provide any sort of internet connection.\n5.	In case of any conflict, the decision of the organizers will be final.\n6.	Breaking of any rules will lead to immediate disqualification.\n7.	Clan troops/spells are not allowed during the event whether it is used as attacking or defending the village.\n8.	There will be no use of magic items such as using potion which boosts the army and spells to a max level and siege machines.")
+                             Text("1.	Townhall 7 to Townhall 9 only.\n2.	Mod or any other 3rd party softwares are not allowed.\n3.	One entry per person.\n4.	Organizers will not provide any sort of internet connection.\n5.	In case of any conflict, the decision of the organizers will be final.\n6.	Breaking of any rules will lead to immediate disqualification.\n7.	Clan troops/spells are not allowed during the event whether it is used as attacking or defending the village.\n8.	There will be no use of magic items such as using potion which boosts the army and spells to a max level and siege machines.",style: TextStyle(fontSize: 18),)
                              
                             ],
                           )),

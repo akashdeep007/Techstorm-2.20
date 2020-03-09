@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:techstorm/splashscreen/Splash.dart';
+import 'package:techstorm/Shared/Splash.dart';
 
 void main() => runApp(MyApp());
 

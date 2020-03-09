@@ -14,7 +14,7 @@ class AboutusPage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage('assets/images/back2.gif'),
+                image: AssetImage('assets/images/back2.gif' ),
                 fit: BoxFit.cover)),
         child: ListView(
           children: <Widget>[
