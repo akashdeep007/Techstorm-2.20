@@ -95,7 +95,7 @@ class _RO_SoccerState extends State<RO_Soccer> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rs 10",
+                                "FEE 100 for bppimt\n150 for non bppimt",
                                 style: TextStyle(fontSize: 18),
                               ),
                              

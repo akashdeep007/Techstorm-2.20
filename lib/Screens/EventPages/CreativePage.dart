@@ -43,7 +43,7 @@ class CreativePage extends StatelessWidget {
               ),
               SizedBox(height: 20,),
               Text(
-                  'Keep it simple',style: TextStyle(
+                  'Lights Camera and Action',style: TextStyle(
                       fontSize: 18,
                       color: Colors.black)),
               

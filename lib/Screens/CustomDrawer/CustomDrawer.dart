@@ -40,174 +40,176 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget> [
-            Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              Container(
-                padding: EdgeInsets.only(top: 12,bottom:50),
-                child: Column(children: <Widget>[
-                  // FlatButton(
-                  //   child: Text('Profile', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
-                  //   onPressed: () {},
-                  // ),
-                  SizedBox(
-                        height: 30,
-                      ),
-                  Container(height:100,child: Image.asset("assets/images/lo.jpg"),),
-                  SizedBox(
-                        height: 50,
-                      ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(Icons.schedule),
-                      SizedBox(
-                        width: 15,
-                      ),
-                      FlatButton(
-                        padding: EdgeInsets.only(top: 15, bottom: 15),
-                        child: Text(
-                          'Schedule',
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.bold),
+      child: Container(color: Colors.white,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget> [
+              Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Container(
+                  padding: EdgeInsets.only(top: 12,bottom:50),
+                  child: Column(children: <Widget>[
+                    // FlatButton(
+                    //   child: Text('Profile', style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold),),
+                    //   onPressed: () {},
+                    // ),
+                    SizedBox(
+                          height: 30,
                         ),
-                        onPressed: () { Navigator.push(context,new MaterialPageRoute(builder: (context) =>SchedulePage()));},
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      FaIcon(FontAwesomeIcons.graduationCap),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      FlatButton(
-                        padding: EdgeInsets.only(top: 15, bottom: 15),
-                        child: Text(
-                          'Results',
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.bold),
+                    Container(height:100,child: Image.asset("assets/images/wockt.png"),),
+                    SizedBox(
+                          height: 50,
                         ),
-                        onPressed: () {
-                          showDialog(
-                              context: context,
-                              builder: (BuildContext context) {
-                                return AlertDialog(
-                                  title: Center(
-                                      child:
-                                          Text("Results will be declared soon ")),
-                                );
-                              });
-                        },
-                      ),
-                    ],
-                  ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(Icons.schedule),
+                        SizedBox(
+                          width: 15,
+                        ),
+                        FlatButton(
+                          padding: EdgeInsets.only(top: 15, bottom: 15),
+                          child: Text(
+                            'Schedule',
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          onPressed: () { Navigator.push(context,new MaterialPageRoute(builder: (context) =>SchedulePage()));},
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        FaIcon(FontAwesomeIcons.graduationCap),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        FlatButton(
+                          padding: EdgeInsets.only(top: 15, bottom: 15),
+                          child: Text(
+                            'Results',
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          onPressed: () {
+                            showDialog(
+                                context: context,
+                                builder: (BuildContext context) {
+                                  return AlertDialog(
+                                    title: Center(
+                                        child:
+                                            Text("Results will be declared soon ")),
+                                  );
+                                });
+                          },
+                        ),
+                      ],
+                    ),
 
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        FaIcon(FontAwesomeIcons.shoppingBasket),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        FlatButton(
+                          padding: EdgeInsets.only(top: 15, bottom: 15),
+                          child: Text(
+                            'Sponsers',
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          onPressed: () { Navigator.push(context,new MaterialPageRoute(builder: (context) =>Carousal()));},
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        FaIcon(FontAwesomeIcons.teamspeak),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        FlatButton(
+                          padding: EdgeInsets.only(top: 15, bottom: 15),
+                          child: Text(
+                            'Team',
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          onPressed:  () { Navigator.push(context,new MaterialPageRoute(builder: (context) =>TeamPage()));},
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        FaIcon(FontAwesomeIcons.dev),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        FlatButton(
+                          padding: EdgeInsets.only(top: 15, bottom: 15),
+                          child: Text(
+                            'Developer',
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          onPressed: () { Navigator.push(context,new MaterialPageRoute(builder: (context) =>DevPage()));},
+                        ),
+                      ],
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Icon(Icons.info),
+                        SizedBox(
+                          width: 5,
+                        ),
+                        FlatButton(
+                          padding: EdgeInsets.only(top: 15, bottom: 15),
+                          child: Text(
+                            '\About Us',
+                            style: TextStyle(
+                                fontSize: 18, fontWeight: FontWeight.bold),
+                          ),
+                          onPressed: () {Navigator.push(context,new MaterialPageRoute(builder: (context) =>AboutusPage()));},
+                        ),
+                      ],
+                    ),
+                  ]),
+                ),
+                Column(children: <Widget>[
+                  
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
+                    
                     children: <Widget>[
-                      FaIcon(FontAwesomeIcons.shoppingBasket),
-                      SizedBox(
-                        width: 5,
+                      IconButton(
+                        icon: FaIcon(FontAwesomeIcons.firefoxBrowser),
+                        onPressed: _launchFacebook,
                       ),
-                      FlatButton(
-                        padding: EdgeInsets.only(top: 15, bottom: 15),
-                        child: Text(
-                          'Sponsers',
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.bold),
-                        ),
-                        onPressed: () { Navigator.push(context,new MaterialPageRoute(builder: (context) =>Carousal()));},
+                      IconButton(
+                        icon: FaIcon(FontAwesomeIcons.map),
+                        onPressed: _launchMaps,
+                      ),
+                      IconButton(
+                        icon: FaIcon(FontAwesomeIcons.facebook),
+                        onPressed: _launchFacebook,
                       ),
                     ],
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      FaIcon(FontAwesomeIcons.teamspeak),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      FlatButton(
-                        padding: EdgeInsets.only(top: 15, bottom: 15),
-                        child: Text(
-                          'Team',
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.bold),
-                        ),
-                        onPressed:  () { Navigator.push(context,new MaterialPageRoute(builder: (context) =>TeamPage()));},
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      FaIcon(FontAwesomeIcons.dev),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      FlatButton(
-                        padding: EdgeInsets.only(top: 15, bottom: 15),
-                        child: Text(
-                          'Developer',
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.bold),
-                        ),
-                        onPressed: () { Navigator.push(context,new MaterialPageRoute(builder: (context) =>DevPage()));},
-                      ),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: <Widget>[
-                      Icon(Icons.info),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      FlatButton(
-                        padding: EdgeInsets.only(top: 15, bottom: 15),
-                        child: Text(
-                          '\About Us',
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.bold),
-                        ),
-                        onPressed: () {Navigator.push(context,new MaterialPageRoute(builder: (context) =>AboutusPage()));},
-                      ),
-                    ],
+                  SizedBox(
+                    height: 15,
                   ),
                 ]),
-              ),
-              Column(children: <Widget>[
-                
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  
-                  children: <Widget>[
-                    IconButton(
-                      icon: FaIcon(FontAwesomeIcons.firefoxBrowser),
-                      onPressed: _launchFacebook,
-                    ),
-                    IconButton(
-                      icon: FaIcon(FontAwesomeIcons.map),
-                      onPressed: _launchMaps,
-                    ),
-                    IconButton(
-                      icon: FaIcon(FontAwesomeIcons.facebook),
-                      onPressed: _launchFacebook,
-                    ),
-                  ],
-                ),
-                SizedBox(
-                  height: 15,
-                ),
               ]),
-            ]),
-              ]),
+                ]),
+      ),
     );
   }
 }

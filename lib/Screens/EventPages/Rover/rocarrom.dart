@@ -70,19 +70,10 @@ class _RO_CarromState extends State<RO_Carrom> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Rule1",
+                                "Think you are a carrom champ, then ro-carrom is the crown jewel platform for you. Here your mind and finger coordination is not on the board but on the control of your buddy present on the board. Ro-carrom is the best platform to show that your team and your bot are connected through the same string forming a beautiful ornament from your lustrous bonding, understanding and awareness. Pocket carrom-men, overcome obstacles, defeat your opponent and show everyone that you and your bot are bestfriends.",
                                 style: TextStyle(fontSize: 18),
                               ),
-                              Text(
-                                "rule2",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
-                              Text(
-                                "rule3",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w500, fontSize: 15),
-                              ),
+                              
                             ],
                           )),
                     ),

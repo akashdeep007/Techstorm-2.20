@@ -21,7 +21,7 @@ class BrainPage extends StatelessWidget {
     decoration: BoxDecoration(
       image: DecorationImage(image: 
       AssetImage('assets/images/BRAIN/am-min.jpg',
-                  ), fit: BoxFit.scaleDown)
+                  ), fit: BoxFit.cover)
     ),
     alignment: Alignment.center,
     child: FlipCard(
@@ -212,7 +212,7 @@ RaisedButton(
       ),
       body: Container(
         decoration: BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/images/back.gif'), fit: BoxFit.cover)
+          image: DecorationImage(image: AssetImage('assets/images/back2.gif'), fit: BoxFit.fill)
         ),
         alignment: Alignment.center,
         child: CarouselSlider.builder(

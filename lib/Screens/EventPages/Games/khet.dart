@@ -124,11 +124,7 @@ class _KHETState extends State<KHET> {
                                 style: TextStyle(
                                     fontSize: 18),
                               ),
-                              Text(
-                                "Rule3",
-                                style: TextStyle(
-                                    fontSize: 18),
-                              ),
+                              
                             ],
                           )),
                     ),

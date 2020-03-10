@@ -17,7 +17,11 @@ class _FantaCState extends State<FantaC> {
                 context,
                 new MaterialPageRoute(
                     builder: (context) => NFormPage(
-                        eventType: 'Brain_Teasers', eventName: 'FANTAC', minMembers: 2, maxMembers: 2,)));
+                          eventType: 'Brain_Teasers',
+                          eventName: 'FANTAC',
+                          minMembers: 2,
+                          maxMembers: 2,
+                        )));
           },
           label: Container(
               width: 100,
@@ -61,7 +65,7 @@ class _FantaCState extends State<FantaC> {
                   'assets/images/BRAIN/fc-min.jpg',
                   fit: BoxFit.fitWidth,
                 )),
-                SizedBox(height: 20),
+            SizedBox(height: 20),
             Card(
               color: Colors.white,
               elevation: 5,
@@ -79,9 +83,10 @@ class _FantaCState extends State<FantaC> {
                   subtitle: Column(
                     children: <Widget>[
                       Text(
-                        " Here is a chance to prove yourself that you are not only a programmer but an elegant andefficient coder. Plunge in to unravel the deep Coding secrets and swim up to the shorewith the best algorithm. The three upcoming rounds will give your mind a real twist and turn so be ready to decode the trail.",
+                        "A great way to improve your skills when learning to code is by solving coding challenge. Here is a chance to prove yourself that you are not only a programmer but an elegant andefficient coder. Plunge in to unravel the deep Coding secrets and swim up to the shorewith the best algorithm. The three upcoming rounds will give your mind a real twist and turn so be ready to decode the trail.",
                         style: TextStyle(fontSize: 18),
                       ),
+                      
                     ],
                   )),
             ),
@@ -218,7 +223,6 @@ class _FantaCState extends State<FantaC> {
                         "To be Announced",
                         style: TextStyle(fontSize: 18),
                       ),
-                    
                     ],
                   )),
             ),

@@ -110,6 +110,45 @@ class _OmegatrixState extends State<Omegatrix> {
                         " 1.Only individuals can participate.\n2.Every participant must carry her/his College identity card during the day of event.\n3.Utilizing any kind of electronics aid will lead to disqualification.\n4.Every participant must produce the given confirmation code during registration. Without proper confirmation code no participant can be registered.\n",
                         style: TextStyle(fontSize: 18),
                       ),
+                      Text(
+                        ''' Prelims:
+Every question will contain 4 options, among them 3 will wrong and 1 will correct.
+Round 1:
+1) No. of questions: 30
+2) Allotted time: 30 mins
+3) Participant will get 1 marks for right answer and No Negative marking.
+4) No marks will be deducted for unmarked questions.
+
+Round 2:
+1) No. of questions: 30
+2) Allotted time: 30 mins
+3) Participant will get 2 marks for right answer and Negative marking is 1 for
+per wrong answer.
+4) No marks will be deducted for unmarked questions.
+
+Tie Breaker Rule
+1) Less number of negative marking will get higher priority.
+
+Finals:
+
+Round 1:
+1) No. of questions: 25
+2) Allotted time: 30 mins
+3) Participant will get 2 marks for right answer and Negative marking is 1 for
+per wrong answer.
+4) (1/2) marks will be deducted for unmarked questions.
+
+Round 2:
+1) It will be a rapid fire round.
+2) No. of questions: 20
+3) Allotted time: 15 mins
+4) Participant will get 3 marks for right answer and Negative marking is 1 for
+per wrong answer.
+
+In case of a tie round 3 will occur.
+In case of a tie after the 2 nd round of final, the tied teams will get into a buzzer/bell round.''',
+                        style: TextStyle(fontSize: 18),
+                      ),
                     ],
                   )),
             ),

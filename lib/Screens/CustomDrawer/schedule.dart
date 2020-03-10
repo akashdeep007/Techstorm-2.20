@@ -12,7 +12,7 @@ class SchedulePage extends StatelessWidget {
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage("assets/images/back2.gif"),
-                fit: BoxFit.cover)),
+                fit: BoxFit.fitWidth)),
         child: ListView(
           children: <Widget>[
             Container(
