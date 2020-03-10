@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:techstorm/Screens/EventPages/Form/NFormPage.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 
@@ -11,6 +12,10 @@ class _ExpoState extends State<Expo> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton.extended(onPressed: () {
+        Navigator.push(context,new MaterialPageRoute(builder: (context) =>NFormPage(eventType: 'Creativity', eventName: "EXPOSCIENCE", minMembers: 4, maxMembers: 4,)));
+      }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
               appBar: AppBar(
                 title: Text('Exposcience'),
                 backgroundColor: Colors.black87,
@@ -145,7 +150,58 @@ Soft copy of the report should be submitted via email to the following e-mail ad
                             ],
                           )),
                     ),
+                                        Divider(height: 20,),
+                    Card(
+                      color: Colors.white,
+                      elevation: 5,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: new BorderRadius.circular(10.0)),
+                      child: ListTile(
+                          contentPadding: EdgeInsets.all(20),
+                          title: Center(
+                            child: Text(
+                              "Contact Us",
+                              style: TextStyle(
+                                  fontSize: 24, fontWeight: FontWeight.w500),
+                            ),
+                          ),
+                          subtitle: Column( children : [
+                            Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Text(
+                                "Arka Banerjee",
+                                style: TextStyle(fontSize: 18),
+                              ),
+                              SizedBox(width:20),
+                               IconButton(icon: Icon(Icons.phone), 
+                            onPressed:() {
+                              launch('tel:${'8017077827'}');
+                            },
+
+      ),
+                            ],
+                          ),
+                            Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Text(
+                                "Sanjukta Sen",
+                                style: TextStyle(fontSize: 18),
+                              ),
+                              SizedBox(width:20),
+                               IconButton(icon: Icon(Icons.phone), 
+                            onPressed:() {
+                              launch('tel:${'8335957344'}');
+                            },
+
+      ),
+                            ],
+                          ),
+                          ])),
+                    ),
                     Divider(height: 20,),
+
             
                     Card(
                       color: Colors.white,

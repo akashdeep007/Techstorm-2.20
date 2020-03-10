@@ -165,7 +165,47 @@ class TeamPage extends StatelessWidget {
                     "abc"),
                      Myitems(
                     Image.asset(
-                      'assets/images/Team/SOUMYA.jpg',
+                      'assets/images/Team/AKASH.jpg',
+                      width: 155.0,
+                      height: 155,
+                      fit: BoxFit.cover,
+                    ),
+                    "abc"),
+                                         Myitems(
+                    Image.asset(
+                      'assets/images/Team/ARITRA.jpg',
+                      width: 155.0,
+                      height: 155,
+                      fit: BoxFit.cover,
+                    ),
+                    "abc"),
+                                         Myitems(
+                    Image.asset(
+                      'assets/images/Team/SUPRAKASH.jpg',
+                      width: 155.0,
+                      height: 155,
+                      fit: BoxFit.cover,
+                    ),
+                    "abc"),
+                                         Myitems(
+                    Image.asset(
+                      'assets/images/Team/SATYAKI.jpg',
+                      width: 155.0,
+                      height: 155,
+                      fit: BoxFit.cover,
+                    ),
+                    "abc"),
+                                         Myitems(
+                    Image.asset(
+                      'assets/images/Team/AHANA.jpg',
+                      width: 155.0,
+                      height: 155,
+                      fit: BoxFit.cover,
+                    ),
+                    "abc"),
+                                         Myitems(
+                    Image.asset(
+                      'assets/images/Team/RINI.jpg',
                       width: 155.0,
                       height: 155,
                       fit: BoxFit.cover,
