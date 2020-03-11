@@ -13,7 +13,7 @@ class _CarousalState extends State<Carousal> {
         body: Container(
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage("assets/images/back2.gif"),
+          image: AssetImage("assets/images/back.gif"),
           fit: BoxFit.cover,
         ),
       ),
@@ -39,11 +39,10 @@ class _CarousalState extends State<Carousal> {
                     dotIncreaseSize: 1.5,
                     boxFit: BoxFit.contain,
                     images: [
-                      AssetImage("assets/images/ardent_logo.png"),
-                      AssetImage("assets/images/a.jpg"),
-                      AssetImage("assets/images/b.png"),
-                      AssetImage("assets/images/r.jpg"),
-                      AssetImage("assets/images/g.jpg"),
+                      AssetImage("assets/images/Sponsors/ardent.jpeg"),
+                      AssetImage("assets/images/Sponsors/jindal.jpeg"),
+                      AssetImage("assets/images/Sponsors/made.jpeg"),
+                      AssetImage("assets/images/Sponsors/webel.jpeg"),
                     ],
                     autoplay: true,
                     animationCurve: Curves.fastOutSlowIn,

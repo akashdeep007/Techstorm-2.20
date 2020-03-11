@@ -11,8 +11,8 @@ class SchedulePage extends StatelessWidget {
       body: Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/back2.gif"),
-                fit: BoxFit.fitWidth)),
+                image: AssetImage("assets/images/back.gif"),
+                fit: BoxFit.fitHeight)),
         child: ListView(
           children: <Widget>[
             Container(
@@ -24,7 +24,7 @@ class SchedulePage extends StatelessWidget {
                     fontSize: 48,
                     fontFamily: "TempestApache",
                     fontWeight: FontWeight.w900,
-                    color: Colors.white,
+                    color: Colors.white
                   ),
                 ),
               ),

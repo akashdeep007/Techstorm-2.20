@@ -21,7 +21,7 @@ class _KHETState extends State<KHET> {
               body: Container(
                                     decoration: BoxDecoration(
                       image : DecorationImage(
-                        image : AssetImage('assets/images/back2.gif'), fit:BoxFit.cover
+                        image : AssetImage('assets/images/back.gif'), fit:BoxFit.cover
                       )
                     ),
                 child: ListView(
@@ -94,7 +94,7 @@ class _KHETState extends State<KHET> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "BPPIMT students: INR 30 /",
+                                "BPPIMT students: INR 30 \n Outside students: INR 40 /",
                                 style: TextStyle(fontSize: 18),
                               ),
                              

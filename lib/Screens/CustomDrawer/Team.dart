@@ -39,7 +39,7 @@ class TeamPage extends StatelessWidget {
         body:Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/back2.gif"),
+                image: AssetImage("assets/images/back.gif"),
                 fit: BoxFit.cover)),
         child:  Column(
           children: <Widget> [Expanded(
@@ -54,120 +54,153 @@ class TeamPage extends StatelessWidget {
                 Myitems(
                     Image.asset(
                       'assets/images/Team/A.jpg',
-                      width:155,
-                      height: 155,
+                      width:145,
+                      height: 145,
                       fit: BoxFit.cover,
                     ),
                     "abc"),
                 Myitems(
                     Image.asset(
                       'assets/images/Team/deba.jpg',
-                      width: 155.0,
-                      height: 155,
+                      width: 145.0,
+                      height: 145,
+                      fit: BoxFit.cover,
+                    ),
+                    "abc"),
+                    Myitems(
+                    Image.asset(
+                      'assets/images/Team/BHARTI.jpg',
+                      width: 145.0,
+                      height: 145,
                       fit: BoxFit.cover,
                     ),
                     "abc"),
                 Myitems(
                     Image.asset(
                       'assets/images/Team/DEEPJYOTIFINAL-min.jpg',
-                      width: 155.0,
-                      height: 155,
+                      width: 145.0,
+                      height: 145,
                       fit: BoxFit.cover,
                     ),
                     "abc"),
                 Myitems(
                     Image.asset(
                       'assets/images/Team/Facebookframesatra.jpg',
-                      width: 155.0,
-                      height: 155,
+                      width: 145.0,
+                      height: 145,
                       fit: BoxFit.cover,
                     ),
                     "abc"),
                 Myitems(
                     Image.asset(
                       'assets/images/Team/KUNDUFINAL-min.jpg',
-                      width: 155.0,
-                      height: 155,
+                      width: 145.0,
+                      height: 145,
                       fit: BoxFit.cover,
                     ),
                     "abc"),
                 Myitems(
                     Image.asset(
                       'assets/images/Team/lahafinal-min.jpg',
-                      width: 155.0,
-                      height: 155,
+                      width: 145.0,
+                      height: 145,
                       fit: BoxFit.cover,
                     ),
                     "abc"),
                 Myitems(
                     Image.asset(
                       'assets/images/Team/NILOTPALFINAL-min.jpg',
-                      width: 155.0,
-                      height: 155,
+                      width: 145.0,
+                      height: 145,
                       fit: BoxFit.cover,
                     ),
                     "abc"),
                 Myitems(
                     Image.asset(
                       'assets/images/Team/niprofinal-min.jpg',
-                      width: 155.0,
-                      height: 155,
+                      width: 145.0,
+                      height: 145,
                       fit: BoxFit.cover,
                     ),
                     "abc"),
                 Myitems(
                     Image.asset(
                       'assets/images/Team/noor.jpg',
-                      width: 155.0,
-                      height: 155,
+                      width: 145.0,
+                      height: 145,
                       fit: BoxFit.cover,
                     ),
                     "abc"),
                 Myitems(
                     Image.asset(
                       'assets/images/Team/raju.jpg',
-                      width: 155.0,
-                      height: 155,
+                      width: 145.0,
+                      height: 145,
                       fit: BoxFit.cover,
                     ),
                     "abc"),
                 Myitems(
                     Image.asset(
                       'assets/images/Team/SAMIDHA2-min.jpg',
-                      width: 155.0,
-                      height: 155,
+                      width: 145.0,
+                      height: 145,
                       fit: BoxFit.cover,
                     ),
                     "abc"),
                 Myitems(
                     Image.asset(
                       'assets/images/Team/shankarfinal-min.jpg',
-                      width: 155.0,
-                      height: 155,
+                      width: 145.0,
+                      height: 145,
                       fit: BoxFit.cover,
                     ),
                     "abc"),
                 Myitems(
                     Image.asset(
                       'assets/images/Team/SOUMILIFINAL-min.jpg',
-                      width: 155.0,
-                      height: 155,
+                      width: 145.0,
+                      height: 145,
                       fit: BoxFit.cover,
                     ),
                     "abc"),
                      Myitems(
                     Image.asset(
                       'assets/images/Team/sumanfinal-min.jpg',
-                      width: 155.0,
-                      height: 155,
+                      width: 145.0,
+                      height: 145,
                       fit: BoxFit.cover,
                     ),
                     "abc"),
-                     Myitems(
+                     
+                                         Myitems(
                     Image.asset(
-                      'assets/images/Team/SOUMYA.jpg',
-                      width: 155.0,
-                      height: 155,
+                      'assets/images/Team/SUPRAKASH.jpg',
+                      width: 145.0,
+                      height: 145,
+                      fit: BoxFit.cover,
+                    ),
+                    "abc"),
+                                         Myitems(
+                    Image.asset(
+                      'assets/images/Team/SATYAKI.jpg',
+                      width: 145.0,
+                      height: 145,
+                      fit: BoxFit.cover,
+                    ),
+                    "abc"),
+                                         Myitems(
+                    Image.asset(
+                      'assets/images/Team/AHANA.jpg',
+                      width: 145.0,
+                      height: 145,
+                      fit: BoxFit.cover,
+                    ),
+                    "abc"),
+                                         Myitems(
+                    Image.asset(
+                      'assets/images/Team/RINI.jpg',
+                      width: 145.0,
+                      height: 145,
                       fit: BoxFit.cover,
                     ),
                     "abc"),

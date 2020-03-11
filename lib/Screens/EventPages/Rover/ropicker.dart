@@ -12,7 +12,7 @@ class _RO_PickerState extends State<RO_Picker> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(onPressed: () {
-        Navigator.push(context,new MaterialPageRoute(builder: (context) =>NFormPage(eventType: 'Roverse', eventName: "ROPICKER", minMembers: 1, maxMembers: 5,)));
+        Navigator.push(context,new MaterialPageRoute(builder: (context) =>NFormPage(eventType: 'Roverse', eventName: "ROPICKER", minMembers: 3, maxMembers: 5,)));
       }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
               appBar: AppBar(
@@ -22,7 +22,7 @@ class _RO_PickerState extends State<RO_Picker> {
               body: Container(
                                     decoration: BoxDecoration(
                       image : DecorationImage(
-                        image : AssetImage('assets/images/back2.gif'), fit:BoxFit.cover
+                        image : AssetImage('assets/images/back.gif'), fit:BoxFit.cover
                       )
                     ),
                 child: ListView(

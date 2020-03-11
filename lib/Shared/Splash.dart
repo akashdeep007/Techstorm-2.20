@@ -12,14 +12,14 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen> {
   startTime() async {
-    var _duration = new Duration(milliseconds: 9000);
+    var _duration = new Duration(milliseconds: 9500);
 
     return new Timer(_duration, navigationPage);
   }
 
   void navigationPage() {
     //Navigator.push(context,new MaterialPageRoute(builder: (context) =>Home()));
-    Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 1500), child: Home()));
+    Navigator.push(context, PageTransition(type: PageTransitionType.fade, duration: Duration(milliseconds: 1000), child: Home()));
   }
 
   @override
@@ -37,7 +37,7 @@ class _SplashScreenState extends State<SplashScreen> {
         Container(
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/images/back2.gif"),
+                    image: AssetImage("assets/images/back.gif"),
                     fit: BoxFit.cover,
                   ),)),
         Center(
@@ -53,7 +53,8 @@ class _SplashScreenState extends State<SplashScreen> {
                   "UNLEASH",
                   "YOUr",
                   "THOUHGTS",
-                  "TECHSTOrM\n2.20"
+                  "bPPIMT\nPrESENTS",
+                  "\nTECHSTOrM\n2.20"
                 ],
                 textStyle: TextStyle(
                   color: Colors.white,

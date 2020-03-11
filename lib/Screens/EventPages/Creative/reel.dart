@@ -12,7 +12,7 @@ class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
     double c_width = MediaQuery.of(context).size.width*0.8;
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(onPressed: () {
-        Navigator.push(context,new MaterialPageRoute(builder: (context) =>NFormPage(eventType: 'Creativity', eventName: "PASSIONWITHREELS", minMembers: 1, maxMembers: 5,)));
+        Navigator.push(context,new MaterialPageRoute(builder: (context) =>NFormPage(eventType: 'Creativity', eventName: "PASSIONWITHREELS", minMembers: 5, maxMembers: 8,)));
       }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
               appBar: AppBar(
@@ -22,7 +22,7 @@ class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
               body: Container(
                                     decoration: BoxDecoration(
                       image : DecorationImage(
-                        image : AssetImage('assets/images/back2.gif'), fit:BoxFit.cover
+                        image : AssetImage('assets/images/back.gif'), fit:BoxFit.cover
                       )
                     ),
                 child: ListView(
@@ -99,7 +99,7 @@ class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
                           subtitle: Column(
                             children: <Widget>[
                               Text(
-                                "Team registration: INR 250",
+                                "College Team registration: INR 250\nOutside Team registration: INR 300\n",
                                 style: TextStyle(fontSize: 18),
                               ),
                              

@@ -39,7 +39,7 @@ class DevPage extends StatelessWidget {
         body:Container(
         decoration: BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/images/back2.gif"),
+                image: AssetImage("assets/images/back.gif"),
                 fit: BoxFit.cover)),
         child:  GridView.count(
           
@@ -51,52 +51,45 @@ class DevPage extends StatelessWidget {
           children: <Widget>[
             Myitems(
                 Image.asset(
-                  'assets/images/Team/A.jpg',
-                  width:155,
-                  height: 155,
+                  'assets/images/Team/AKASH.jpg',
+                  width:145,
+                  height: 145,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
             Myitems(
                 Image.asset(
-                  'assets/images/Team/deba.jpg',
-                  width: 155.0,
-                  height: 155,
+                  'assets/images/Team/ARITRA.jpg',
+                  width: 145.0,
+                  height: 145,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
             Myitems(
                 Image.asset(
-                  'assets/images/Team/DEEPJYOTIFINAL-min.jpg',
-                  width: 155.0,
-                  height: 155,
+                  'assets/images/Team/TATHA.jpg',
+                  width: 145.0,
+                  height: 145,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
             Myitems(
                 Image.asset(
-                  'assets/images/Team/Facebookframesatra.jpg',
-                  width: 155.0,
-                  height: 155,
+                  'assets/images/Team/samya.jpg',
+                  width: 145.0,
+                  height: 145,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
             Myitems(
                 Image.asset(
-                  'assets/images/Team/KUNDUFINAL-min.jpg',
-                  width: 155.0,
-                  height: 155,
+                  'assets/images/Team/srinjan-min.jpg',
+                  width: 145.0,
+                  height: 145,
                   fit: BoxFit.cover,
                 ),
                 "abc"),
-            Myitems(
-                Image.asset(
-                  'assets/images/Team/lahafinal-min.jpg',
-                  width: 155.0,
-                  height: 155,
-                  fit: BoxFit.cover,
-                ),
-                "abc"),
+           
            
                 
           ],

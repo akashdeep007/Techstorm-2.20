@@ -11,7 +11,7 @@ class _TechnomaniaState extends State<Technomania> {
   Widget build(BuildContext context) {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(onPressed: () { 
-      Navigator.push(context,new MaterialPageRoute(builder: (context) =>NFormPage(eventType : 'Brain_Teasers', eventName : 'TECHNOMANIA', minMembers: 1, maxMembers: 2,)));
+      Navigator.push(context,new MaterialPageRoute(builder: (context) =>NFormPage(eventType : 'Brain_Teasers', eventName : 'TECHNOMANIA', minMembers: 2, maxMembers: 4,)));
 
       }, label: Container(width : 100 ,child : Center(child: Text('Register', style: TextStyle(fontSize : 18),)))),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
@@ -22,7 +22,7 @@ class _TechnomaniaState extends State<Technomania> {
               body: Container(
                                     decoration: BoxDecoration(
                       image : DecorationImage(
-                        image : AssetImage('assets/images/back2.gif'), fit:BoxFit.cover
+                        image : AssetImage('assets/images/back.gif'), fit:BoxFit.cover
                       )
                     ),
                 child: ListView(
@@ -131,7 +131,7 @@ class _TechnomaniaState extends State<Technomania> {
                                 style: TextStyle(fontSize: 18),
                               ),
                               Text(
-                                "Other Teams: INR 120 ",
+                                "Other Teams: INR 150 ",
                                 style: TextStyle(fontSize: 18),
                               ),
                              

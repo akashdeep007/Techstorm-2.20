@@ -17,6 +17,14 @@ class CustomDrawer extends StatelessWidget {
     }
   }
 
+   _launchSchedule() async {
+    const url = 'https://drive.google.com/file/d/1VfpGl2bks_p66YAIfCNiGNwPamcvBtq8/view';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
   _launchMaps() async {
     const url =
         'https://www.google.com/maps/dir//bp+poddar/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x39f89e3149180d5b:0x9abf8a7af72c0eef?sa=X&ved=2ahUKEwiggaSdoPfnAhUISX0KHaLEBUsQ9RcwDnoECCYQDw';
@@ -58,7 +66,7 @@ class CustomDrawer extends StatelessWidget {
                     SizedBox(
                           height: 30,
                         ),
-                    Container(height:100,child: Image.asset("assets/images/lo.jpg"),),
+                    Container(height:100,child: Image.asset("assets/images/wockt.png"),),
                     SizedBox(
                           height: 50,
                         ),
@@ -76,7 +84,7 @@ class CustomDrawer extends StatelessWidget {
                             style: TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.bold),
                           ),
-                          onPressed: () { Navigator.push(context,new MaterialPageRoute(builder: (context) =>SchedulePage()));},
+                          onPressed: _launchSchedule,
                         ),
                       ],
                     ),
@@ -119,7 +127,7 @@ class CustomDrawer extends StatelessWidget {
                         FlatButton(
                           padding: EdgeInsets.only(top: 15, bottom: 15),
                           child: Text(
-                            'Sponsers',
+                            'Sponsors',
                             style: TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.bold),
                           ),

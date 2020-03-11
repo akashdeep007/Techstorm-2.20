@@ -235,7 +235,8 @@ class _NFormPageState extends State<NFormPage> {
                   print('not ok');
                 }
               },
-            )
+            ),
+            SizedBox(height: 20,),
               ]
             ))
           ],
