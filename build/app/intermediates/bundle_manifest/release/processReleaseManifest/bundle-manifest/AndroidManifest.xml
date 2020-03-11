@@ -23,7 +23,7 @@
     <application
         android:name="io.flutter.app.FlutterApplication"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/techstorm2020"
         android:label="techstorm" >
         <activity
             android:name="com.example.techstorm.MainActivity"

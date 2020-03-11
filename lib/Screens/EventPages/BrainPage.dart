@@ -21,7 +21,7 @@ class BrainPage extends StatelessWidget {
     decoration: BoxDecoration(
       image: DecorationImage(image: 
       AssetImage('assets/images/BRAIN/am-min.jpg',
-                  ), fit: BoxFit.cover)
+                  ), fit: BoxFit.fitWidth)
     ),
     alignment: Alignment.center,
     child: FlipCard(
@@ -44,7 +44,7 @@ class BrainPage extends StatelessWidget {
                     fontWeight: FontWeight.bold,
                     color: Colors.black),
               ),
-              SizedBox(height:30),
+              SizedBox(height:20),
               Center(
                 child: Text(
                     'Showcase your inner Zuckerberg by spitting out the next facebook.',style: TextStyle(

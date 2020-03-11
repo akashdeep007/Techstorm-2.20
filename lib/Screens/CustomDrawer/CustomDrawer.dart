@@ -119,7 +119,7 @@ class CustomDrawer extends StatelessWidget {
                         FlatButton(
                           padding: EdgeInsets.only(top: 15, bottom: 15),
                           child: Text(
-                            'Sponsers',
+                            'Sponsors',
                             style: TextStyle(
                                 fontSize: 18, fontWeight: FontWeight.bold),
                           ),

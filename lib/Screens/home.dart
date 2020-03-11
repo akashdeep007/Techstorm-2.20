@@ -109,7 +109,7 @@ var pad=MediaQuery.of(context).padding.top;
             child: Container(
               decoration: BoxDecoration(
                 image: DecorationImage(
-                  image: AssetImage("assets/images/back2.gif"),
+                  image: AssetImage("assets/images/back.gif"),
                   fit: BoxFit.cover,
                 ),
               ),

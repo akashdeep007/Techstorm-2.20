@@ -138,7 +138,7 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\wh
 	android:label
 		ADDED from D:\FlutterProjects\Techstorm-2.20\android\app\src\main\AndroidManifest.xml:11:9-34
 	android:icon
-		ADDED from D:\FlutterProjects\Techstorm-2.20\android\app\src\main\AndroidManifest.xml:12:9-43
+		ADDED from D:\FlutterProjects\Techstorm-2.20\android\app\src\main\AndroidManifest.xml:12:9-45
 	android:name
 		ADDED from D:\FlutterProjects\Techstorm-2.20\android\app\src\main\AndroidManifest.xml:10:9-57
 activity#com.example.techstorm.MainActivity

@@ -16,6 +16,10 @@
         "source": "C:\\Users\\whois\\.gradle\\caches\\transforms-2\\files-2.1\\4c0b774c09d5393feb013f0dbe753af3\\play-services-base-17.0.0\\res\\drawable-xhdpi-v4\\common_google_signin_btn_text_light_normal_background.9.png"
     },
     {
+        "merged": "D:\\FlutterProjects\\Techstorm-2.20\\build\\app\\intermediates\\res\\merged\\release\\mipmap-xxxhdpi_techstorm2020.png.flat",
+        "source": "D:\\FlutterProjects\\Techstorm-2.20\\android\\app\\src\\main\\res\\mipmap-xxxhdpi\\techstorm2020.png"
+    },
+    {
         "merged": "D:\\FlutterProjects\\Techstorm-2.20\\build\\app\\intermediates\\res\\merged\\release\\color_common_google_signin_btn_text_light.xml.flat",
         "source": "C:\\Users\\whois\\.gradle\\caches\\transforms-2\\files-2.1\\4c0b774c09d5393feb013f0dbe753af3\\play-services-base-17.0.0\\res\\color\\common_google_signin_btn_text_light.xml"
     },
@@ -58,6 +62,10 @@
     {
         "merged": "D:\\FlutterProjects\\Techstorm-2.20\\build\\app\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_googleg_disabled_color_18.png.flat",
         "source": "C:\\Users\\whois\\.gradle\\caches\\transforms-2\\files-2.1\\4c0b774c09d5393feb013f0dbe753af3\\play-services-base-17.0.0\\res\\drawable-mdpi-v4\\googleg_disabled_color_18.png"
+    },
+    {
+        "merged": "D:\\FlutterProjects\\Techstorm-2.20\\build\\app\\intermediates\\res\\merged\\release\\mipmap-xxhdpi_techstorm2020.png.flat",
+        "source": "D:\\FlutterProjects\\Techstorm-2.20\\android\\app\\src\\main\\res\\mipmap-xxhdpi\\techstorm2020.png"
     },
     {
         "merged": "D:\\FlutterProjects\\Techstorm-2.20\\build\\app\\intermediates\\res\\merged\\release\\drawable_common_google_signin_btn_text_light.xml.flat",
@@ -252,8 +260,16 @@
         "source": "C:\\Users\\whois\\.gradle\\caches\\transforms-2\\files-2.1\\4c0b774c09d5393feb013f0dbe753af3\\play-services-base-17.0.0\\res\\drawable-mdpi-v4\\common_google_signin_btn_icon_light_normal_background.9.png"
     },
     {
+        "merged": "D:\\FlutterProjects\\Techstorm-2.20\\build\\app\\intermediates\\res\\merged\\release\\mipmap-hdpi_techstorm2020.png.flat",
+        "source": "D:\\FlutterProjects\\Techstorm-2.20\\android\\app\\src\\main\\res\\mipmap-hdpi\\techstorm2020.png"
+    },
+    {
         "merged": "D:\\FlutterProjects\\Techstorm-2.20\\build\\app\\intermediates\\res\\merged\\release\\drawable-mdpi-v4_notification_bg_normal_pressed.9.png.flat",
         "source": "C:\\Users\\whois\\.gradle\\caches\\transforms-2\\files-2.1\\c1da7862c7abb8e426855a3f78caf221\\core-1.0.0\\res\\drawable-mdpi-v4\\notification_bg_normal_pressed.9.png"
+    },
+    {
+        "merged": "D:\\FlutterProjects\\Techstorm-2.20\\build\\app\\intermediates\\res\\merged\\release\\mipmap-mdpi_techstorm2020.png.flat",
+        "source": "D:\\FlutterProjects\\Techstorm-2.20\\android\\app\\src\\main\\res\\mipmap-mdpi\\techstorm2020.png"
     },
     {
         "merged": "D:\\FlutterProjects\\Techstorm-2.20\\build\\app\\intermediates\\res\\merged\\release\\drawable_common_google_signin_btn_icon_dark_normal.xml.flat",
@@ -314,5 +330,9 @@
     {
         "merged": "D:\\FlutterProjects\\Techstorm-2.20\\build\\app\\intermediates\\res\\merged\\release\\layout_notification_template_icon_group.xml.flat",
         "source": "C:\\Users\\whois\\.gradle\\caches\\transforms-2\\files-2.1\\c1da7862c7abb8e426855a3f78caf221\\core-1.0.0\\res\\layout\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "D:\\FlutterProjects\\Techstorm-2.20\\build\\app\\intermediates\\res\\merged\\release\\mipmap-xhdpi_techstorm2020.png.flat",
+        "source": "D:\\FlutterProjects\\Techstorm-2.20\\android\\app\\src\\main\\res\\mipmap-xhdpi\\techstorm2020.png"
     }
 ]

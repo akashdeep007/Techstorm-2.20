@@ -22,7 +22,7 @@ class _PASSIONWITHREELSState extends State<PASSIONWITHREELS> {
               body: Container(
                                     decoration: BoxDecoration(
                       image : DecorationImage(
-                        image : AssetImage('assets/images/back2.gif'), fit:BoxFit.cover
+                        image : AssetImage('assets/images/back.gif'), fit:BoxFit.cover
                       )
                     ),
                 child: ListView(

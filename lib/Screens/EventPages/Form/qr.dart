@@ -42,8 +42,13 @@ class _QrGenState extends State<QrGen> {
                       child: QrImage(
                         data: widget.data,
                       )),
-                      SizedBox(height: 50,),
-                      Text('Please Take ScreenShot', style: TextStyle(fontSize : 32, color:Colors.red, fontWeight:FontWeight.bold),)
+                      SizedBox(height: 40,),
+                      Text('Please Take ScreenShot', style: TextStyle(fontSize : 28, color:Colors.red, fontWeight:FontWeight.bold),),
+                      
+                      Padding(
+                        padding: const EdgeInsets.all(10),
+                        child: Text('Please take a screenshot of the QR code. You have to submit the registration fees at Alumni Room, BPPIMT on any working day (for BPPIMT students) or on the day of the event (for students from other colleges). Your payment will be recieved only if you have the QR code. The QR code will be verified during payment and before the start of your event.'),
+                      ),
                 ],
               ),
             ),

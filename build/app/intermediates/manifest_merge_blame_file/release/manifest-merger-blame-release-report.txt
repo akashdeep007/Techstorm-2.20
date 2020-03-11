@@ -38,8 +38,8 @@
 24-->D:\FlutterProjects\Techstorm-2.20\android\app\src\main\AndroidManifest.xml:10:9-57
 25        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
 25-->[androidx.core:core:1.0.0] C:\Users\whois\.gradle\caches\transforms-2\files-2.1\c1da7862c7abb8e426855a3f78caf221\core-1.0.0\AndroidManifest.xml:22:18-86
-26        android:icon="@mipmap/ic_launcher"
-26-->D:\FlutterProjects\Techstorm-2.20\android\app\src\main\AndroidManifest.xml:12:9-43
+26        android:icon="@mipmap/techstorm2020"
+26-->D:\FlutterProjects\Techstorm-2.20\android\app\src\main\AndroidManifest.xml:12:9-45
 27        android:label="techstorm" >
 27-->D:\FlutterProjects\Techstorm-2.20\android\app\src\main\AndroidManifest.xml:11:9-34
 28        <activity
